@@ -32,7 +32,11 @@ To complete this lab, you need:
     * Time remaining
     * Your temporary credentials that you must use for this lab
     * Your temporary project ID
-    * Links to additional student resources
+    * Links to additional student resources  
+
+Leave this browser up, so you can copy/paste these resources as needed.  It is also, not a bad idea to create a text file with the values presented.
+
+![info](qinfo.png)
 
 2. Open Google Cloud console in new **incognito** browser window by right clicking the **Google Cloud Console** link in **Student Resources**.
     ***Tip:*** Arrange the tabs in separate windows, side-by-side.
