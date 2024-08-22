@@ -1,26 +1,27 @@
 ---
-title: "Fortinet TECWorkshop Template - MVP1"
-menuTitle: "TECWorkshop Template"
+title: "Web Services 201 FortiWeb Cloud"
+menuTitle: "Home Page"
 weight: 1
 archetype: home
 ---
 
 ### Welcome!
 
+In this lab, you will have an opportunity to configure FortiWeb Cloud to protect a Juice Shop server, emulating a very vulnerable e-commerce website.  Students will onboard their application and then run a few simple attacks, as well as turn on several security features, in order to learn more about FortiWeb Cloud's capabilities.
 
-This site will explain how to use the [Hugo Web Framework]("https://gohugo.io/") & the ["reLearn" Theme]("https://mcshelby.github.io/hugo-theme-relearn/index.html") to effectively organize & deliver Fortinet TEC Workshops & Product demos in a consistent, simple, and visually appealing format.
+### FortiWeb
+FortiWeb is Fortinet's Web Application and API security platform, enabling enterprise customers to protect web applications no matter where they are deployed.  FortiWeb defends web applications and APIs against OWASP Top-10 threats, DDOS attacks, and malicious bot attacks. Advanced ML-powered features improve security and reduce administrative overhead. Capabilities include anomaly detection, API discovery/protection, bot mitigation and advanced threat analytics to identify the most critical threats across all protected applications.
 
-The beauty of this framework lies in its simplicity.  Within approx 30 mins, anybody can have a site up and running.  Content is created via Markdown files, and the workshop guide layout is simply a directory structure.
+FortiWeb Cloud WAF as a Service (WAFaaS) reduces administrative overhead by offering the full suite of FortiWeb security features without the need to manage VMs and networking.  Customers simply change their DNS records so that all appication traffic is proxied through FortiWeb Cloud.
 
-Follow along on this simple tutorial to get up and running with a Hugo formatted site for your TEC Workshop/training/demo content today!
 
 ### Learning Objectives
-- Setup UserRepo on your system & Build container with Hugo & CentralRepo
-- Learn to work in Hugo to create your content to display proper information flow for your TEC Workshop/demo/training
-- Publish your Hugo site to GitHub pages via a CI/CD model 
- 
-### Hugo and Fortinet TECWorkshops - Visually
-- The purpose of this workflow is to simplify creation of Fortinet TECWorkshop guides while providing an example CI/CD development environment with maximum re-usability 
-- Here's a visual representation of our process which will be fully explained in each chapter
+- Learn to Onboard Web Applications 
+- more stuff
+- other stuff
 
-{{< FTNThugoFlow >}}
+## Lab Environment
+
+Below is a diagram of the Lab environment.
+
+![lab1](./img/diagram.png)

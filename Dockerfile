@@ -2,15 +2,15 @@
 
 #alpine has shell, busybox does not
 #FROM klakegg/hugo:0.107.0-busybox AS hugo
-FROM klakegg/hugo:0.107.0-alpine AS base
+#FROM klakegg/hugo:0.107.0-alpine AS base
+FROM hugomods/hugo:std as base
 
 FROM base as dev
 ADD https://github.com/FortinetCloudCSE/CentralRepo.git#prreviewJune23 /home/CentralRepo
 
 WORKDIR /home/CentralRepo
 
-COPY ./layouts /tmp
-RUN cp -R /tmp/* /home/CentralRepo/layouts
+RUN apk add --update --no-cache python3 py3-pip && ln -sf python3 /usr/bin/python
 
 ENTRYPOINT ["/home/CentralRepo/scripts/local_copy.sh"]
 
@@ -19,7 +19,6 @@ ADD https://github.com/FortinetCloudCSE/CentralRepo.git#main /home/CentralRepo
 
 WORKDIR /home/CentralRepo
 
-COPY ./layouts /tmp
-RUN cp -R /tmp/* /home/CentralRepo/layouts
+RUN apk add --update --no-cache python3 py3-pip && ln -sf python3 /usr/bin/python
 
 ENTRYPOINT ["/home/CentralRepo/scripts/local_copy.sh"]
