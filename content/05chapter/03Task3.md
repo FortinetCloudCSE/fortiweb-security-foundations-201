@@ -14,9 +14,9 @@ FortiWeb can validate incoming requests against your OpenAPI schema to ensure th
 
 1. Download the juiceshop schema file to your local machine by clicking on URL below.
 
-```sh
+
 https://juiceshopswagger.blob.core.windows.net/juiceshopswagger/swagger.yaml?sp=r&st=2024-08-06T16:05:20Z&se=2024-11-09T01:05:20Z&spr=https&sv=2022-11-02&sr=b&sig=F8TWuKSH430782%2FgJBWLhCQuEDK2101CChRkXx4XdU0%3D
-```
+
 
 2. From the FortiWeb Cloud Console left pane, select ADD MODULES. Scroll down and turn on  under API Protection to add OPEN API VALIDATION
 

@@ -32,7 +32,7 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 - email: ```test@example.com```
 - password: ```test1234$```
 - Repeat Password: ```test1234$```
-- Security Question: Select **Your eldest siblins middle name** from dropdown. 
+- Security Question: Select **Your eldest sibling's middle name** from dropdown. 
 - Answer: ```botman```
 
 - Click on **register**
@@ -46,8 +46,8 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
 9. Once logged in clik on Account > Privacy and Security > Change Password. 
 
-- Current password: ```thelloest1234$```
-- New Password: ```password123$```
+- Current password: ```test1234$```
+- New Password: ```password1234$```
 - Repeat New Password: ```password1234$```
 
 - Click **Change**
