@@ -10,7 +10,7 @@ This lab was originally bootstrapped with and ingress firewall rule which allows
 For the below steps, ensure that you are in the Protected Project in the GCP Console.  When you log into the console for the first time, you are directed to the Protected Project by default.  This can be changed by clicking on the drop down at the top left of the console screen, between the Google Logo and the Search bar.
 {{% /notice %}}
 
-Protected Project ID should be visible in the left pane of of the Lab Start Screen.
+**Protected Project ID** should be visible in the **left pane** of of the Lab Start Screen.
 
 ### Task 1: Modify GCP Network Firewall Rules
 

@@ -29,7 +29,7 @@ For the next step, choose **Yes**.  You do want to stay logged in.
 
 4. This will take you to the FortiCloud Premium Dashboard. At the top of the screen select **Services** > **FortiWeb Cloud**
 
-{{% notice info %}}When you log in, you will see that you are unauthorized to view the FortiCloud Premium Dashboard.  This is expected, as this user has not been given this permission.{{% /notice %}}
+{{% notice warning %}}When you log in, you will see that you are unauthorized to view the FortiCloud Premium Dashboard.  This is expected, as this user has not been given this permission.{{% /notice %}}
 
 ![unauth](unauthorized.png)
 

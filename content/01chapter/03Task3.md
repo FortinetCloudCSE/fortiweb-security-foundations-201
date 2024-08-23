@@ -37,5 +37,6 @@ Accept certificate errors and proceed.  When prompted, click **Connect**.  This 
 ```sh
 bash
 echo nameserver 8.8.8.8 >> /etc/resolv.conf
+apt-get install nano
 wget https://dl.pstmn.io/download/latest/linux_64 -O /tmp/linux_64 && tar xvzf /tmp/linux_64 -C /tmp/ && sudo mv /tmp/Postman /opt/ && sudo ln -s /opt/Postman/app/Postman /usr/local/bin/Postman
 ```

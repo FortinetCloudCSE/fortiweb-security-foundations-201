@@ -34,6 +34,8 @@ To complete this lab, you need:
     * Your temporary project ID
     * Links to additional student resources  
 
+![qstart](qstart.png)
+
 Leave this browser up, so you can copy/paste these resources as needed.  It is also, not a bad idea to create a text file with the values presented.
 
 ![info](qinfo.png)
