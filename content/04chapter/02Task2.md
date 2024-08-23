@@ -1,6 +1,6 @@
 ---
-title: "Task 2- Use SQLMAP to exploit vulnerability"
-menuTitle: "Task 2- Use SQLMAP to exploit vulnerability"
+title: "Task 2 - Use SQLMAP to exploit vulnerability"
+menuTitle: "Task 2 - Use SQLMAP to exploit vulnerability"
 weight: 20
 ---
 

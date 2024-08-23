@@ -15,22 +15,16 @@
     "weight":10
   },
   {
-    "text": "Fortinet Standard Workshop Guide",
-    "URL": "https://fortinetcloudcse.github.io/UserRepo",
+    "text": "Fortiweb Cloud admin guide",
+    "URL": "https://docs.fortinet.com/document/fortiweb-cloud/23.4.0/user-guide/981027/overview",
     "icon": "fa-tools-cap",
     "weight":20
   },
   {
-    "text": "Fortinet Standard Workshop Template Repo",
-    "URL": "https://github.com/FortinetCloudCSE/UserRepo",
+    "text": "Fortiweb Live demo portal",
+    "URL": "https://www.fortiweb-cloud.com/index/login",
     "icon": "fa-tools-cap",
     "weight":30
-  },
-  {
-    "text": "Fortinet Hugo reLearn theme - Guide",
-    "URL": "https://mcshelby.github.io/hugo-theme-relearn/index.html",
-    "icon": "fa-tools-cap",
-    "weight":40
   }
   ]
 }

@@ -1,28 +1,10 @@
 ---
-title: "Task 3- Test API Gateway"
-menuTitle: "Task 3- Test API Gateway"
+title: "Task 3 - Schema Protection"
+menuTitle: "Task 3 - Schema Protection"
 weight: 30
 ---
 
-
-
-1.  In Postman, click **Send** again to re-test your api call.  It should return status 403 and return a long error page ending with "Please contact the administrator..."
-
-![no key](no-key.png)
-
-2. Now, let's add a key
-
-- select **Headers** under the URL bar.
-- enter ```apikey``` for Key
-- enter the previously copied key for Value
-- click the empty box next to apikey to send this header
-- click **Send**
-
-You should see code 200 and returned data.
-
-![yes key](yes-key.png)
-
-## Task 3: Open API Validation/Schema protection
+#### Open API Validation/Schema protection
 
 In this task, lets run through the open API/Swagger based schema protection with Fortiweb cloud. Swagger, now known as the OpenAPI Specification (OAS), is a framework for API development that allows developers to design, build, document, and consume RESTful web services.
 

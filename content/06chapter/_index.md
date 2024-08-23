@@ -1,7 +1,7 @@
 ---
-title: "Ch 5 - In Closing"
+title: "Ch 6 - In Closing"
 chapter: false
-menuTitle: "Ch 5 - In Closing"
+menuTitle: "Ch 6 - In Closing"
 weight: 60
 ---
 
