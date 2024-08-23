@@ -6,13 +6,13 @@ weight: 30
 
 Below is a diagram of the Lab environment.
 
-![lab1](./img/diagram.png)
+![lab1](diagram.png)
 
 ### Check Availability of Juice Shop
 
 Use the public IP of Juice Shop to log in: http://{{Juice Shop IP}}:3000
 
-![Juiceshop Home Page](./img/juice-home.png)
+![Juiceshop Home Page](juice-home.png)
 
 ### Login to Kali
 
@@ -20,15 +20,15 @@ Use the public IP of Juice Shop to log in: http://{{Juice Shop IP}}:3000
 
 Accept certificate errors and proceed.  When prompted, click **Connect**.  This will take you to the home screen of Kali
 
-![Kali Home Page](./img/kali-home.png)
+![Kali Home Page](kali-home.png)
 
 2.  In order to copy/paste into Kali, we will need to click on the tab at the left hand side of the screen.
 
-![cp-tab](./img/cp-tab-kali.png)
+![cp-tab](cp-tab-kali.png)
 
 3.  This will open the tab revealing a couple of options.  Select the clipboard icon and paste your text into the box.  Once the text is in the box, you can right click on the desktop and select Paste Selection to paste in the text.  When done, you can click on the arrow to hide the clipboard.
 
-![paste-kali](./img/paste-kali.png)
+![paste-kali](paste-kali.png)
 
 {{% notice info %}}We are going to make a small change to Kali in order to prepare for later steps. Please open a terminal by clicking on the Black Icon at the bottom of the screen.{{% /notice %}}
 
