@@ -1,6 +1,6 @@
 ---
-title: "Task 2- Enable Block Mode"
-menuTitle: "Task 2- Enable Block Mode"
+title: "Task 2 - Enable Block Mode"
+menuTitle: "Task 2 - Enable Block Mode"
 weight: 20
 ---
 

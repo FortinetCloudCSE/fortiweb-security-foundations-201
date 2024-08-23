@@ -191,16 +191,11 @@ url = "https://fortinet.qwiklabs.com"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools-cap'></i> Fortinet Standard Workshop Guide"
-url = "https://fortinetcloudcse.github.io/UserRepo"
+name = "<i class='fas fa-tools-cap'></i> Fortiweb Cloud admin guide"
+url = "https://docs.fortinet.com/document/fortiweb-cloud/23.4.0/user-guide/981027/overview"
 weight = 20
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools-cap'></i> Fortinet Standard Workshop Template Repo"
-url = "https://github.com/FortinetCloudCSE/UserRepo"
+name = "<i class='fas fa-tools-cap'></i> Fortiweb Live demo portal"
+url = "https://www.fortiweb-cloud.com/index/login"
 weight = 30
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-tools-cap'></i> Fortinet Hugo reLearn theme - Guide"
-url = "https://mcshelby.github.io/hugo-theme-relearn/index.html"
-weight = 40

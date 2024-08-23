@@ -1,6 +1,6 @@
 ---
-title: "Task 2- Explore FortiWeb Options"
-menuTitle: "Task 2- Explore FortiWeb Options"
+title: "Task 3 - Explore FortiWeb Options"
+menuTitle: "Task 3 - Explore FortiWeb Options"
 weight: 30
 ---
 

@@ -1,8 +1,10 @@
 ---
-title: "Task 2- Setup API Gateway"
-menuTitle: "Task 2- Setup API Gateway"
+title: "Task 2 - Setup API Gateway"
+menuTitle: "Task 2 - Setup API Gateway"
 weight: 20
 ---
+
+#### Setup API Gateway
 
 1.  From the FortiWeb Cloud Console left pane, select **ADD MODULES**.  Scroll down and turn on **API Gateway** under API Protection.
 
@@ -34,3 +36,20 @@ weight: 20
 
 ![api save](api-save.png)
 
+#### Test API gateway
+
+1.  In Postman, click **Send** again to re-test your api call.  It should return status 403 and return a long error page ending with "Please contact the administrator..."
+
+![no key](no-key.png)
+
+2. Now, let's add a key
+
+- select **Headers** under the URL bar.
+- enter ```apikey``` for Key
+- enter the previously copied key for Value
+- click the empty box next to apikey to send this header
+- click **Send**
+
+You should see code 200 and returned data.
+
+![yes key](yes-key.png)
