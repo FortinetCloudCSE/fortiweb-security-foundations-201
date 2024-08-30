@@ -14,7 +14,7 @@ bash
 sudo nano /etc/hosts
 ```
 
-3. When the host file opens you will need to add in the host entry in the format "ip address number.fwebtraincse.com" at the bottom of the file.  For this you can enter one or both of the IP Addresses you noted earliear during "Step 5" of the onboarding earlier.   Once this is complete, type **ctrl+o** followed by **enter** and then **ctrl+x**
+3. When the host file opens you will need to add in the host entry in the format "ip address number.fwebtraincse.com" at the bottom of the file.  For this you can enter one or both of the IP Addresses you noted earliear in Chapter 2 Task 1 "Step 5" of the onboarding.   Once this is complete, type **ctrl+o** followed by **enter** and then **ctrl+x**
 
 ![Hosts](hosts.png)
 

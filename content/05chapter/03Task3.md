@@ -22,7 +22,7 @@ https://juiceshopswagger.blob.core.windows.net/juiceshopswagger/swagger.yaml?sp=
 
 ![apischema1](api-schema1.png)
 
-3. In the API protection module, click on Open API validation > Create OpenAPI validation file. 
+3. In the API protection module, click on Open API validation > Create OpenAPI Validation Rule. 
 
 ![apischema2](api-schema2.png)
 
@@ -33,6 +33,10 @@ https://juiceshopswagger.blob.core.windows.net/juiceshopswagger/swagger.yaml?sp=
 5. Dont forget to Save at the bottom. 
 
 ![apischema4](api-schema4.png)
+
+{{% notice warning%%}}
+If for some reason you are logged out when you click save here, you will need to log back in using this link ```https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login``` and the credentials recieved in the original email.  You will need to repeat steps 1 through 5.
+{{%/notice%}}
 
 6. Now lets open POSTMAN, by opening a new terminal (not bash) and type ```Postman``` at the prompt.  This should start the postman application.
 
@@ -69,6 +73,6 @@ for Request body, Click on Body > Raw > JSON and paste the following:
 
 ![apischema7](api-schema7.png)
 
-9. on Fortiweb Cloud > Attack log > we can see a log generated for this block request to show the reason for block is Open API schema Violation. 
+9. In Fortiweb Cloud on the left hand side of the screen go to Threat Analytics > Attack log > we can see a log generated for this block request to show the reason for block is Open API schema Violation. 
 
 ![apischema8](api-schema8.png)

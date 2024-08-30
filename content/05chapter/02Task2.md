@@ -28,7 +28,7 @@ weight: 20
 
 ![api rule](api-rule.png)
 
-5. Now your user should have an API key click on the eye icon to display the key.  Copy it and put it into a note pad.
+5. You will need to click **Save** at the bottom right.  Now you should have an API key. Click on the eye icon to display the key.  Copy it and put it into a note pad.
 
 ![see key](see-key.png)
 

@@ -16,11 +16,11 @@ sqlmap -h
 
 ```
 
-2. Now we will attempt to discover what typ SQL injection vulnerabilities exist.  Since we know that the database runs on **sqlite** we can shorten the scan time by giving sqlmap that information.  Input the first line below at the terminal, substituting your URL.
+2. Now we will attempt to discover what typ SQL injection vulnerabilities exist.  Since we know that the database runs on **sqlite** we can shorten the scan time by giving sqlmap that information.  Input the first line below at the terminal, substituting your URL. **Make sure to change "number" in the URL below to your student number**
 
 ```sh
 
-sqlmap -u "https://number.fwebtraincse.com/rest/products/search?q="  --dbms=SQLite --technique=B --level 3 --batch
+sqlmap -u "https://number.fwebtraincse.com/rest/products/search?q=" --dbms=SQLite --technique=B --level 3 --batch
 
 ```
 
@@ -35,3 +35,7 @@ sqlmap -u "https://number.fwebtraincse.com/rest/products/search?q="  --dbms=SQLi
 4. Re-run the sqlmap attempt.  You will see that some vulnerabilities were found.
 
 ![Map-Allow](mapallow.png)
+
+{{% notice warning}}
+Please re-enable block mode for your application before moving forward.
+{{% /notice %}}

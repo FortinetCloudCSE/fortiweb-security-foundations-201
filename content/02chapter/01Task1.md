@@ -59,4 +59,4 @@ Take Note of the IPv4 addresses and CNAME for use in a later step.  **Before you
 
 ![App-on](app-on.png)
 
-{{% notice warning %}}This is a **Shared Environment** !!!  Please ensure that you are only making changes to **Your Application**.  After Applications are onbaorded into FortiWeb Cloud, Administrators have full RBAC capabilities, but we will not be activating that during this 90 minute lab.{{% /notice %}}
+{{% notice warning %}}This is a **Shared Environment** !!!  Please ensure that you are only making changes to **Your Application**.  After Applications are onbaorded into FortiWeb Cloud, Administrators have full RBAC capabilities, but we will not be activating that during this lab.{{% /notice %}}
