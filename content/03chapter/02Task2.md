@@ -11,6 +11,10 @@ On the Applications page enable block mode by clicking on the Block Mode button
 
 ![En-Block](en-block.png)
 
+{{%notice warning%}}
+It can take two to three minutes for changes to take effect in FortiWeb Cloud
+{{% /notice %}}
+
 2. Repeat the same step to perform SQLi attack in the browser.
 
 ```sh

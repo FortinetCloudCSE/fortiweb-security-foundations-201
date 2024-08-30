@@ -12,7 +12,7 @@ Add Application
 
 2. For Step 1 "WEBSITE" 
 
-- for **Web Application Name** enter the number of the username found in the email you recieved from **fortinetsecdevops@gmail.com**.   
+- for **Web Application Name** enter the number of the username found in the email you recieved from **fortinetsecdevops@gmail.com** or at the top right corner of the FortiWeb Cloud Screen.   
 
 {{% notice info %}}For example, if the Username is CSEAccount669@fortinetcloud.onmicrosoft.com the number would be 669{{% /notice %}}
 
