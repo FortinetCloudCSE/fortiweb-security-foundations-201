@@ -1,6 +1,6 @@
 ---
 title: "Task 1 - Call API with Postman"
-menuTitle: "Task 1 - Call API with Postman"
+linkTitle: "Task 1 - Call API with Postman"
 weight: 10
 ---
 

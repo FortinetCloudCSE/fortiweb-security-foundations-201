@@ -1,6 +1,6 @@
 ---
 title: "Task 1 - Perform a simple SQL injection attack"
-menuTitle: "Task 1 - Perform a simple SQL injection attack"
+linkTitle: "Task 1 - Perform a simple SQL injection attack"
 weight: 10
 ---
 

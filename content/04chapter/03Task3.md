@@ -1,6 +1,6 @@
 ---
 title: "Task 3 - CSRF attack "
-menuTitle: "Task 3 - CSRF attack "
+linkTitle: "Task 3 - CSRF attack "
 weight: 20
 ---
 

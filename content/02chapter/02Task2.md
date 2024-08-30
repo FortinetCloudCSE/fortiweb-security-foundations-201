@@ -1,6 +1,6 @@
 ---
 title: "Task 2- Secure Google"
-menuTitle: "Task 2- Secure Google Infrastructure"
+linkTitle: "Task 2- Secure Google Infrastructure"
 weight: 20
 ---
 

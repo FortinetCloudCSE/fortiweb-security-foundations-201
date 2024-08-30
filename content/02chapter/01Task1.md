@@ -1,6 +1,6 @@
 ---
 title: "Task 1 - Onboard Application"
-menuTitle: "Task 1 - Onboard Application"
+linkTitle: "Task 1 - Onboard Application"
 weight: 10
 ---
 

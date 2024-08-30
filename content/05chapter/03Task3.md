@@ -1,6 +1,6 @@
 ---
 title: "Task 3 - Schema Protection"
-menuTitle: "Task 3 - Schema Protection"
+linkTitle: "Task 3 - Schema Protection"
 weight: 30
 ---
 
@@ -34,7 +34,7 @@ https://juiceshopswagger.blob.core.windows.net/juiceshopswagger/swagger.yaml?sp=
 
 ![apischema4](api-schema4.png)
 
-{{% notice warning%%}}
+{{% notice warning %}}
 If for some reason you are logged out when you click save here, you will need to log back in using this link ```https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login``` and the credentials recieved in the original email.  You will need to repeat steps 1 through 5.
 {{%/notice%}}
 

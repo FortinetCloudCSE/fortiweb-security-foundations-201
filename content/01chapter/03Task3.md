@@ -1,6 +1,6 @@
 ---
 title: "Task 3 - Verify Lab Environment"
-menuTitle: "Task 3 - Verify Lab Environment"
+linkTitle: "Task 3 - Verify Lab Environment"
 weight: 30
 ---
 

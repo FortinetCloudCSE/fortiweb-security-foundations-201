@@ -1,6 +1,6 @@
 ---
 title: "Task 1 - Create Qwiklab Account"
-menuTitle: "Task 1 - Create Qwiklab Account"
+linkTitle: "Task 1 - Create Qwiklab Account"
 weight: 10
 ---
 

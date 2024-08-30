@@ -1,6 +1,6 @@
 ---
 title: "Task 2 - Use SQLMAP to exploit vulnerability"
-menuTitle: "Task 2 - Use SQLMAP to exploit vulnerability"
+linkTitle: "Task 2 - Use SQLMAP to exploit vulnerability"
 weight: 20
 ---
 
@@ -36,6 +36,6 @@ sqlmap -u "https://number.fwebtraincse.com/rest/products/search?q=" --dbms=SQLit
 
 ![Map-Allow](mapallow.png)
 
-{{% notice warning}}
+{{% notice warning %}}
 Please re-enable block mode for your application before moving forward.
 {{% /notice %}}

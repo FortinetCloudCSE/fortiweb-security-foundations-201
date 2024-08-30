@@ -1,7 +1,7 @@
 ---
 title: "Ch 1 - Getting Started"
 chapter: false
-menuTitle: "Ch 1: Getting Started"
+linkTitle: "Ch 1: Getting Started"
 weight: 10
 ---
 

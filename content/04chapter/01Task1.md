@@ -1,6 +1,6 @@
 ---
 title: "Task 1 - Find Vulnerability with Burpsuite"
-menuTitle: "Task 1 - Find Vulnerability with Burpsuite"
+linkTitle: "Task 1 - Find Vulnerability with Burpsuite"
 weight: 10
 ---
 

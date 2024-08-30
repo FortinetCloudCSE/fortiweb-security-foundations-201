@@ -1,6 +1,6 @@
 ---
 title: "Task 2 - Setup API Gateway"
-menuTitle: "Task 2 - Setup API Gateway"
+linkTitle: "Task 2 - Setup API Gateway"
 weight: 20
 ---
 

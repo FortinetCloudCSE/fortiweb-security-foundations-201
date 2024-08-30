@@ -1,6 +1,6 @@
 ---
 title: "Web Services 201 FortiWeb Cloud"
-menuTitle: "Home Page"
+linkTitle: "Home Page"
 weight: 1
 archetype: home
 ---

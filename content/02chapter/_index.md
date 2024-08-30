@@ -1,7 +1,7 @@
 ---
 title: "Ch 2 - Protect Application"
 chapter: false
-menuTitle: "Ch 2: Protect Application"
+linkTitle: "Ch 2: Protect Application"
 weight: 20
 ---
 

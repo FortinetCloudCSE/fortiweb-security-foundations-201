@@ -1,6 +1,6 @@
 ---
 title: "Task 2 - Start Lab Environment"
-menuTitle: "Task 2 - Start Lab Environment"
+linkTitle: "Task 2 - Start Lab Environment"
 weight: 20
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Ch 4 - Dig Deeper"
 chapter: false
-menuTitle: "Ch 4: Dig Deeper"
+linkTitle: "Ch 4: Dig Deeper"
 weight: 40
 ---
 

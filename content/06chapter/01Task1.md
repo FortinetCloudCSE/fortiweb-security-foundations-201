@@ -1,6 +1,6 @@
 ---
 title: "Task 1 - Delete Your App"
-menuTitle: "Task 1 - Delete Your App"
+linkTitle: "Task 1 - Delete Your App"
 weight: 10
 ---
 
