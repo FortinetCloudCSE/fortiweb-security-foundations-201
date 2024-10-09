@@ -4,6 +4,11 @@ linkTitle: "Task 1 - Call API with Postman"
 weight: 10
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Call Juice Shop API with Postman
+| **Task**                   | Configure Postman and GET information about Apple Juice from the product page
+| **Verify task completion** | The Postman Request should successfully return datat afor the Apple Juice product
 
 1.  Open postman by opening a new terminal (not bash) and type ```Postman``` at the prompt.  This should start the postman application.
 

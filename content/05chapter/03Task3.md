@@ -4,6 +4,12 @@ linkTitle: "Task 3 - Schema Protection"
 weight: 30
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Enable and Test API Schema Protection
+| **Task**                   | Enable OpenAPI validation in FortiWeb Cloud and then use postman to submit a modified request
+| **Verify task completion** | If successful, modified schema request should be blocked by FortiWeb
+
 #### Open API Validation/Schema protection
 
 In this task, lets run through the open API/Swagger based schema protection with Fortiweb cloud. Swagger, now known as the OpenAPI Specification (OAS), is a framework for API development that allows developers to design, build, document, and consume RESTful web services.

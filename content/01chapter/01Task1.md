@@ -4,6 +4,13 @@ linkTitle: "Task 1 - Create Qwiklab Account"
 weight: 10
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Login to Qwiklabs
+| **Task**                   | Create a Qwiklabs account and login.
+| **Verify task completion** | You should see the NSEXperts Class in the catalog
+
+
 1.  Go to **https://fortinet.qwiklabs.com** 
     - Click on the **Join** button at the top right of the screen
 

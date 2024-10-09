@@ -4,6 +4,11 @@ linkTitle: "Task 3 - Explore FortiWeb Options"
 weight: 30
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Explore FortiWeb Cloud Security Features
+| **Task**                   | Navigate through the FortiWeb Cloud GUI menu
+| **Verify task completion** | You should have a better idea of what security features are available with FortiWeb Cloud.
 
 FortiWeb Cloud Options
 

@@ -4,6 +4,11 @@ linkTitle: "Task 2 - Enable Block Mode"
 weight: 20
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Block SQLi attack
+| **Task**                   | Enable block mode in FortiWeb Cloud
+| **Verify task completion** | You should see a block page in your browser
 
 1. Enable Block Mode on FortiWeb Cloud
 

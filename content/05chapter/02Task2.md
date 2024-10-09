@@ -4,6 +4,12 @@ linkTitle: "Task 2 - Setup API Gateway"
 weight: 20
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Setup API Gateway on FortiWeb Cloud
+| **Task**                   | Enable and Configure API Gateway and then test function using Postman
+| **Verify task completion** | If successful, API requests will require submission of an API Key in order to access data
+
 #### Setup API Gateway
 
 1.  From the FortiWeb Cloud Console left pane, select **ADD MODULES**.  Scroll down and turn on **API Gateway** under API Protection.

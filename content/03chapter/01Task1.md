@@ -5,6 +5,12 @@ weight: 10
 ---
 
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Perform SQL injection attack
+| **Task**                   | Modify the hosts file on Kali and then perform a simple browser based attack
+| **Verify task completion** | You should see that the SQLi attack is accepted by Juice Shop.
+
 1. Log into Kali linux: https://{{Kali IP}}/vnc.html
 
 2. BSince we did not modify the DNS record we will enter a host entry on Kali.  Open the terminal emulator by clicking on the black box at the bottom of the Kali Hom screen. At the prompt, type:
