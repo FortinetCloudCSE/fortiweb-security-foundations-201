@@ -3,27 +3,27 @@
   "author":"Derrick Gooch",
   "workshopTitle":"Web Services 201 FortiWeb Cloud",
   "themeVariant":"Xperts2024",
-  "logoBannerText":"Web Services 201 FortiWeb Cloud",
-  "logoBannerSubText":"",
+  "logoBannerText":"Web Services 201",
+  "logoBannerSubText":"FortiWeb Cloud Security Foundational",
   "errorLevel":"warning",
   "googleServicesID":"G-5RZBH288ST",
   "shortcuts": [
   {
     "text": "Fortinet Qwiklabs Home",
     "URL": "https://fortinet.qwiklabs.com",
-    "icon": "fa-tools-cap",
+    "icon": "fa-tools",
     "weight":10
   },
   {
     "text": "Fortiweb Cloud admin guide",
     "URL": "https://docs.fortinet.com/document/fortiweb-cloud/23.4.0/user-guide/981027/overview",
-    "icon": "fa-tools-cap",
+    "icon": "fa-tools",
     "weight":20
   },
   {
     "text": "Fortiweb Live demo portal",
     "URL": "https://www.fortiweb-cloud.com/index/login",
-    "icon": "fa-tools-cap",
+    "icon": "fa-tools",
     "weight":30
   }
   ]

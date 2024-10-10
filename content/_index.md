@@ -1,9 +1,13 @@
 ---
-title: "Web Services 201 FortiWeb Cloud"
+title: "Fortinet XPerts 2024"
 linkTitle: "Home Page"
 weight: 1
 archetype: home
 ---
+
+{{< Xperts24Banner line1="Web Services &amp; App Security 201" line2="FortiWeb Cloud Security Foundational" line3="" >}}
+
+{{< launchdemoform >}}
 
 ### Welcome!
 
