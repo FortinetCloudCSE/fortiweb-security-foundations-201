@@ -63,8 +63,8 @@ enableEmoji = true
     # - set the following `style` to a predefined style name
     # - remove the `@import` of the self-defined chroma stylesheet from your CSS files
     #   (here eg.: theme-relearn-light.css / theme-relearn-dark.css)
-    noClasses = false
-    style = "native"
+    noClasses = true
+    style = "catppuccin-latte"
 
   [markup.goldmark.renderer]
     # activated for this showcase to use HTML and JavaScript; decide on your own needs;
@@ -84,9 +84,11 @@ enableEmoji = true
   #Optional, By Default, the logo banner will match the Text from themeVariant Above
   # If you would like to change the primary logo banner text, uncommenet logoBannerText Parameter and set to desired text.
   
-  logoBannerText = "Web Services 201 FortiWeb Cloud"
+  logoBannerText = "Web Services 201"
   
   # Optional: If you'd like additional logo sub text/descriptions, use logoBannerSubText Parameter.  leave empty string to omit: ""
+  
+  logoBannerSubText = "FortiWeb Cloud Security Foundational"
   
 
   # Shows a checkmark for visited pages on the menu
@@ -186,16 +188,16 @@ enableEmoji = true
 
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools-cap'></i> Fortinet Qwiklabs Home"
+name = "<i class='fas fa-tools'></i> Fortinet Qwiklabs Home"
 url = "https://fortinet.qwiklabs.com"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools-cap'></i> Fortiweb Cloud admin guide"
+name = "<i class='fas fa-tools'></i> Fortiweb Cloud admin guide"
 url = "https://docs.fortinet.com/document/fortiweb-cloud/23.4.0/user-guide/981027/overview"
 weight = 20
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools-cap'></i> Fortiweb Live demo portal"
+name = "<i class='fas fa-tools'></i> Fortiweb Live demo portal"
 url = "https://www.fortiweb-cloud.com/index/login"
 weight = 30
