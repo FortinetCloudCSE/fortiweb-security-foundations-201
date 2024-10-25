@@ -17,13 +17,13 @@ Below is a diagram of the Lab environment.
 
 ### Check Availability of Juice Shop
 
-Use the public IP of Juice Shop to log in: http://{{Juice Shop IP}}:3000
+Use the public IP of Juice Shop (provided in the QwikLabs console) to log in: ```http://{{Juice Shop IP}}:3000```
 
 ![Juiceshop Home Page](juice-home.png)
 
 ### Login to Kali
 
-1.  Use the Kali public IP to log in: https://{{Kali IP}}/vnc.html
+1.  Use the Kali public IP (provided in the QwikLabs console) to log in: ```https://{{Kali IP}}/vnc.html```
 
 Accept certificate errors and proceed.  When prompted, click **Connect**.  This will take you to the home screen of Kali
 
@@ -37,9 +37,7 @@ Accept certificate errors and proceed.  When prompted, click **Connect**.  This 
 
 ![paste-kali](paste-kali.png)
 
-{{% notice info %}}We are going to make a small change to Kali in order to prepare for later steps. Please open a terminal by clicking on the Black Icon at the bottom of the screen.{{% /notice %}}
-
- 4.  Enter the following:
+ 4.  From the Kali Linux session, open a terminal window and Enter the following:
 
 ```sh
 bash

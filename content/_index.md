@@ -20,9 +20,9 @@ FortiWeb Cloud WAF as a Service (WAFaaS) reduces administrative overhead by offe
 
 
 ### Learning Objectives
-- Learn to Onboard Web Applications 
-- more stuff
-- other stuff
+- Learn to Onboard Web Applications into FortiWeb Cloud
+- Explore SQL injection attacks and then block them with FortiWeb Cloud 
+- Secure API's with FortiWeb Cloud
 
 ## Lab Environment
 
