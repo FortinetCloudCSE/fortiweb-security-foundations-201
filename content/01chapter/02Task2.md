@@ -4,6 +4,12 @@ linkTitle: "Task 2 - Start Lab Environment"
 weight: 20
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Start Student lab environment
+| **Task**                   | Click on Start Lab button and wait for lab to provision
+| **Verify task completion** | When lab is running you should be able to use the provided credentials to log into the GCP Console
+
 ### Before you click the Start Lab button
 
 

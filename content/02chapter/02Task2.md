@@ -4,6 +4,12 @@ linkTitle: "Task 2- Secure Google Infrastructure"
 weight: 20
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Lock down Application Access in GCP
+| **Task**                   | Modify GCP Firwall to only allow traffic from FortiWeb Cloud
+| **Verify task completion** | You should no longer be able to reach Juice Shop directly from your desktop.
+
 This lab was originally bootstrapped with an ingress firewall rule which allows all ports and protocols from all sources (0.0.0.0/0).  This is not a best practice.  It is recommended, to only allow necessary ports and/or sources.  Now that we have onboarded our application, we want to ensure that the only device that can communicate with our application is FortiWeb Cloud.
 
 {{% notice info %}}

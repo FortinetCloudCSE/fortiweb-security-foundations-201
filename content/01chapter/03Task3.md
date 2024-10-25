@@ -4,6 +4,13 @@ linkTitle: "Task 3 - Verify Lab Environment"
 weight: 30
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Verify Lab availablity
+| **Task**                   | Navigate to Kali Linux and Juice Shop servers
+| **Verify task completion** | You should be able to access both Kali and Juice Shop.  All commands in step 4 should complete successfully.
+
+
 Below is a diagram of the Lab environment.
 
 ![lab1](diagram.png)

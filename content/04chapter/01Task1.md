@@ -4,6 +4,12 @@ linkTitle: "Task 1 - Find Vulnerability with Burpsuite"
 weight: 10
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Find vulnerability with Burpsuite
+| **Task**                   | Activate Burpsuite and use it to scan Juice Shop
+| **Verify task completion** | You will see a Server Response, indicating an SQLITE error.
+
 
 Burp Suite gives us a quick and easy way to query targeted sites.
 

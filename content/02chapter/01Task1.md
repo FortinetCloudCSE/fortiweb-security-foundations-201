@@ -4,6 +4,12 @@ linkTitle: "Task 1 - Onboard Application"
 weight: 10
 ---
 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Add Juice Shop Application to FortiWeb Cloud
+| **Task**                   | Onboard Application in FortiWeb GUI
+| **Verify task completion** | Your Application will show up in the Application list.
+
 Add Application
 
 1. At the top of the screen, clci, on **+ ADD APPLICATION** 
