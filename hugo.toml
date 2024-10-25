@@ -81,7 +81,7 @@ enableEmoji = true
   # For added variants, please contact fortinetcloudcse@fortinet.com
   themeVariant = "Xperts2024"
 
-  #Optional, By Default, the logo banner will match the Text from themeVariant Above
+  # Optional, By Default, the logo banner will match the Text from themeVariant Above
   # If you would like to change the primary logo banner text, uncommenet logoBannerText Parameter and set to desired text.
   
   logoBannerText = "Web Services 201"
@@ -90,6 +90,9 @@ enableEmoji = true
   
   logoBannerSubText = "FortiWeb Cloud Security Foundational"
   
+
+  # Optional parameter to set Marketing/Event code per repo from repoConfig.json
+  marketingCode = "CloudCSE-Xperts2024"
 
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = true
@@ -191,6 +194,21 @@ enableEmoji = true
 name = "<i class='fas fa-tools'></i> Fortinet Qwiklabs Home"
 url = "https://fortinet.qwiklabs.com"
 weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tools'></i> FortiWeb Cloud Login"
+url = "https://www.fortiweb-cloud.com"
+weight = 11
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tools'></i> FortiCloud SAML Login"
+url = "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login"
+weight = 12
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tools'></i> FortiCloud SAML Logout"
+url = "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/saml"
+weight = 13
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-tools'></i> Fortiweb Cloud admin guide"

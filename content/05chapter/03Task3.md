@@ -12,7 +12,7 @@ weight: 30
 
 #### Open API Validation/Schema protection
 
-In this task, lets run through the open API/Swagger based schema protection with Fortiweb cloud. Swagger, now known as the OpenAPI Specification (OAS), is a framework for API development that allows developers to design, build, document, and consume RESTful web services.
+In this task, we will explore  the open API/Swagger based schema protection with FortiWeb Cloud. Swagger, now known as the OpenAPI Specification (OAS), is a framework for API development that allows developers to design, build, document, and consume RESTful web services.
 
 example of Swagger: https://petstore.swagger.io/
 

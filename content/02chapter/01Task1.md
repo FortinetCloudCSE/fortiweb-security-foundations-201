@@ -6,23 +6,23 @@ weight: 10
 
 |                            |    |  
 |----------------------------| ----
-| **Goal**                   | Add Juice Shop Application to FortiWeb Cloud
+| **Goal**                   | Start protecting Juice Shop Application with FortiWeb Cloud
 | **Task**                   | Onboard Application in FortiWeb GUI
 | **Verify task completion** | Your Application will show up in the Application list.
 
 Add Application
 
-1. At the top of the screen, clci, on **+ ADD APPLICATION** 
+1. Open the **Applications** view from top left menu bar, and then click, on **+ ADD APPLICATION** 
 
 ![Add-App](add-app.png)
 
 2. For Step 1 "WEBSITE" 
 
-- for **Web Application Name** enter the number of the username found in the email you recieved from **fortinetsecdevops@gmail.com** or at the top right corner of the FortiWeb Cloud Screen.   
+- for **Web Application Name** enter the number of the username found in the email you received from **fortinetsecdevops@gmail.com** or at the top right corner of the FortiWeb Cloud Screen.   
 
 {{% notice info %}}For example, if the Username is CSEAccount669@fortinetcloud.onmicrosoft.com the number would be 669{{% /notice %}}
 
-- For **Domain Name** use number.fwebtraincse.com and then select next
+- For **Domain Name** use ```<studentId>.fwebtraincse.com and then select next
 
 ![App-1](app-1.png)
 
@@ -65,4 +65,4 @@ Take Note of the IPv4 addresses and CNAME for use in a later step.  **Before you
 
 ![App-on](app-on.png)
 
-{{% notice warning %}}This is a **Shared Environment** !!!  Please ensure that you are only making changes to **Your Application**.  After Applications are onbaorded into FortiWeb Cloud, Administrators have full RBAC capabilities, but we will not be activating that during this lab.{{% /notice %}}
+{{% notice warning %}}This is a **Shared Environment** !!!  Please ensure that you are only making changes to **Your Application**.  After Applications are onboarded into FortiWeb Cloud, Administrators have full RBAC capabilities, but we will not be activating that during this lab.{{% /notice %}}

@@ -22,11 +22,8 @@ It can take two to three minutes for changes to take effect in FortiWeb Cloud
 
 2. Repeat the same step to perform SQLi attack in the browser.
 
-```sh
-
-For example: https://669.fwebtraincse.com/?name=' OR 'x'='x
-
-```
+   - For example (be sure to use your studentId)
+     - ```https://669.fwebtraincse.com/?name=' OR 'x'='x```
 
 {{% notice info %}}
 You will see that FortiWeb now blocks the SQLi attack.

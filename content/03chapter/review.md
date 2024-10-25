@@ -1,6 +1,6 @@
 ---
-title: "Application Protection Review"
-linktitle: "Application Protection Review"
+title: "SQLi Review"
+linktitle: "SQLi Review"
 weight: 50
 ---
 

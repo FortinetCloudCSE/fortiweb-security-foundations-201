@@ -35,6 +35,9 @@ For the below steps, ensure that you are in the Protected Project in the GCP Con
 4. Click **EDIT** at the top of the page.
 
 5. Scroll down to **Source IPv4 ranges**.  Delete **0.0.0.0/0** and enter the IP's copied from FortiWeb Cloud in step 1.  Then Click Save
+{{< notice warning >}}
+You will likely have to modify the first and last entries due to extra characters in the copied data (ip4:[])
+{{< /notice >}}
 
 ![ED-FW](ed-fw.png)
 

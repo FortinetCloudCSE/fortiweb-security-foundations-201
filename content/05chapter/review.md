@@ -1,6 +1,6 @@
 ---
-title: "Application Protection Review"
-linktitle: "Application Protection Review"
+title: "API Protection Review"
+linktitle: "API Protection Review"
 weight: 50
 ---
 

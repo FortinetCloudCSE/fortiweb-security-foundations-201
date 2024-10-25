@@ -27,7 +27,7 @@ More information can be found in the docs at:
 https://docs.fortinet.com/document/fortiweb-cloud/23.3.0/user-guide/898181/vulnerability-scan
 {{% /notice %}}
 
-4. Next Click on **+ Add Modules**.  This is where we can activate additional security featuresfeatures.  These features are all covered under the FortiWeb Cloud WAF-as-a-Service License, which is billed based on the number of websites protected and the average Mbps throughput in aggregate for all protected sites.
+4. Next Click on **+ Add Modules**.  This is where we can activate additional security features.  These features are all covered under the FortiWeb Cloud WAF-as-a-Service License, which is billed based on the number of websites protected and the average Mbps throughput in aggregate for all protected sites.
 
 {{% notice info %}}
 FortiWeb Cloud Datasheet:

@@ -12,13 +12,13 @@ weight: 20
 
 #### Setup API Gateway
 
-1.  From the FortiWeb Cloud Console left pane, select **ADD MODULES**.  Scroll down and turn on **API Gateway** under API Protection.
+1.  From the FortiWeb Cloud Console select your application and in the left pane, select **ADD MODULES**.  Scroll down and turn on **API Gateway** under API Protection.
 
 ![api on](api-on.png)
 
 2.  Now API PROTECTION should show up on the left side of the screen. Under API PROTECTION, select **API Gateway**
 
-3.  Add a **Name** and **Email address** Then Click **OK**
+3. Click to **Create an API User**. Add a **Name** and **Email address** Then Click **OK**
 
 ![api user](api-user.png)
 

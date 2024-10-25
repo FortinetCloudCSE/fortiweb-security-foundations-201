@@ -14,17 +14,17 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
 1. Lets generate a CSRF attack with Burpsuite. 
 
-2. Repeate Step 1-5 from Task 1 to open Burpsuite. if Burpsuite is already running in the background just click to go back to at by clicking on the top left corner of Kali linux.
+2. Repeat Step 1-5 from Task 1 to open Burpsuite. if Burpsuite is already running in the background just click to go back to at by clicking on the top left corner of Kali linux.
 
 3. On the proxy tab, Click on **Open Browser**
 
 ![csrf1](csrf1.png)
 
-4. Type the FQDN allocated: **https://yournumber.fwebtraincse.com** into the browser. for example: **https://670.fwetraincse.com**
+4. Type the FQDN allocated: ```https://<studentId>.fwebtraincse.com``` into the browser.
 
 ![csrf2](csrf2.png)
 
-5. Cnce the Juiceshop app loads, click on Account > Login.
+5. Once the Juiceshop app loads, click on Account > Login.
 
 ![csrf3](csrf3.png)
 
@@ -69,7 +69,7 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
 ![csrf11](csrf11.png)
 
-12. Click on the repeater tab to see the change password request. The Raw request shows the current password and new password we updated. 
+12. Click on the **Repeater** tab to see the change password request. The Raw request shows the current password and new password we updated. 
 
 ![csrf12](csrf12.png)
 
@@ -97,9 +97,9 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
 ![csrf16](csrf16.png)
 
-it Works and its a successful CSRF attack!.
+As we can see with successfully login using the new credentials, our CSRF attack was successful!
 
-19. Now login to Fortiweb cloud. Make sure to click on your allocated application.
+19. Now login to FortiWeb Cloud. Make sure to click on your allocated application.
 
 20. Scroll down to **Add modules** at the bottom. Add CSRF protection under Client Security Module and click **OK**
 
@@ -107,7 +107,9 @@ it Works and its a successful CSRF attack!.
 
 ![csrf18](csrf18.png)
 
-21. In the Application View > Client Security > Click on CSRF Protection. In the Page list and URL list we will add the URL **/rest/user/change-password** , update the Action to **Alert and Deny** and click Save. the Module takes ~3 minutes to be in effect. 
+21. In the Application View > Client Security > Click on CSRF Protection.
+    - On both **Page List Table** AND **URL List Table**, Add the URL ```/rest/user/change-password```
+    - Update the Action to **Alert and Deny** and click Save. the Module takes ~3 minutes to be in effect. 
 
 ![csrf19](csrf19.png)
 
@@ -118,6 +120,6 @@ it Works and its a successful CSRF attack!.
 
 ![csrf21](csrf21.png)
 
-23. On FortiWeb cloud, Threat Analytics > Attack Logs > There is a CSRF attack log.
+23. On FortiWeb cloud, **Threat Analytics > Attack Logs >** There is a CSRF attack log.
 
 ![csrf22](csrf22.png)

@@ -21,7 +21,7 @@ weight: 10
 2.  Now, let's make an api call to search for Apple Juice.  Use the below url, but replace the url with your student url.
 
 ```sh
-https://<number.fwebtraincse.com>/rest/products/search?q=Apple
+https://<studentID>.fwebtraincse.com/rest/products/search?q=Apple
 ```
 
 3.  This first call will fail, due to a certificate error.  In the response section, you will need to scroll down and select "Disable SSL Verification".
