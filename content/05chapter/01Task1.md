@@ -12,11 +12,13 @@ weight: 10
 
 1.  Open postman by opening a new terminal (not bash) and type ```Postman``` at the prompt.  This should start the postman application.
 
-![postman](postman.png)
-
-- When postman comes up, select "Or continue with lightweight API client
+- When postman comes up, select **Continue without an account**
 
 ![postmanlite](p-light.png)
+
+- Now select **Open Lightweight API Client**
+
+![postmanlite2](p-light2.png)
 
 2.  Now, let's make an api call to search for Apple Juice.  Use the below url, but replace the url with your student url.
 

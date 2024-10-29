@@ -39,6 +39,10 @@ Accept certificate errors and proceed.  When prompted, click **Connect**.  This 
 
  4.  From the Kali Linux session, open a terminal window and Enter the following:
 
+ {{% notice warning %}} 
+Do not paste these commands in all at once.  We have seen some situations, in which some of the commands fail, which causes issues later in the lab. 
+{{% /notice %}}
+
 ```sh
 bash
 echo nameserver 8.8.8.8 >> /etc/resolv.conf

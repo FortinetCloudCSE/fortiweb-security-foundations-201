@@ -1,0 +1,14 @@
+#cloud-config
+package_upgrade: false
+packages:
+  - docker.io
+  - docker-compose
+
+runcmd:
+  - touch /home/labuser/.hushlogin
+  - git clone https://github.com/fortidg/juiceshop.git
+  - cd juiceshop
+  - chmod +x run-container.sh
+  - sudo ./run-container.sh
+
+
