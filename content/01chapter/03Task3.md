@@ -1,52 +1,66 @@
 ---
-title: "Task 3 - Verify Lab Environment"
-linkTitle: "Task 3 - Verify Lab Environment"
+title: "Task 3 - Start Kali RDP"
+linkTitle: "Task 3 - Start Kali RDP"
 weight: 30
 ---
 
 |                            |    |  
 |----------------------------| ----
-| **Goal**                   | Verify Lab availablity
+| **Goal**                   | Start Kali RDP
 | **Task**                   | Navigate to Kali Linux and Juice Shop servers
 | **Verify task completion** | You should be able to access both Kali and Juice Shop.  All commands in step 4 should complete successfully.
 
 
-Below is a diagram of the Lab environment.
+### ***Logging into your student environment***
 
-![lab1](diagram.png)
+## Prereqs
+  - Internet Access
+  - Web Browser
+    - Any modern browser will work.  Some people have had issues with Safari.  If that happens, please try Firefox or Chrome.  Your student environment includes a client and server with all required software.
 
-### Check Availability of Juice Shop
 
-Use the public IP of Juice Shop (provided in the QwikLabs console) to log in: ```http://{{Juice Shop IP}}:3000```
+### Start Kali RDP
 
-![Juiceshop Home Page](juice-home.png)
+For this lab, we will only need to interact with the Kali linux device.  We will use guacamole to create an RDP session in your browser.
 
-### Login to Kali
+- In your browser window, type in the url below, substituting your Kali server IP.
 
-1.  Use the Kali public IP (provided in the QwikLabs console) to log in: ```https://{{Kali IP}}/vnc.html```
+  {{% notice warning %}}
+  Kali Linux takes about 20 minutes to fully deploy, so you may get a connection refused error.  Please be patient and the login prompt will eventually appear.  Even after Kali is reachable via HTTPS, some of the initial packages may still be downloading.
+  {{% /notice %}}
 
-Accept certificate errors and proceed.  When prompted, click **Connect**.  This will take you to the home screen of Kali
+  ```
+  https://<kali-IP>:8443
+  ```
+- Accept all warnings and proceed to the site.
+- You will be prompted to login to Apache Guacamole.  
+  - Enter ```guacadmin``` for Username and enter ```S3cur3P4ssw0rd123!```
+  - Click **Login**
 
-![Kali Home Page](kali-home.png)
+![Guac Login](guac_log.png)
 
-2.  In order to copy/paste into Kali, we will need to click on the tab at the left hand side of the screen.
+- The Guacamole home page will have a list of connections.  Click on the connection labled **Lab Desktop**
 
-![cp-tab](cp-tab-kali.png)
+![Kali con](kali_con.png)
 
-3.  This will open the tab revealing a couple of options.  Select the clipboard icon and paste your text into the box.  Once the text is in the box, you can right click on the desktop and select Paste Selection to paste in the text.  When done, you can click on the arrow to hide the clipboard.
+- Note the icons at the top left of the home screen.  We will be using these during the lab.
 
-![paste-kali](paste-kali.png)
+![Kali Home](kali_home.png)
 
- 4.  From the Kali Linux session, open a terminal window and Enter the following:
+### Paste text into Kali Desktop
 
- {{% notice warning %}} 
-Do not paste these commands in all at once.  We have seen some situations, in which some of the commands fail, which causes issues later in the lab. 
-{{% /notice %}}
+There are portions of this lab that will require large amounts of text to be entered on the Kali desktop. To accomplish this:
+- You will need to open (and close) the Guacamole menu by typing **ctrl+alt+shift** for Windows or **ctrl+command+shift** for MAC. 
+- Paste your text into the window, and select **Text input** as the Input method.
 
-```sh
-bash
-echo nameserver 8.8.8.8 >> /etc/resolv.conf
-apt-get update
-apt-get install nano
-wget https://dl.pstmn.io/download/latest/linux_64 -O /tmp/linux_64 && tar xvzf /tmp/linux_64 -C /tmp/ && sudo mv /tmp/Postman /opt/ && sudo ln -s /opt/Postman/app/Postman /usr/local/bin/Postman
-```
+![CP Paste](cp_paste.png)
+
+- Right click on the desktop where you want to past and click "paste" or "paste from clipboard" depending on which option is available.
+
+### Open Wireshark
+
+- Click on the **Applications** icon at the top right of the Kali home screen.  Search for "wireshark" and open the application.
+![Find shark](find_shark.png)
+  - You will be asked to Authenticate.  
+  ![Shark Auth](shark_auth.png)
+  - You will input the labuser password ```S3cur3P4ssw0rd123!``` and click **Authenticate**
