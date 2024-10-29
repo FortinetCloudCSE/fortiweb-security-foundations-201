@@ -5,11 +5,34 @@ linkTitle: "Ch 1: Getting Started"
 weight: 10
 ---
 
+## Provisioning the Azure environment (40min)
 
-# FortiWeb
-FortiWeb is Fortinet's Web Application and API security platform, enabling enterprise customers to protect web applications no matter where they are deployed.  FortiWeb defends web applications and APIs against OWASP Top-10 threats, DDOS attacks, and malicious bot attacks. Advanced ML-powered features improve security and reduce administrative overhead. Capabilities include anomaly detection, API discovery/protection, bot mitigation and advanced threat analytics to identify the most critical threats across all protected applications.
+Provision your Azure Environment, enter your Email address and click _Provision_
+{{< launchdemoform labdefinition="web-101" >}}
 
-FortiWeb Cloud WAF as a Service (WAFaaS) reduces administrative overhead by offering the full suite of FortiWeb security features without the need to manage VMs and networking.  Customers simply change their DNS records so that all appication traffic is proxied through FortiWeb Cloud.
+{{< notice warning >}}
 
-## Overview
-In this lab, you will have an opportunity to configure FortiWeb Cloud to protect a Juice Shop server, emulating a very vulnerable e-commerce website.  Students will onboard their application and then run a simple SQL injection attack and an SQL map attempt.  As the format for these training session are purposefully short, in order to maintain student interest and fit into the work day.  The attacks used here are very high level. We will not be covering the ML feature set in this lab, as the training period requirements would be time prohibitive.
+Provisioning can take several minutes.
+
+\*\*\* __PLEASE DO NOT SUBMIT MULTIPLE TIMES__ \*\*\*  
+
+{{< /notice >}}
+
+When provisioning is complete, one of the following will happen.
+
+* You will receive an email with Azure environment credentials. Use those credentials for this environment, even if you have your own.
+* You will receive and email indicating that there are no environments available to utilize. In this case please try again at a later date.
+* You will receive an email indicating that the supplied email address is from an unsupported domain.
+* No email received due to an unexpected error. You can try again or notify the Azure CSE team.
+
+Tasks
+
+* Setup Azure Cloud Shell
+* Run Terraform
+* Verify Terraform
+
+## Student Setup Diagram
+
+Each Student will have their own environment for the lab. The following diagram provides an overview of the Student environment.
+
+   ![setup](env_diagram.png)
