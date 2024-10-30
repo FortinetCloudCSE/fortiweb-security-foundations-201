@@ -7,14 +7,12 @@ weight: 20
 |                            |    |  
 |----------------------------| ----
 | **Goal**                   | Learn how to lock down Access in Azure
-| **Task**                   | Modify  Firwall  in terraform to only allow traffic from FortiWeb Cloud
+| **Task**                   | Modify Azure NSG in terraform to only allow traffic from FortiWeb Cloud
 | **Verify task completion** | You should no longer be able to reach Juice Shop directly from your desktop.
 
 This lab was originally bootstrapped with an ingress firewall rule which allows all ports and protocols from all sources (0.0.0.0/0).  This is not a best practice.  It is recommended, to only allow necessary ports and/or sources.  Now that we have onboarded our application, we want to ensure that the only device that can communicate with our application is FortiWeb Cloud.
 
-**Protected Project ID** should be visible in the **left pane** of of the Lab Start Screen.
-
-### Task 1: Modify GCP Network Firewall Rules
+### Task 1: Modify Azure Network Firewall Rules
 
 1. First, let's grab the IPs which FortiWeb Cloud will use to communicate with your application. From the FortiWeb Cloud Applications page, select **Allow IP List** from the top of the page.  This will open a dialog showing Management and Scrubbing Center Addresses.  Clcik on **Copy to Clipboard**.  Paste these IPs into a text document and then click **Return**
 
