@@ -28,11 +28,12 @@ If Postman doesn't open, it's likely due to the terminal still using Bash.  To e
     https://<studentID>.fwebtraincse.com/rest/products/search?q=Apple
     ```
 
-3.  This first call will fail, due to a certificate error.  In the response section, you will need to scroll down and select "Disable SSL Verification".
+{{% notice warning %}}
+If the first call fails, due to a certificate error.  In the response section, you will need to scroll down and select "Disable SSL Verification".
+![postman ssl disable](p-dis.png)
+{{%/notice%}}
 
-    ![postman ssl disable](p-dis.png)
+3. Now the Call should go through an you should see a status 200 and returned data.
 
-4. Now the Call should go through, and you should see a status 200 and returned data.
 
     ![postman success](p-success.png)
-
