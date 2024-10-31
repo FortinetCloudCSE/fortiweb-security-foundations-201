@@ -6,25 +6,25 @@ weight: 50
 
 ### Review 
 
-In this module, we onboarded our application into FortiWeb Cloud using the GUI.  We also used the built in firewall rules in our GCP Virtual Private Cloud Network to lock down access to the origin server such that only traffic from FortiWeb Cloud will be accepted.
+In this module, we performed a very simple SQL injection attack an highlighted how FortiWeb Cloud protects applications from them.
 
 
 ### SQLi Review Quiz
 
-1. What is the final step for onboarding a Web Application in FortiWeb Cloud?
+1. FortiWeb Cloud is in Block Mode by default. (True or False)
 
     {{% expand title="Click here for answer" %}}
-Change the DNS Record.  While we did not perform this step for the purposes of this lab.  In a production environment, the final step to onboarding your application is to change either the CNAME or A record for your application such that all traffic is directed towards FortiWeb Cloud.
+**False** - You can enable block mode during application onboarding, but it is not active by default.
     {{% /expand %}}
 
-2. You must use TLS on port 443 to communicate from FortiWeb Cloud to your origin server. (True or False)
+2. What do you have to configure on FortiWeb Cloud in order to enable protection from basic Known Attacks
 
     {{% expand title="Click here for answer" %}}
-False: While it is highly recommended to use TLS for the connection from FortiWeb Cloud to the origin server, as we saw in the lab, the server protocol and port are configurable.
+When Block mode is enabled, the minimum security configuration, including Known Attacks is already in place.
     {{% /expand %}}
 
-3. Web attacks are difficult to perpetrate and you need to be an inveterate hacker to attempt it (True or False)
+3. Vulnerability scan is available by default. (True or False)
 
     {{% expand title="Click here for answer" %}}
-**FALSE** - The attack in this lab is very simple, but very effective.  This should highlight the need to protect web applications with a purpose built Web Application Firewall (WAF)
+**FALSE** - Vulnerability scan is an add-on paid service, which must be purchased separately.
     {{% /expand %}}

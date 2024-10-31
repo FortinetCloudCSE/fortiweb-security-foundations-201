@@ -22,13 +22,7 @@ Change the DNS Record.  While we did not perform this step for the purposes of t
 **False**: While it is highly recommended to use TLS for the connection from FortiWeb Cloud to the origin server, as we saw in the lab, the server protocol and port are configurable.
     {{% /expand %}}
 
-3. Web attacks are difficult to perpetrate, and you need to be an inveterate hacker to attempt it (True or False)
-
-    {{% expand title="Click here for answer" %}}
-**FALSE** - The attack in this lab is very simple, but very effective.  This should highlight the need to protect web applications with a purpose built Web Application Firewall (WAF)
-    {{% /expand %}}
-
-4. Why are we no longer able to browse directly to Juice Shop App
+3. Why are we no longer able to browse directly to Juice Shop App
 
     {{% expand title="Click here for answer" %}}
 We modified the Azure Network Security group applied to the Juice Shop VM, only allowing FortiWeb Cloud source IP addresses

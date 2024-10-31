@@ -59,7 +59,7 @@ Burp Suite gives us a quick and easy way to query targeted sites.
 
     ![Burp_Suite8](bs-repeater1.png)
 
-10. Now we are going to modify our query a bit.  
+10. Now we are going to modify our query a bit.  We will intentionally send an incomplete input in order to generate an error. 
     - Click on the First line in the Raw request and append ```'--``` to the end of the GET request.  
     - The GET should now look like ```/rest/products/search?q='--```-.  Click **Send**.  
     - We will now see an error in the Response section.  
