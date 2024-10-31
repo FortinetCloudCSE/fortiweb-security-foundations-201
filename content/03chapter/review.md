@@ -17,7 +17,7 @@ In this module, we performed a very simple SQL injection attack an highlighted h
 **False** - You can enable block mode during application onboarding, but it is not active by default.
     {{% /expand %}}
 
-2. What do you have to configure on FortiWeb Cloud in order to enable protection from basic Known Attacks
+2. What do you have to configure on FortiWeb Cloud in order to enable protection from basic Known Attacks?
 
     {{% expand title="Click here for answer" %}}
 When Block mode is enabled, the minimum security configuration, including Known Attacks is already in place.
