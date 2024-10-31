@@ -189,6 +189,10 @@ enableEmoji = true
   # Author of the site, will be used in meta information
     name = "Derrick Gooch"
 
+[[menu.shortcuts]]
+name = "<i class='fas fa-graduation-cap'></i> Slides and Course Material"
+url = "https://github.com/FortinetCloudCSE/fortiweb-security-foundations-201/tree/main/content/slides"
+weight = 1
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-right-to-bracket'></i> FortiWeb Cloud Login"
