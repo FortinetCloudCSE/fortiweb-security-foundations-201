@@ -51,7 +51,7 @@ weight: 10
    - Select **Save**
     ![App-4](app-4.png) 
 
-5. ** Tab 5: "CHANGE DNS" 
+5. **Tab 5: "CHANGE DNS"**
 
    We are presented with very important information regarding DNS settings which need to be changed in order to direct traffic to FortiWeb Cloud.  In this lab, we will not be doing this, as sometimes it can take a while for the DNS settings to propagate.  
 

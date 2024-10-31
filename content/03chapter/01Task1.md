@@ -12,7 +12,7 @@ weight: 10
 | **Verify task completion** | You should see that the SQLi attack is accepted by Juice Shop.
 
 
-1. Log into Kali linux: ``https://{{Kali IP}}:8443```
+1. Log into Kali linux: ```https://{{Kali IP}}:8443```
 
 2. To avoid any DNS problems during this workshop, we'll create a static hosts file entry on the Kali Box to resolve our FortiWeb Cloud protected application
    - Open the terminal emulator by clicking on the black box at the bottom of the Kali Home screen. At the prompt, type:
