@@ -1,5 +1,5 @@
 ---
-title: "Ch 2 - Protect Application"
+title: "Ch 2: Protect Application"
 chapter: false
 linkTitle: "Ch 2: Protect Application"
 weight: 20
@@ -28,10 +28,6 @@ For the next step, choose **Yes**.  You do want to stay logged in.
 {{% notice info %}} Sometimes if you wait too long to input your password, you will get SAML login portal error "Error: SAML response with InResponseTo is too late for previous request"  If this happens just click the small blue "Login" link. {{% /notice %}}
 
 4. This will take you to the FortiCloud Premium Dashboard. At the top of the screen select **Services** > **FortiWeb Cloud**
-
-{{% notice warning %}}When you log in, you will see that you are unauthorized to view the FortiCloud Premium Dashboard.  This is expected, as this user has not been given this permission.{{% /notice %}}
-
-![unauth](unauthorized.png)
 
 ![Choose fweb](choose-fweb.png)
 

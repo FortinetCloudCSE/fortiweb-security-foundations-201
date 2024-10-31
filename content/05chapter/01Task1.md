@@ -1,6 +1,6 @@
 ---
-title: "Task 1 - Call API with Postman"
-linkTitle: "Task 1 - Call API with Postman"
+title: "Task 1: Call API with Postman"
+linkTitle: "Task 1: Call API with Postman"
 weight: 10
 ---
 
@@ -8,29 +8,31 @@ weight: 10
 |----------------------------| ----
 | **Goal**                   | Call Juice Shop API with Postman
 | **Task**                   | Configure Postman and GET information about Apple Juice from the product page
-| **Verify task completion** | The Postman Request should successfully return datat afor the Apple Juice product
+| **Verify task completion** | The Postman Request should successfully return data for the Apple Juice product
 
 1.  Open postman by opening a new terminal (not bash) and type ```Postman``` at the prompt.  This should start the postman application.
+{{% notice warning %}}
 
-- When postman comes up, select **Continue without an account**
+If Postman doesn't open, it's likely due to the terminal still using Bash.  To exit bash, simply type ```sh```
 
-![postmanlite](p-light.png)
+{{% /notice %}}
 
-- Now select **Open Lightweight API Client**
+   - When postman opens, select **Continue without an account**
+    ![postmanlite](p-light.png)
+   - Now select **Open Lightweight API Client**
+    ![postmanlite2](p-light2.png)
 
-![postmanlite2](p-light2.png)
+2.  Now, let's make an HTTP GET API call to search for Apple Juice.  Use the following URL, ensuring you replace your studentID.
 
-2.  Now, let's make an api call to search for Apple Juice.  Use the below url, but replace the url with your student url.
-
-```sh
-https://<studentID>.fwebtraincse.com/rest/products/search?q=Apple
-```
+    ```sh
+    https://<studentID>.fwebtraincse.com/rest/products/search?q=Apple
+    ```
 
 3.  This first call will fail, due to a certificate error.  In the response section, you will need to scroll down and select "Disable SSL Verification".
 
-![postman ssl disable](p-dis.png)
+    ![postman ssl disable](p-dis.png)
 
-4. Now the Call should go through an you should see a status 200 and returned data.
+4. Now the Call should go through, and you should see a status 200 and returned data.
 
-![postman success](p-success.png)
+    ![postman success](p-success.png)
 

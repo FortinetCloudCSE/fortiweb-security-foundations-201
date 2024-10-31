@@ -1,7 +1,7 @@
 ---
-title: "Ch 4 - Dig Deeper"
+title: "Ch 4: Web Attacks!"
 chapter: false
-linkTitle: "Ch 4: Dig Deeper"
+linkTitle: "Ch 4: Web Attacks!"
 weight: 40
 ---
 

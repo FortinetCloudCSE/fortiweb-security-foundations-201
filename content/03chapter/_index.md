@@ -1,5 +1,5 @@
 ---
-title: "Ch 3 - Simple Attack"
+title: "Ch 3: Simple Attack"
 chapter: false
 linkTitle: "Ch 3: SQL Injection"
 weight: 30

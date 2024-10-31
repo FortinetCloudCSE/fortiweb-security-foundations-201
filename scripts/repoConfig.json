@@ -10,39 +10,33 @@
   "marketingCode":"CloudCSE-Xperts2024",
   "shortcuts": [
   {
-    "text": "Fortinet Qwiklabs Home",
-    "URL": "https://fortinet.qwiklabs.com",
-    "icon": "fa-tools",
-    "weight":10
-  },
-  {
     "text": "FortiWeb Cloud Login",
     "URL": "https://www.fortiweb-cloud.com",
-    "icon": "fa-tools",
+    "icon": "fa-right-to-bracket",
     "weight":11
   },
   {
     "text": "FortiCloud SAML Login",
     "URL": "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login",
-    "icon": "fa-tools",
+    "icon": "fa-right-to-bracket",
     "weight":12
   },
   {
     "text": "FortiCloud SAML Logout",
     "URL": "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/saml",
-    "icon": "fa-tools",
+    "icon": "fa-right-from-bracket",
     "weight":13
   },
   {
     "text": "Fortiweb Cloud admin guide",
     "URL": "https://docs.fortinet.com/document/fortiweb-cloud/23.4.0/user-guide/981027/overview",
-    "icon": "fa-tools",
+    "icon": "fa-book",
     "weight":20
   },
   {
     "text": "Fortiweb Live demo portal",
     "URL": "https://www.fortiweb-cloud.com/index/login",
-    "icon": "fa-tools",
+    "icon": "fa-laptop-code",
     "weight":30
   }
   ]

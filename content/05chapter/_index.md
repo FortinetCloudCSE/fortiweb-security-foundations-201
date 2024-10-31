@@ -1,7 +1,7 @@
 ---
-title: "Ch 5 - API Protection"
+title: "Ch 5: API Protection"
 chapter: false
-linkTitle: "Ch 5 - API Protection"
+linkTitle: "Ch 5: API Protection"
 weight: 50
 ---
 

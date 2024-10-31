@@ -1,6 +1,6 @@
 ---
-title: "Task 3 - Start Kali RDP"
-linkTitle: "Task 3 - Start Kali RDP"
+title: "Task 3: Start Kali RDP"
+linkTitle: "Task 3: Start Kali RDP"
 weight: 30
 ---
 
@@ -29,6 +29,7 @@ For this lab, we will only need to interact with the Kali linux device.  We will
   Kali Linux takes about 20 minutes to fully deploy, so you may get a connection refused error.  Please be patient and the login prompt will eventually appear.  Even after Kali is reachable via HTTPS, some of the initial packages may still be downloading.
   {{% /notice %}}
 
+  {{% notice warning %}} Depending on your browser, you will likely need to accept the self-signed certificate warnings.  {{% /notice %}}
   ```
   https://<kali-IP>:8443
   ```
@@ -39,7 +40,7 @@ For this lab, we will only need to interact with the Kali linux device.  We will
 
 ![Guac Login](guac_log.png)
 
-- The Guacamole home page will have a list of connections.  Click on the connection labled **Lab Desktop**
+- The Guacamole home page will have a list of connections.  Click on the connection labeled **Lab Desktop**
 
 ![Kali con](kali_con.png)
 
@@ -55,12 +56,4 @@ There are portions of this lab that will require large amounts of text to be ent
 
 ![CP Paste](cp_paste.png)
 
-- Right click on the desktop where you want to past and click "paste" or "paste from clipboard" depending on which option is available.
-
-### Open Wireshark
-
-- Click on the **Applications** icon at the top right of the Kali home screen.  Search for "wireshark" and open the application.
-![Find shark](find_shark.png)
-  - You will be asked to Authenticate.  
-  ![Shark Auth](shark_auth.png)
-  - You will input the labuser password ```S3cur3P4ssw0rd123!``` and click **Authenticate**
+- Right-click on the desktop where you want to past and click "paste" or "paste from clipboard" depending on which option is available.

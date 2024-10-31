@@ -1,6 +1,6 @@
 ---
-title: "Task 1 - Create Azure Account"
-linkTitle: "Task 1 - Create Azure Account"
+title: "Task 1: Setup Azure Cloudshell"
+linkTitle: "Task 1: Setup Azure Cloudshell"
 weight: 10
 ---
 
@@ -11,7 +11,7 @@ weight: 10
 | **Verify task completion** | You will receive an email
 
 
-{{% notice info %}} The below document references "student number" for a couple of the steps.  This is the first portion of the Username you recived in the initial email with your Azure credentials.  For example if your username is **web10@fortinetcloud.onmicrosoft.com** then your student number would be **web10**  {{% /notice %}}
+{{% notice info %}} The below document references "student number" for a couple of the steps.  This is the first portion of the Username you received in the initial email with your Azure credentials.  For example if your username is **web10@fortinetcloud.onmicrosoft.com** then your student number would be **web10**  {{% /notice %}}
 
 
 #### **Setup your AzureCloud Shell**
@@ -54,7 +54,7 @@ weight: 10
 * On the Select storage account screen (values in drop down)
   * choose **Internal-Training** as description
   * resource group will be **"student number"-http101-workshop** 
-  * storage account name will be "student number" floolowed by some random numbers and letters
+  * storage account name will be "student number" followed by some random numbers and letters
   * File share will be **cloudshellshare**
   * Click **Select**
 

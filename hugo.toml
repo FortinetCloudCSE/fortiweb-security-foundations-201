@@ -191,31 +191,26 @@ enableEmoji = true
 
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> Fortinet Qwiklabs Home"
-url = "https://fortinet.qwiklabs.com"
-weight = 10
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> FortiWeb Cloud Login"
+name = "<i class='fas fa-right-to-bracket'></i> FortiWeb Cloud Login"
 url = "https://www.fortiweb-cloud.com"
 weight = 11
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> FortiCloud SAML Login"
+name = "<i class='fas fa-right-to-bracket'></i> FortiCloud SAML Login"
 url = "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login"
 weight = 12
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> FortiCloud SAML Logout"
+name = "<i class='fas fa-right-from-bracket'></i> FortiCloud SAML Logout"
 url = "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/saml"
 weight = 13
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> Fortiweb Cloud admin guide"
+name = "<i class='fas fa-book'></i> Fortiweb Cloud admin guide"
 url = "https://docs.fortinet.com/document/fortiweb-cloud/23.4.0/user-guide/981027/overview"
 weight = 20
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> Fortiweb Live demo portal"
+name = "<i class='fas fa-laptop-code'></i> Fortiweb Live demo portal"
 url = "https://www.fortiweb-cloud.com/index/login"
 weight = 30

@@ -1,6 +1,6 @@
 ---
-title: "Task 2 - Run Terraform"
-linkTitle: "Task 2 - Run Terraform"
+title: "Task 2: Run Terraform"
+linkTitle: "Task 2: Run Terraform"
 weight: 20
 ---
 
@@ -18,7 +18,7 @@ All the components required for Lab are deployed through terraform.
 
 Perform the following steps in your Cloudshell console to create your environment.
 
-1. Clone the Github repo `git clone https://github.com/FortinetCloudCSE/fortiweb-security-foundations-201.git`
+1. Clone the GitHub repo `git clone https://github.com/FortinetCloudCSE/fortiweb-security-foundations-201.git`
 2. Change directory to the `cd fortiweb-security-foundations-201/terraform` folder
 3. Run `terraform init`
 
@@ -51,7 +51,7 @@ terraform apply  -var='username=web31' --auto-approve
 
 ![lab12](../images/terraform2.png)
     
-5. Terraform deployment takes atleast 10-15 min to complete.
+5. Terraform deployment takes at least 10-15 min to complete.
   * Once Terraform is complete you should see the output. Please copy the output to notepad.
 
 ![lab13](../images/tfoutput.png)
