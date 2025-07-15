@@ -5,8 +5,6 @@ weight: 1
 archetype: home
 ---
 
-{{< Xperts24Banner line1="Web Services &amp; App Security 201" line2="FortiWeb Cloud Security Foundational" line3="" >}}
-
 ### Welcome!
 
 In this lab, you will have an opportunity to configure FortiWeb Cloud to protect a Juice Shop server, emulating a very vulnerable e-commerce website.  Students will onboard their application and then run a few simple attacks, as well as turn on several security features, in order to learn more about FortiWeb Cloud's capabilities.
