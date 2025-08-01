@@ -16,7 +16,8 @@ This lab was originally bootstrapped with an ingress firewall rule which allows 
 
 1. In the FortiWeb Cloud UI, Copy the IPs which FortiWeb Cloud will use to communicate with your application. From the FortiWeb Cloud Applications page, select **Allow IP List** from the top of the page.  This will open a dialog showing Management and Scrubbing Center Addresses.  Click on **Copy to Clipboard**.  Paste these IPs into a text document and then click **Return**
 
-   ![WAF-IP](waf-ip.png)
+  
+   ![allow-IP](allowIP-list.png)
 
 2. In Azure cloud shell, verify you're in the terraform folder or navigate to it by typing ``` cd fortiweb-security-foundations-201/terraform/```
 

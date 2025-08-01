@@ -7,16 +7,16 @@ weight: 30
 |                            |    |  
 |----------------------------| ----
 | **Goal**                   | Enable and Test API Schema Protection
-| **Task**                   | Enable OpenAPI validation in FortiWeb Cloud and then use postman to submit a modified request
-| **Verify task completion** | If successful, modified schema request should be blocked by FortiWeb
+| **Task**                   | Enable OpenAPI validation in FortiAppSec Cloud and then use postman to submit a modified request
+| **Verify task completion** | If successful, modified schema request should be blocked by FFortiAppSec
 
 #### Open API Validation/Schema protection
 
-In this task, we will explore  the open API/Swagger based schema protection with FortiWeb Cloud. Swagger, now known as the OpenAPI Specification (OAS), is a framework for API development that allows developers to design, build, document, and consume RESTful web services.
+In this task, we will explore  the open API/Swagger based schema protection with FortiWFortiAppSec Cloud. Swagger, now known as the OpenAPI Specification (OAS), is a framework for API development that allows developers to design, build, document, and consume RESTful web services.
 
 example of Swagger: https://petstore.swagger.io/
 
-FortiWeb can validate incoming requests against your OpenAPI schema to ensure they conform to the defined structure and data types. This helps prevent injection attacks and other malicious activities.
+FortiAppSec can validate incoming requests against your OpenAPI schema to ensure they conform to the defined structure and data types. This helps prevent injection attacks and other malicious activities.
 
 1. Download the juiceshop schema file to your local machine by clicking on URL below.
 
@@ -24,7 +24,7 @@ FortiWeb can validate incoming requests against your OpenAPI schema to ensure th
     https://juiceshopswagger.blob.core.windows.net/juiceshopswagger/swagger.yaml?sp=r&st=2024-08-06T16:05:20Z&se=2024-11-09T01:05:20Z&spr=https&sv=2022-11-02&sr=b&sig=F8TWuKSH430782%2FgJBWLhCQuEDK2101CChRkXx4XdU0%3D
 
 
-2. From the FortiWeb Cloud Console left pane, select ADD MODULES. Scroll down and turn on  under API Protection to add OPEN API VALIDATION
+2. From the FortiAppSec Cloud Console left pane, select ADD MODULES. Scroll down and turn on  under API Protection to add OPEN API VALIDATION
 
     ![apischema1](api-schema1.png)
 
@@ -34,7 +34,7 @@ FortiWeb can validate incoming requests against your OpenAPI schema to ensure th
 
 4. Click on "choose file" to upload the file downloaded in Step 1, Click OK. 
 
-    {{% notice warning %}} On some systems (macOS), the file may download with a **.yml** extension, giving you an error upon attempting to upload.  In this case, simply rename the file with ```.yaml``` extension before uploading to FortiWeb OpenAPI Validation rule
+    {{% notice warning %}} On some systems (macOS), the file may download with a **.yml** extension, giving you an error upon attempting to upload.  In this case, simply rename the file with ```.yaml``` extension before uploading to FortiAppSec OpenAPI Validation rule
     {{% /notice %}}
 
     ![apischema3](api-schema3.png)
@@ -44,7 +44,7 @@ FortiWeb can validate incoming requests against your OpenAPI schema to ensure th
     ![apischema4](api-schema4.png)
     
     {{% notice warning %}}
- If for some reason you are logged out when you click save here, you will need to log back in using this link ```https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login``` and the credentials received in the original email.  You will need to repeat steps 1 through 5.
+ If for some reason you are logged out when you click save here, you will need to log back in using this link ```https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login\``` and the credentials received in the original email.  You will need to repeat steps 1 through 5.
     {{%/notice%}}
 
 6. Back on Kali Desktop in Postman

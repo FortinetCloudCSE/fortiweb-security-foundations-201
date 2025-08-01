@@ -99,28 +99,28 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
     As we can see with successfully login using the new credentials, our CSRF attack was successful!
 
-19. Now login to **FortiWeb Cloud**
+19. Now login to **FortiAppSec Cloud**
     - Be sure to click on your **allocated application.**
 
-20. Scroll down to **Add modules** at the bottom. Add **CSRF protection** under Client Security Module and click **OK**
+20. Scroll down to **Waf** **->** **Add modules** at the bottom. Add **CSRF protection** under Client Security Module and click **OK**
 
-    ![csrf17](csrf17.png)
+    ![Add-Module](Add-Module.png)
     
-    ![csrf18](csrf18.png)
+    ![add CSRF](<Add CSRF.png>)
 
-21. In the Application View > Client Security > Click on CSRF Protection.
+21. In the Application View > WAF > Client Security > Click on CSRF Protection.
     - On both **Page List Table** AND **URL List Table**, Add the URL ```/rest/user/change-password```
     - Update the Action to **Alert and Deny** and click Save. the Module takes ~3 minutes to be in effect. 
 
-    ![csrf19](csrf19.png)
+    ![CSRF-config](CSRF-config.png)
     
-    ![csrf20](csrf20.png)
+    ![CSRF-config-1](CSRF-config-1.png)
 
 
 22. Once done, repeat the attack again with Password of your choice, and you should see a block message. 
 
     ![csrf21](csrf21.png)
 
-23. On FortiWeb cloud, **Threat Analytics > Attack Logs >** There is a CSRF attack log.
+23. On Fortiappsec cloud, **Threat Analytics > Attack Logs >** There is a CSRF attack log.
 
     ![csrf22](csrf22.png)

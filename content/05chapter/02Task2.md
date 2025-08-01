@@ -6,13 +6,13 @@ weight: 20
 
 |                            |    |  
 |----------------------------| ----
-| **Goal**                   | Setup API Gateway on FortiWeb Cloud
+| **Goal**                   | Setup API Gateway on FortiAppSec Cloud
 | **Task**                   | Enable and Configure API Gateway and then test function using Postman
 | **Verify task completion** | If successful, API requests will require submission of an API Key in order to access data
 
 ### Setup API Gateway
 
-1.  From the FortiWeb Cloud Console select your application and in the left pane, select **ADD MODULES**.  Scroll down and turn on **API Gateway** under API Protection.
+1.  From the FortiAppSec Cloud Console select your application and in the left pane, select **Waf >** **ADD MODULES**.  Scroll down and turn on **API Gateway** under API Protection.
 
     ![api on](api-on.png)
 

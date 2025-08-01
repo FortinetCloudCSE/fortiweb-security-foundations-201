@@ -39,7 +39,7 @@ Now that we know what the Database type is, we can use sqlmap to see if we can g
 
 3. Disable Block Mode on your application in FortiWeb Cloud
 
-   ![Dis-Block](dis-block.png)
+  ![blockmode-disable](blockmode-disable.png)
 
 4. Re-run the sqlmap attempt.  You will see that some vulnerabilities were found.
 
