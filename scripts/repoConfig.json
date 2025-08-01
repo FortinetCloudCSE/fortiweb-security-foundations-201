@@ -1,43 +1,46 @@
 {
   "repoName":"fortiweb-security-foundations-201",
-  "author":"Derrick Gooch",
-  "workshopTitle":"Web Services 201 FortiWeb Cloud",
+  "author":"Derrick Gooch,Wondyrad Tefera",
+  "workshopTitle":"Web Services 201 FortiAppSec Cloud",
   "themeVariant":"Xperts2025",
   "logoBannerText":"Web Services 201",
-  "logoBannerSubText":"FortiWeb Cloud Security Foundational",
+  "logoBannerSubText":"FortiAppSec Cloud Security Foundational",
   "errorLevel":"warning",
   "googleServicesID":"G-5RZBH288ST",
   "marketingCode":"CloudCSE-Xperts2025",
+  "bannerLine1":"Web Services and App Security 201",
+  "bannerLine2":"FortiAppSec Security Foundational",
+  "bannerLine3":"",
   "shortcuts": [
-  {
-    "text": "FortiWeb Cloud Login",
-    "URL": "https://www.fortiweb-cloud.com",
-    "icon": "fa-right-to-bracket",
-    "weight":11
-  },
-  {
-    "text": "FortiCloud SAML Login",
-    "URL": "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login",
-    "icon": "fa-right-to-bracket",
-    "weight":12
-  },
-  {
-    "text": "FortiCloud SAML Logout",
-    "URL": "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/saml",
-    "icon": "fa-right-from-bracket",
-    "weight":13
-  },
-  {
-    "text": "Fortiweb Cloud admin guide",
-    "URL": "https://docs.fortinet.com/document/fortiweb-cloud/23.4.0/user-guide/981027/overview",
-    "icon": "fa-book",
-    "weight":20
-  },
-  {
-    "text": "Fortiweb Live demo portal",
-    "URL": "https://www.fortiweb-cloud.com/index/login",
-    "icon": "fa-laptop-code",
-    "weight":30
-  }
+    {
+      "text": "FortiAppSec Cloud Login",
+      "URL": "https://appsec.fortinet.com/",
+      "icon": "fa-right-to-bracket",
+      "weight":11
+    },
+    {
+      "text": "FortiCloud SAML Login",
+      "URL": "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login/",
+      "icon": "fa-right-to-bracket",
+      "weight":12
+    },
+    {
+      "text": "FortiCloud SAML Logout",
+      "URL": "https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/saml/",
+      "icon": "fa-right-from-bracket",
+      "weight":13
+    },
+    {
+      "text": "FortiAppSec Cloud admin guide",
+      "URL": "https://docs.fortinet.com/product/fortiappsec-cloud",
+      "icon": "fa-book",
+      "weight":20
+    },
+    {
+      "text": "FortiAppsec Live demo portal",
+      "URL": "https://www.fortinet.com/demo-center/fortiappsec-demo",
+      "icon": "fa-laptop-code",
+      "weight":30
+    }
   ]
 }
