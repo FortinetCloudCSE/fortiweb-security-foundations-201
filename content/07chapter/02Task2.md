@@ -1,11 +1,53 @@
 ---
-title: "Task 2: Bot Deception"
-linkTitle: "Task 2: Bot Deception"
+title: "Task 2: Configuring Bot Mitigation Modules"
+linkTitle: "Task 2: Configuring Bot Mitigation Modules"
 weight: 20
 ---
 
 
-**Bot Deception :** Configuring the bot deception policy involves embedding links in HTML-type response pages. These links are invisible to regular clients but detectable by malicious bots like web crawlers. When bots request the resources pointed to by these invisible links, it allows Fortiweb to identify the request as originating from an automated source. 
+|                            |    |  
+|----------------------------| ----
+| **Goal**                   | Setup Bot Mitigation using FortiAppSec Cloud
+| **Task**                   | Enable and Configure all the Bot Mitigation Modules on FortiAppSec CLoud
+| **Verify task completion** | If successful, Simulated Bot Traffic will be flagged and blocked on FortiAppSec CLoud 
+
+### Enable Bot Mitigation Modules 
+
+ 1.  From the FortiAppSec Cloud Console select your application and in the left pane, select **Waf >** **ADD MODULES**.  Scroll down and turn on **Known Bots, Threshold Based Detection, Biometric Based Detection and Bot Deception** under Bot Mitigation.
+
+   ![Enable-Bot](Bot-1.png)
+
+2.  Now the Bot Mitigation tools we need to configure should show up on the left side of the screen. 
 
 
+#### Configure Known Bots Module 
 
+1. Under **Bot Mitigaton** , select **Known Bots**
+
+2. Change the value in the Action box to **Alert and Deny** , **enable** the **known Bad Bots** toggle switch Then Click **Save**
+
+   ![Known-Bots](Bot-2.png)
+
+#### Configure Threshold Based Detection Module 
+
+1.  Under **Bot Mitigaton** , select **Threshold Based Detection** 
+
+2. Change the value in the Action box to **Alert and Deny** , **enable** the **Crawler, Vulnerability Scanning, Slow Attack,Content Scraping,Credential Based Brute Force** toggle switch. Then Click **Save**
+
+![Threshold Based](Bot-3.png)
+
+#### Configure Biometrics Based Detection 
+
+1.  Under **Bot Mitigaton** , select **Biometrics Based Detection** 
+
+2. click on **Create Rule**, type in **photo** in the URL box, Click **OK** to continue. Then Click **Save**
+
+![Biometric](Bot-4.png)
+
+#### Configure Bot Deception
+
+1.  Under **Bot Mitigaton** , select **Bot Deception** 
+
+2. click on **Create Rule**, type in **about** in the URL box, Click **OK** to continue. Then Click **Save**
+
+![Bot Deception](Bot-5.png)

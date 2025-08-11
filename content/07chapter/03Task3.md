@@ -1,21 +1,80 @@
 ---
-title: "Task 3: Threshold based detectionn"
-linkTitle: "Task 3: Threshold based detection"
+title: "Task 3: Simulate Bot Traffic"
+linkTitle: "Task 3: Simulate Bot Traffic"
 weight: 30
 ---
 
-**Threshold based detection:** FortiWeb allows configuring threshold-based detection rules to specify the occurrence, time period, severity, and trigger policy for various suspicious behaviors. This includes:
+|                            |    |  
+|----------------------------|----
+| **Goal**                   | Run traffic to test the FortiAppSec Cloud configuration  
+| **Task**                   | Use the provided script to simulate bot traffic  
+| **Verify task completion** | If successful, simulated bot traffic will be flagged and blocked in FortiAppSec Cloud  
 
-1. Crawler Detection: Identifying excessive crawling behavior that may indicate bot activity attempting to index or scrape website content.
-  
-2. Vulnerability Scanning: Monitoring for patterns indicative of automated scans searching for vulnerabilities in web applications or infrastructure.
-  
-3. Slow Attack Detection: Identifying slow-rate attacks where requests are deliberately slowed to evade detection or overwhelm servers.
-  
-4. Content Scraping Detection: Detecting patterns consistent with automated scraping of website content for unauthorized use or distribution.
-  
-5. Illegal User Scan Detection: Identifying scanning activities aimed at identifying and exploiting vulnerabilities or weaknesses in the system.
+---
 
-By configuring these rules, FortiWeb can assess whether requests originate from humans or bots, helping to mitigate potential threats effective
+### Use the provided tool to send traffic to your application
+
+We’ve provided a tool called **bots** that will simulate a mix of bot and legitimate traffic.
+
+1. Log into Kali Linux:  ```https://{{Kali IP}}:8443```
+
+2. Open the terminal emulator by clicking the black box icon at the top of the Kali home screen.  
+At the prompt, type:  
+    ![accessTerminal](accessTerminal.png)
 
 
+3. You will be prompted with the following menu: ( notice most of the values are default values)
+
+- Load a saved profile: `Y`  
+- Target URL: `https://<FortiWebStudentID>.fwebtraincse.com`  
+- Optimize for OWASP Juice Shop? `Y`  
+- Choose number: `6`  
+- CSV log file: *(leave blank)*  
+- Total run duration: `4m`  
+- Concurrency: `20`  
+- HTTP timeout per request: `12s`  
+- Progress interval: `10`  
+- Use one sticky IP in `X-Forwarded-For`: `n`  
+- Force HTTP/1.0: `n`  
+- Requests per second: `20`  
+- Start now: `Y`
+
+![Bot-Attack-1](Bot-Attack-1.png)
+
+Once the tool starts running, you’ll see progress updates approximately every 10 seconds.
+
+![Bot-Attack-2](Bot-Attack-2.png)
+
+The bots tool will send traffic to your application protected by FortiAppSec.
+Wait about 4 minutes, then start checking the dashboard and log files in FortiAppSec.
+
+
+{{< notice >}}
+If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong> browser and use the link below to log back in:
+
+<pre><code>https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login/</code></pre>
+{{< /notice >}}
+
+
+### check the FortiAppsec Dashboards and Log Files 
+
+There are multiple ways to review the logs. We’ll start with the “big picture” view using incidents on the dashboard.
+
+ 1.  From the FortiAppSec Cloud Console, select *** Threat Analytics*** from the left-hand menu.
+ ![Threat-Analytics](Bot-Attack-3-1.png)
+
+ 2. In the Top Attack Types pane click on Bot Attacks (scanner) to view incident details.
+  Several drill-down options will show source IP, source country, URL attacked, and more.
+  You’re encouraged to explore these options. 
+ ![Incident](Bot-Attack-4.png)
+ ![Incident-1](Bot-Attack-5.png)
+ ![Incident-2](Bot-Attack-6.png)
+
+ 3. Under Threat Analytics, click on Attack Logs to view individual log entries with detailed information.
+
+ ![Access-logs](Bot-Attack-7.png)
+
+we can now look at individual log entries. Logs can be Filtered by Application, URL, Source Country etc. Logs can also be filters by time period. 
+please click on any log entry and investigate the detailed information provided. 
+
+![Access-Log-Detail](Bot-Attack-8.png)

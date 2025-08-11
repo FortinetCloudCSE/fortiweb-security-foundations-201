@@ -31,14 +31,18 @@ To build the anomaly detection model, you need to generate a sufficient number o
 
    Run the following command:
 
-   ```./ml-build``` 
+   ```./ml-2`` 
 
 2. When prompted, enter the URL you are targeting in the following format:
 
 
    ```https://<FortiWebStudentID>.fwebtraincse.com```
 
-  The tool will begin sending requests to simulate legitimate user traffic. You will see progress messages in your terminal window indicating how many requests have been sent and how much time remains.
+   ![start-tool](ML-2.png)
+
+  The tool will begin sending requests to simulate legitimate user traffic. You will see progress messages in your terminal window indicating how many requests have been sent and how much time remains. Progress report takes about 90 seconds to show up so please be patient and avoid starting the tool multiple times. 
+![progress](ML-3.png)
+
 
 ⚠️ Note: The process may take up to 30 minutes to complete. Please keep the terminal open during this time.
 
@@ -70,7 +74,13 @@ Building the model can take up to 30 minutes. Please do not delete once it is bu
 
 {{< /notice >}}
 
-3. When the model gets to the running Stage we will be ready to proceed to launching some attacks 
+once the tool finishes running you will see a message like the one shown below 
+
+
+3. When the model gets to the running Stage we will be ready to proceed to launching some attacks.
+
+![finished running](ML-4.png)
+
 
 ### Step 4: Launch Attacks 
 To test the model that was built above, we will run another tool that will launch various **SQL injection**, **command injection**, and **XSS attacks**, along with legitimate requests.
@@ -79,7 +89,7 @@ To test the model that was built above, we will run another tool that will launc
 
    Run the following command:
 
-   ```./ml-attack``` 
+   ```./ml-mix``` 
 
 2. When prompted, enter the URL you are targeting in the following format:
 

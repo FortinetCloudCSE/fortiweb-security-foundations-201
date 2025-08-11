@@ -1,15 +1,15 @@
 {
   "repoName":"fortiweb-security-foundations-201",
   "author":"Derrick Gooch,Wondyrad Tefera",
-  "workshopTitle":"Web Services 201 FortiAppSec Cloud",
+  "workshopTitle":"AppSec 102 FortiAppSec Cloud",
   "themeVariant":"Xperts2025",
-  "logoBannerText":"Web Services 201",
+  "logoBannerText":"AppSec 102",
   "logoBannerSubText":"FortiAppSec Cloud Security Foundational",
   "errorLevel":"warning",
   "googleServicesID":"G-5RZBH288ST",
   "marketingCode":"CloudCSE-Xperts2025",
-  "bannerLine1":"Web Services and App Security 201",
-  "bannerLine2":"FortiAppSec Security Foundational",
+  "bannerLine1":"AppSec: 102: AI-driven Anomoly Detection ",
+  "bannerLine2":"and Bot Mitigation with FortiAppSec Cloud",
   "bannerLine3":"",
   "shortcuts": [
     {
