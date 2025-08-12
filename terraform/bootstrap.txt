@@ -50,6 +50,7 @@ write_files:
         sleep 2
       done
 
+      # Install Go if not present
       if ! /usr/local/go/bin/go version >/dev/null 2>&1; then
         log "Go not found, installing Go 1.22.2..."
         cd /tmp
@@ -83,8 +84,18 @@ write_files:
         ln -sf /usr/local/go/bin/go /usr/bin/go
         ln -sf /usr/local/go/bin/gofmt /usr/bin/gofmt
         
-        # Source the profile for current session
-        source /etc/profile
+        # Set PATH directly in current session (avoid problematic profile sourcing)
+        log "Setting PATH directly for current session..."
+        export PATH="/usr/local/go/bin:$PATH"
+        
+        # Verify Go is accessible
+        if /usr/local/go/bin/go version >/dev/null 2>&1; then
+          log "Go verification successful: $(/usr/local/go/bin/go version)"
+        else
+          log "ERROR: Go verification failed after PATH setup"
+          exit 1
+        fi
+        
         log "Go installation completed successfully"
       else
         log "Go already installed at /usr/local/go/bin/go"
@@ -100,10 +111,29 @@ write_files:
         exit 1
       fi
 
+      # Setup Guacamole
+      log "Setting up Guacamole..."
       if [ ! -d /opt/guacamole ]; then
+        log "Cloning Guacamole repository..."
         git clone --depth=1 https://github.com/boschkundendienst/guacamole-docker-compose /opt/guacamole
+        if [ ! -d /opt/guacamole ]; then
+          log "ERROR: Failed to clone Guacamole repository"
+          exit 1
+        fi
+        log "Guacamole repository cloned successfully"
+      else
+        log "Guacamole directory already exists"
       fi
-      bash -lc 'cd /opt/guacamole && zsh ./prepare.sh && docker-compose up -d'
+      
+      log "Starting Guacamole services..."
+      cd /opt/guacamole
+      if [ -f prepare.sh ]; then
+        log "Running prepare script..."
+        bash -lc 'cd /opt/guacamole && zsh ./prepare.sh && docker-compose up -d' || log "Warning: Guacamole setup had issues (continuing)"
+      else
+        log "ERROR: prepare.sh not found in /opt/guacamole"
+        exit 1
+      fi
 
       wait_tcp() { local h="$1" p="$2" t="${3:-90}"; for i in $(seq 1 "$t"); do nc -z "$h" "$p" 2>/dev/null && return 0; sleep 1; done; return 1; }
       wait_http_tokens() {
