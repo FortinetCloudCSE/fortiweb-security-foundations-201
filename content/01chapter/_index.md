@@ -7,16 +7,19 @@ weight: 10
 
 ## Provisioning the Azure environment (40min)
 
-Provision your Azure Environment, enter your Email address and click _Provision_
-{{< launchdemoform labdefinition="web-101" >}}
+{{% notice warning %}}
 
-{{< notice warning >}}
+Provisioning can take several minutes.  Delivery to corporate email addresses can be delayed, so we recommend using a personal email address (gmail works great) to speed up delivery. If you do not receive an email after 10 minutes, please check your spam folder and/or notify the instructors
 
-Provisioning can take several minutes.
+\*\*\* __PLEASE DO NOT SUBMIT MULTIPLE TIMES__ \*\*\*
 
-\*\*\* __PLEASE DO NOT SUBMIT MULTIPLE TIMES__ \*\*\*  
+There is no notice here of submission, your email address just disappears.
 
-{{< /notice >}}
+{{% /notice %}}
+
+Provision your Azure Environment, enter your Email address and click **Provision**
+{{< launchdemoform labdefinition="appsec-102" >}}
+
 
 When provisioning is complete, one of the following will happen.
 
