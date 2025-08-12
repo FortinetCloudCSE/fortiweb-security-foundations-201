@@ -7,9 +7,11 @@ weight: 20
 
 ## Enabling Anomaly Detection in FortiAppSec
 
-In this section, we will enable the **Anomaly Detection** module, which uses machine learning to block zero-day threats and other sophisticated attacks. This module builds a behavioral model by analyzing legitimate traffic patterns, allowing it to detect anomalies and unknown attack types.
+In this section, we will enable the **Anomaly Detection** module, which uses machine learning to block zero-day threats and other sophisticated attacks.  
+This module builds a behavioral model by analyzing legitimate traffic patterns, allowing it to detect anomalies and unknown attack types.
 
-To train the model, we will use a tool that generates a sufficient number of legitimate requests. Please note that the tool may take approximately **30 minutes** to complete its run.
+To train the model, we will use a tool that generates a sufficient number of legitimate requests.  
+Please note: the tool may take approximately **30 minutes** to complete its run.
 
 ### Step 1: Enable the Anomaly Detection Module
 
@@ -21,11 +23,24 @@ To train the model, we will use a tool that generates a sufficient number of leg
 ![Anomaly-on](anomaly-on.png)
 
 
+In a production environment, both **known attack detection** (signature-based) and **anomaly detection** are used together.  
+However, for this demonstration, we will disable signature-based detection.
+
+1. From the **FortiAppSec Cloud Console**, select your application.
+2. In the left navigation pane, go to **WAF > Security Rules > Known Attacks**.
+3. In the **Signature-Based Detection** pane, disable the following by toggling each corresponding button:  
+   - SQL Injection  
+   - Cross-Site Scripting  
+   - Generic Attacks  
+   - Known Exploits  
+   - Trojans  
+4. Click **Save**.
+
 
 
 ### Step 2: Run the Tool to Generate Legitimate Traffic
 
-To build the anomaly detection model, you need to generate a sufficient number of legitimate requests. Follow these steps:
+To build the anomaly detection model, you need to generate enough legitimate requests.
 
 1. Open a terminal window from your Kali desktop.
 
@@ -40,13 +55,16 @@ To build the anomaly detection model, you need to generate a sufficient number o
 
    ![start-tool](ML-2.png)
 
-  The tool will begin sending requests to simulate legitimate user traffic. You will see progress messages in your terminal window indicating how many requests have been sent and how much time remains. Progress report takes about 90 seconds to show up so please be patient and avoid starting the tool multiple times. 
+ The tool will begin sending requests to simulate legitimate user traffic.
+ You will see progress messages in your terminal indicating how many requests have been sent and the time remaining.
+ Note: Progress may take up to 90 seconds to appear — please be patient and avoid starting the tool multiple times. 
+
 ![progress](ML-3.png)
 
 
 ⚠️ Note: The process may take up to 30 minutes to complete. Please keep the terminal open during this time.
 
-3. While the tool is running, you can proceed to the next step by logging into the FortiAppSec Cloud Console and observing the model-building progress 
+3. While the tool is running, you can log into the FortiAppSec Cloud Console to observe the model-building progress.
 
 
 ### Step 3: Review the Anomaly detection module on FortiAppSec Cloud
@@ -63,8 +81,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 1. From the **FortiAppSec Cloud Console**, select your application.
 2. In the left navigation pane, select **Waf > Security Rules > Anomaly Detection** 
-   click on the **TreeView** TAB and drill down to the search parameter field and notice how it is going through the diffrent stages: 
-   **Collecting, Building and Running**
+   Click on the TreeView tab and drill down to the search parameter field. You will see the stages: **Collecting, Building, and Running.**
 
    ![ML_build_1](ML_build_1.png)
 
@@ -74,16 +91,17 @@ Building the model can take up to 30 minutes. Please do not delete once it is bu
 
 {{< /notice >}}
 
-once the tool finishes running you will see a message like the one shown below 
+Once the tool finishes running, you will see a completion message.
 
 
-3. When the model gets to the running Stage we will be ready to proceed to launching some attacks.
+3. When the model reaches the Running stage, you are ready to proceed with launching attacks.
 
 ![finished running](ML-4.png)
 
 
 ### Step 4: Launch Attacks 
-To test the model that was built above, we will run another tool that will launch various **SQL injection**, **command injection**, and **XSS attacks**, along with legitimate requests.
+
+To test the model, we will run another tool that launches **SQL Injection, Command Injection**, and **XSS attacks** along with legitimate requests..
 
 1. Open a terminal window from your Kali desktop.
 
@@ -91,9 +109,20 @@ To test the model that was built above, we will run another tool that will launc
 
    ```./ml-mix``` 
 
-2. When prompted, enter the URL you are targeting in the following format:
+2. When prompted, enter the URL:
 
 
    ```https://<FortiWebStudentID>.fwebtraincse.com```
 
-The tool will begin sending requests to simulate a mix of attack and legitimate user traffic
+Accept the default values for the remaining options:
+ 
+  - Duration: 5m 
+  - Target 30
+  - Workers: 20
+  - Attack mix percentage: 30 
+  - Use /rest/products/search? q= ... : Y ( this is the parameter field we trained in the pervious section)
+  - Skip TLS verification: **Y**
+  - Per- request timeoue : 10s
+  - Verbose sample logging: n 
+
+While the tool is running, log back into the FortiAppSec Cloud Console and review the logs to confirm that attacks are being detected and mitigated.

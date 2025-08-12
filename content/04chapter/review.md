@@ -22,7 +22,7 @@ In this module, we used Burpsuite and SQLMap to both discover and exploit vulner
 With this information, an attacker can greatly narrow their reconnaissance efforts, and focus on weaponization much more quickly.
     {{% /expand %}}
 
-3. What type of security is FortiWeb Cloud's Cross Site Request Forgery protection?
+3. What type of security is FortiAppSec Cloud's Cross Site Request Forgery protection?
 
     {{% expand title="Click here for answer" %}}
 **Clien Security** - This type of security is designed to prevent compromised clients from accessing sensitive data.

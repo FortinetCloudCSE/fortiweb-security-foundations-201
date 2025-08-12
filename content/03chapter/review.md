@@ -6,18 +6,18 @@ weight: 50
 
 ### Review 
 
-In this module, we performed a very simple SQL injection attack an highlighted how FortiWeb Cloud protects applications from them.
+In this module, we performed a very simple SQL injection attack an highlighted how FortiAppSec Cloud protects applications from them.
 
 
 ### SQLi Review Quiz
 
-1. FortiWeb Cloud is in Block Mode by default. (True or False)
+1. FortiAppSec Cloud is in Block Mode by default. (True or False)
 
     {{% expand title="Click here for answer" %}}
 **False** - You can enable block mode during application onboarding, but it is not active by default.
     {{% /expand %}}
 
-2. What do you have to configure on FortiWeb Cloud in order to enable protection from basic Known Attacks?
+2. What do you have to configure on FortiAppSec Cloud in order to enable protection from basic Known Attacks?
 
     {{% expand title="Click here for answer" %}}
 When Block mode is enabled, the minimum security configuration, including Known Attacks is already in place.

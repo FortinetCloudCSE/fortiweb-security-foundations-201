@@ -200,7 +200,10 @@ var juiceSearchTerms = []string{
 	"honey", "pepper", "cheese", "yogurt", "ginger", "mango", "papaya", "pomegranate",
 }
 
-type weightedPath struct{ Path string; Weight int }
+type weightedPath struct {
+	Path   string
+	Weight int
+}
 
 var juiceWeighted = []weightedPath{
 	{"/rest/products/search", 40}, // with ?q=
@@ -1021,9 +1024,16 @@ func pickIP(sticky bool) string {
 	}
 	return randIPv4()
 }
-func randIPv4() string { return fmt.Sprintf("%d.%d.%d.%d", 1+rand.Intn(223), rand.Intn(256), rand.Intn(256), 1+rand.Intn(254)) }
+func randIPv4() string {
+	return fmt.Sprintf("%d.%d.%d.%d", 1+rand.Intn(223), rand.Intn(256), rand.Intn(256), 1+rand.Intn(254))
+}
 
-func max(a, b int) int { if a > b { return a }; return b }
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
 
 func minDur(a, b time.Duration) time.Duration {
 	if a < b {
