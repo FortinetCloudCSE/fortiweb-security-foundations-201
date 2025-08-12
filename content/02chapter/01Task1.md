@@ -78,3 +78,7 @@ weight: 10
 
    ![](app-ips.png)
    {{% /notice %}}
+
+7. Update Google DNS
+
+    {{< dns_record >}}
