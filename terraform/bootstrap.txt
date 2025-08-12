@@ -51,15 +51,53 @@ write_files:
       done
 
       if ! /usr/local/go/bin/go version >/dev/null 2>&1; then
+        log "Go not found, installing Go 1.22.2..."
         cd /tmp
         rm -rf /usr/local/go
+        log "Downloading Go 1.22.2..."
         wget -q https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
+        if [ ! -f go1.22.2.linux-amd64.tar.gz ]; then
+          log "ERROR: Failed to download Go"
+          exit 1
+        fi
+        log "Extracting Go to /usr/local..."
         tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
+        if [ ! -f /usr/local/go/bin/go ]; then
+          log "ERROR: Failed to extract Go"
+          exit 1
+        fi
+        log "Setting up Go PATH..."
         grep -q '/usr/local/go/bin' /etc/profile || echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
         grep -q '^export GOPATH=' /etc/profile   || echo 'export GOPATH=/home/labuser/go'     >> /etc/profile
+        
+        # Update labuser's profile
         grep -q '/usr/local/go/bin' /home/labuser/.bashrc || echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/labuser/.bashrc
         grep -q '^export GOPATH='  /home/labuser/.bashrc  || echo 'export GOPATH=/home/labuser/go'      >> /home/labuser/.bashrc
         chown labuser:labuser /home/labuser/.bashrc
+        
+        # Update root's profile for automation scripts
+        grep -q '/usr/local/go/bin' /root/.bashrc || echo 'export PATH=$PATH:/usr/local/go/bin' >> /root/.bashrc
+        grep -q '/usr/local/go/bin' /root/.profile || echo 'export PATH=$PATH:/usr/local/go/bin' >> /root/.profile
+        
+        # Create symlink in /usr/bin for system-wide access
+        ln -sf /usr/local/go/bin/go /usr/bin/go
+        ln -sf /usr/local/go/bin/gofmt /usr/bin/gofmt
+        
+        # Source the profile for current session
+        source /etc/profile
+        log "Go installation completed successfully"
+      else
+        log "Go already installed at /usr/local/go/bin/go"
+      fi
+      
+      # Verify Go installation
+      if /usr/local/go/bin/go version >/dev/null 2>&1 || /usr/bin/go version >/dev/null 2>&1; then
+        GO_VERSION=$(/usr/local/go/bin/go version 2>/dev/null || /usr/bin/go version 2>/dev/null)
+        log "Go verification successful: ${GO_VERSION}"
+        log "Go available at: /usr/local/go/bin/go and /usr/bin/go"
+      else
+        log "ERROR: Go installation verification failed"
+        exit 1
       fi
 
       if [ ! -d /opt/guacamole ]; then
@@ -326,15 +364,34 @@ write_files:
       #!/usr/bin/env bash
       echo "[trigger-build] $(date -Is) Starting build process"
       
-      # Wait for Go to be available
+      # Wait for Go to be available (check multiple locations)
       echo "[trigger-build] Waiting for Go installation..."
-      while ! command -v go &> /dev/null; do
-        echo "[trigger-build] Go not found, waiting 10 seconds..."
+      while ! (command -v go &> /dev/null || /usr/local/go/bin/go version &> /dev/null || /usr/bin/go version &> /dev/null); do
+        echo "[trigger-build] Go not found, checking locations..."
+        echo "[trigger-build] PATH: $PATH"
+        echo "[trigger-build] /usr/local/go/bin/go: $([ -f /usr/local/go/bin/go ] && echo 'exists' || echo 'missing')"
+        echo "[trigger-build] /usr/bin/go: $([ -f /usr/bin/go ] && echo 'exists' || echo 'missing')"
+        echo "[trigger-build] which go: $(which go 2>/dev/null || echo 'not found')"
+        echo "[trigger-build] Waiting 10 seconds..."
         sleep 10
       done
       
-      echo "[trigger-build] Go found at: $(which go)"
-      echo "[trigger-build] Go version: $(go version)"
+      # Determine which Go to use
+      if command -v go &> /dev/null; then
+        GO_CMD="go"
+        echo "[trigger-build] Go found in PATH: $(which go)"
+      elif /usr/local/go/bin/go version &> /dev/null; then
+        GO_CMD="/usr/local/go/bin/go"
+        echo "[trigger-build] Go found at: /usr/local/go/bin/go"
+      elif /usr/bin/go version &> /dev/null; then
+        GO_CMD="/usr/bin/go"
+        echo "[trigger-build] Go found at: /usr/bin/go"
+      else
+        echo "[trigger-build] ERROR: Go not found anywhere!"
+        exit 1
+      fi
+      
+      echo "[trigger-build] Go version: $($GO_CMD version)"
       
       # Wait a bit more for system to stabilize
       sleep 5
