@@ -254,7 +254,7 @@ func chooseQ(rng *rand.Rand, attackPct int) string {
 
 func legitTerm(rng *rand.Rand) string {
 	terms := []string{
-		"apple", "coffee", "tea",
+		"apple", "Banana",
 	}
 	return terms[rng.Intn(len(terms))]
 }

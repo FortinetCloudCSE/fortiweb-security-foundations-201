@@ -102,7 +102,7 @@ Building the model can take up to 30 minutes. In some cases we have found we nee
 
 3. When the model reaches the Running stage, you are ready to proceed with launching attacks.
 
-
+![running](running.png)
 
 
 ### Step 4: Launch Attacks 
@@ -129,4 +129,12 @@ Accept the default values for the remaining options:
   - Per- request timeoue : 10s
   - Verbose sample logging: n 
 
+  ![Launch-Attack](launch-attack.png)
+
 While the tool is running, log into the FortiAppSec Cloud Console and check the logs to confirm attacks are being detected and mitigated.
+
+![Attack-detected](ML-5.png)
+
+Drill down on the log entries and review the details. 
+
+![detail-log](ML-6.png)
