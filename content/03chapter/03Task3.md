@@ -12,6 +12,12 @@ weight: 30
 
 ### FortiAppSec Cloud Options
 
+{{< notice >}}
+If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong> browser and use the link below to log back in:
+
+<pre><code>https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login/</code></pre>
+{{< /notice >}}
+
 In the previous task, we simply turned on Block Mode in FortiAppSec Cloud.  This enabled the default, minimum security configuration.  Take a moment now to click through some of the menu options on the left to see what Features are enabled by default.  We will also look at how to enable new features.
 
 1. Navigate to **Security Rules** on the left menu and click on **Known Attacks** to see what features are turned on.  The first category is Signature Based Detection.  Click the **Search Signature** button on the right and search for the injection Keyword.  

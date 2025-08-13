@@ -13,6 +13,12 @@ weight: 20
 
 ### Enable Bot Mitigation Modules 
 
+{{< notice >}}
+If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong> browser and use the link below to log back in:
+
+<pre><code>https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login/</code></pre>
+{{< /notice >}}
+
  1.  From the FortiAppSec Cloud Console select your application and in the left pane, select **Waf >** **ADD MODULES**.  Scroll down and turn on **Known Bots, Threshold Based Detection, Biometric Based Detection and Bot Deception** under Bot Mitigation.
 
    ![Enable-Bot](Bot-1.png)
