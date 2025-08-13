@@ -26,7 +26,7 @@ At the prompt, type:
 3. You will be prompted with the following menu: ( notice most of the values are default values)
 
 - Load a saved profile: `Y`  
-- Target URL: `https://<FortiWebStudentID>.fwebtraincse.com`  
+- Target URL: `https://<FortiAppSecStudentID>.fwebtraincse.com`  
 - Optimize for OWASP Juice Shop? `Y`  
 - Choose number: `6`  
 - CSV log file: *(leave blank)*  

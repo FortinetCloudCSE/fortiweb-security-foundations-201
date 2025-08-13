@@ -7,8 +7,8 @@ weight: 20
 |                            |    |  
 |----------------------------| ----
 | **Goal**                   | Use Burpsuite to Perform CSRF attack
-| **Task**                   | Burpsuite will modify a user password, using Cross Site Request Forgery, then block it with FortiWeb Cloud
-| **Verify task completion** | The CSRF password change should go through initially, but be blocked after enabling CSRF protection on FortiWeb Cloud
+| **Task**                   | Burpsuite will modify a user password, using Cross Site Request Forgery, then block it with FortiAppSec Cloud
+| **Verify task completion** | The CSRF password change should go through initially, but be blocked after enabling CSRF protection on FortiAppSec Cloud
 
 A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where an attacker tricks a user into performing actions on a web application without their consent. This can happen when a malicious website, email, or other online resource causes the user's web browser to perform an unwanted action on a different site where the user is authenticated.
 

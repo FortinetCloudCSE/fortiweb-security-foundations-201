@@ -8,7 +8,7 @@ weight: 20
 |----------------------------| ----
 | **Goal**                   | Use SQLMAP to find Vulnerability
 | **Task**                   | Activate SQLMAP and scan Juice Shop
-| **Verify task completion** | After FortiWeb block mode is disabled, SQLMAP should identify that get parameter 'q' is vulnerable
+| **Verify task completion** | After FortiAppSec block mode is disabled, SQLMAP should identify that get parameter 'q' is vulnerable
 
 Now that we know what the Database type is, we can use sqlmap to see if we can get some "Juicy" information (pun intended).  You could just run SQLMAP initially to find the vulnerability, but It would take much longer without an idea of what you were looking for.
 
@@ -25,19 +25,19 @@ Now that we know what the Database type is, we can use sqlmap to see if we can g
    
 2. Now we will attempt to discover what type of SQL injection vulnerabilities exist.  
    - Since we know that the database runs on **sqlite** we can shorten the scan time by giving sqlmap that information.  
-   - Input the first line below at the terminal, substituting your URL. **Make sure to change <FortiWebStudentID> in the URL below to your student number**
+   - Input the first line below at the terminal, substituting your URL. **Make sure to change <FortiAppSecStudentID> in the URL below to your student number**
 
    ```sh
-   sqlmap -u "https://<FortiWebStudentID>.fwebtraincse.com/rest/products/search?q=" --dbms=SQLite --technique=B --level 3 --batch
+   sqlmap -u "https://<FortiAppSecStudentID>.fwebtraincse.com/rest/products/search?q=" --dbms=SQLite --technique=B --level 3 --batch
    ```
 
-   {{% notice info %}}This attempt will fail with an **HTTP 403 error** , due to the default protections offered by FortiWeb.
+   {{% notice info %}}This attempt will fail with an **HTTP 403 error** , due to the default protections offered by FortiAppSec.
  
-   As a best practice, FortiWeb ML protections in production environments prevent reconnaissance with tools like sqlmap{{% /notice %}}
+   As a best practice, FortiAppSec ML protections in production environments prevent reconnaissance with tools like sqlmap{{% /notice %}}
 
    ![Map-Blocked](map-blocked.png)
 
-3. Disable Block Mode on your application in FortiWeb Cloud
+3. Disable Block Mode on your application in FortiAppSec Cloud
 
   ![blockmode-disable](blockmode-disable.png)
 

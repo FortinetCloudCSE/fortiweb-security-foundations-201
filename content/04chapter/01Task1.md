@@ -44,7 +44,7 @@ Burp Suite gives us a quick and easy way to query targeted sites.
       - ![](bs-browserpw.png)
       - ![](bs-pwunencrypt.png)
 
-7. In the browser URL bar, input ```https://<FortiWebStudentID>.fwebtraincse.com``` and hit enter.  This will bring you to the juice shop home page.
+7. In the browser URL bar, input ```https://<FortiAppSecStudentID>.fwebtraincse.com``` and hit enter.  This will bring you to the juice shop home page.
 
 8. Minimize the browser and go back to the Burpsuite console and click on the **HTTP History** tab under Proxy.  
    - Scroll down the list until you find a URL labeled **"/rest/products/search?q=**.  

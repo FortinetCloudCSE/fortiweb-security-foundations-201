@@ -23,7 +23,7 @@ To address these challenges, **FortiAppSec** uses **machine learning for anomaly
 2. **Second Layer: Threat Model Verification**  
    - If the first layer flags a request as anomalous, the second layer determines if it is a true attack or a benign anomaly.
    - Uses pre-built, pre-trained **threat models** for categories like SQL Injection, Cross-site Scripting (XSS), etc.
-   - Models are trained using thousands of attack samples and continuously updated via the **FortiWeb Security Service**.
+   - Models are trained using thousands of attack samples and continuously updated via the **FortiAppSec Security Service**.
    - The **FortiGuard** team analyzes new threats and retrains relevant models, which are then pushed to all FortiAppSec installations similarly to signature updates.
 
 ---

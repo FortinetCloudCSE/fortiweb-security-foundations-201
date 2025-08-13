@@ -54,7 +54,7 @@ To build the anomaly detection model, you need to generate enough legitimate req
 2. When prompted, enter the URL:
 
      
-   ```https://<FortiWebStudentID>.fwebtraincse.com```
+   ```https://<FortiAppSecStudentID>.fwebtraincse.com```
 
 Use the following values for the remaining options:
  
@@ -116,7 +116,7 @@ Run:
 2. When prompted, enter the URL:
 
 
-   ```https://<FortiWebStudentID>.fwebtraincse.com```
+   ```https://<FortiAppSecStudentID>.fwebtraincse.com```
 
 Accept the default values for the remaining options:
  

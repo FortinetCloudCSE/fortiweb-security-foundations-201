@@ -50,7 +50,7 @@ FortiAppSec can validate incoming requests against your OpenAPI schema to ensure
 6. Back on Kali Desktop in Postman
     - We will send a POST request to the URL we have documented in Schema. 
     - Create a new request with the <kbd>+</kbd> button in the top bar.
-    - Change "**GET**" to "**POST**", for URL use: ```https://<FortiWebStudentID>.fwebtraincse.com/b2b/v2/orders```
+    - Change "**GET**" to "**POST**", for URL use: ```https://<FortiAppSecStudentID>.fwebtraincse.com/b2b/v2/orders```
       - Be sure to replace your Student ID in the URL!
 
     - To enter Request body, Click on Body > Raw > JSON and paste the following:
@@ -70,16 +70,16 @@ FortiAppSec can validate incoming requests against your OpenAPI schema to ensure
        ```
        ![apischema6](api-schema6.png)
     
-    - Note: The schema for Product ID is changed from Integer to String. the FortiWeb cloud Juiceshop schema we uploaded have this value defined as Integer. 
+    - Note: The schema for Product ID is changed from Integer to String. the FortiAppSec cloud Juiceshop schema we uploaded have this value defined as Integer. 
     
     ![apischema10](api-schema10.png)
     
     - Click on "**SEND**"
 
-7. We will see "403 internal server error" with a FortiWeb cloud block message in HTML.
+7. We will see "403 internal server error" with a FortiAppSec cloud block message in HTML.
 
     ![apischema7](api-schema7.png)
 
-8. In FortiWeb Cloud on the left hand side of the screen go to Threat Analytics > Attack log > we can see a log generated for this block request to show the reason for block is Open API schema Violation. 
+8. In FortiAppSec Cloud on the left hand side of the screen go to Threat Analytics > Attack log > we can see a log generated for this block request to show the reason for block is Open API schema Violation. 
 
     ![apischema8](api-schema8.png)
