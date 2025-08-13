@@ -7,7 +7,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"math/rand"
 	"net/http"
 	"net/url"
@@ -48,7 +48,7 @@ func randomIP() string {
 func makeRequest(baseURL string, client *http.Client) error {
 	term := searchTerms[rand.Intn(len(searchTerms))]
 	q := url.QueryEscape(term)
-	fullURL := fmt.Sprintf("%s/rest/products/search?q=%s", baseURL, q)
+	fullURL := fmt.Sprintf("%s/products/search?q=%s", baseURL, q)
 
 	req, err := http.NewRequest("GET", fullURL, nil)
 	if err != nil {
@@ -64,7 +64,7 @@ func makeRequest(baseURL string, client *http.Client) error {
 	}
 	defer resp.Body.Close()
 
-	_, _ = ioutil.ReadAll(resp.Body)
+	_, _ = io.ReadAll(resp.Body)
 	return nil
 }
 

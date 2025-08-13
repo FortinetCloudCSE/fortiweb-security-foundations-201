@@ -41,7 +41,7 @@ func main() {
 	rpsStr := promptString(reader, "Target RPS (global)", "30")
 	concurrencyStr := promptString(reader, "Workers (concurrency)", "20")
 	attackPctStr := promptString(reader, "Attack mix percentage (0-100)", "30")
-	useRESTStr := promptString(reader, "Use /rest/products/search?q=... ? (y/n)", "y")
+	useRESTStr := promptString(reader, "Use /rest/products/search?q=... ? (y/n)", "n")
 	insecureStr := promptString(reader, "Skip TLS verification? (y/n)", "n")
 	timeoutStr := promptString(reader, "Per-request timeout (e.g. 10s)", "10s")
 	verboseStr := promptString(reader, "Verbose sample logging? (y/n)", "n")
@@ -138,9 +138,10 @@ func main() {
 		go func(id int) {
 			defer wg.Done()
 			rng := rand.New(rand.NewSource(time.Now().UnixNano() + int64(id)*991))
-			path := "/rest/products/search"
-			if !useREST {
-				path = "/search"
+			// Determine path based on REST preference
+			path := "/products/search" // Default to same endpoint as ml2.go
+			if useREST {
+				path = "/rest/products/search" // Use REST if requested
 			}
 			for {
 				select {
@@ -215,7 +216,7 @@ func main() {
 
 	fmt.Println("\n=== Summary ===")
 	fmt.Printf("Target:     %s\n", base)
-	fmt.Printf("Endpoint:   %s\n", map[bool]string{true: "/rest/products/search?q=", false: "/search?q="}[useREST])
+	fmt.Printf("Endpoint:   %s\n", map[bool]string{true: "/rest/products/search?q=", false: "/products/search?q="}[useREST])
 	fmt.Printf("Duration:   %s | RPS target: %d | Workers: %d | Attack%%: %d\n", duration, rps, workers, attackPct)
 	fmt.Printf("Sent:       %d | OK: %d | Failed: %d\n", atomic.LoadUint64(&sent), atomic.LoadUint64(&ok), atomic.LoadUint64(&failed))
 	fmt.Printf("Latency:    p50=%v p95=%v p99=%v\n", p50, p95, p99)
@@ -253,10 +254,7 @@ func chooseQ(rng *rand.Rand, attackPct int) string {
 
 func legitTerm(rng *rand.Rand) string {
 	terms := []string{
-		"apple", "banana juice", "strawberry", "gift card", "coffee", "chocolate",
-		"wireless charger", "foam cup", "recycled paper", "t-shirt", "hoodie",
-		"backpack", "notebook", "usb c", "monitor stand", "keyboard", "mouse",
-		"organic", "gluten free", "almond", "orange", "lemon", "soda", "tea",
+		"apple", "coffee", "tea",
 	}
 	return terms[rng.Intn(len(terms))]
 }
