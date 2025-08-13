@@ -11,7 +11,7 @@ weight: 20
 
 ```sh
 
-https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login\
+https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login/
 
 ```
 

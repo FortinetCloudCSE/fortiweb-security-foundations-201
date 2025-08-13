@@ -1,0 +1,225 @@
+<div id="dns-form-container">
+  <!-- Create DNS Record Section -->
+  <form id="dns-record-form">
+    <h3>Create DNS CNAME Record</h3>
+    <div style="margin-bottom: 15px;">
+      <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Name (subdomain):</label>
+      <input type="text" required id="name" name="name" value="" placeholder="mysubdomain" 
+             style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+      <label for="cname" style="display: block; margin-bottom: 5px; font-weight: bold;">CNAME (target domain):</label>
+      <input type="text" required id="cname" name="cname" value="" placeholder="example.com" 
+             style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+    </div>
+    <input type="submit" value="Create DNS Record" 
+           style="background-color: #007cba; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-right: 10px;" />
+  </form>
+
+  <!-- Delete DNS Record Section -->
+  <form id="dns-delete-form" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
+    <h3 style="color: #d32f2f;">Delete DNS CNAME Record</h3>
+    <p class="warning-text">⚠️ Warning: This action cannot be undone. Make sure you enter the exact values of the record you want to delete.</p>
+    <div style="margin-bottom: 15px;">
+      <label for="delete-name" style="display: block; margin-bottom: 5px; font-weight: bold;">Name (subdomain to delete):</label>
+      <input type="text" required id="delete-name" name="delete-name" value="" placeholder="mysubdomain" 
+             style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+      <label for="delete-cname" style="display: block; margin-bottom: 5px; font-weight: bold;">CNAME (target domain to delete):</label>
+      <input type="text" required id="delete-cname" name="delete-cname" value="" placeholder="example.com" 
+             style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+    </div>
+    <input type="submit" value="Delete DNS Record" 
+           style="background-color: #d32f2f; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;" />
+  </form>
+
+  <div id="dns-status" style="margin-top: 15px; padding: 10px; border-radius: 4px; display: none;"></div>
+</div>
+
+<script>
+// Create DNS Record Form Handler
+document.getElementById('dns-record-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  
+  const nameValue = document.getElementById('name').value.trim();
+  const cnameValue = document.getElementById('cname').value.trim();
+  
+  if (!nameValue || !cnameValue) {
+    showStatus('Please fill in both fields.', 'error');
+    return;
+  }
+  
+  await createDnsRecord(nameValue, cnameValue);
+});
+
+// Delete DNS Record Form Handler
+document.getElementById('dns-delete-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  
+  const nameValue = document.getElementById('delete-name').value.trim();
+  const cnameValue = document.getElementById('delete-cname').value.trim();
+  
+  if (!nameValue || !cnameValue) {
+    showStatus('Please fill in both fields for deletion.', 'error');
+    return;
+  }
+  
+  // Confirm deletion
+  if (!confirm(`Are you sure you want to delete the DNS record for ${nameValue}.fwebtraincse.com → ${cnameValue}?`)) {
+    return;
+  }
+  
+  await deleteDnsRecord(nameValue, cnameValue);
+});
+
+// Function to create DNS record
+async function createDnsRecord(nameValue, cnameValue) {
+  showStatus('Creating DNS record...', 'loading');
+  
+  try {
+    const dnsData = {
+      "name": nameValue + ".",
+      "type": "CNAME",
+      "ttl": 86400,
+      "rrdatas": [cnameValue + "."]
+    };
+    
+    const response = await fetch('https://dns.fwebtraincse.com/zones/fwebtraincse-com/records', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'key': 'PazhXz4rKsBu7lcDqW0UCDqz4DwMnKwQ3TEAUq1m'
+      },
+      body: JSON.stringify(dnsData)
+    });
+    
+    if (response.ok) {
+      const result = await response.json();
+      showStatus(`DNS CNAME record created successfully! ${nameValue}.fwebtraincse.com → ${cnameValue}`, 'success');
+      // Clear the form
+      document.getElementById('name').value = '';
+      document.getElementById('cname').value = '';
+      
+      // Auto-populate delete form for convenience
+      document.getElementById('delete-name').value = nameValue;
+      document.getElementById('delete-cname').value = cnameValue;
+    } else {
+      const errorText = await response.text();
+      showStatus(`Failed to create DNS record. Error: ${response.status} - ${errorText}`, 'error');
+    }
+    
+  } catch (error) {
+    console.error('DNS API Error:', error);
+    showStatus('An error occurred while creating the DNS record. Please try again.', 'error');
+  }
+}
+
+// Function to delete DNS record
+async function deleteDnsRecord(nameValue, cnameValue) {
+  showStatus('Deleting DNS record...', 'loading');
+  
+  try {
+    const dnsData = {
+      "name": nameValue + ".",
+      "type": "CNAME",
+      "ttl": 86400,
+      "rrdatas": [cnameValue + "."]
+    };
+    
+    const response = await fetch('https://dns.fwebtraincse.com/zones/fwebtraincse-com/records', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'key': 'VaFdZKlkE0pYPXvWiIxW5r93LjnTKsbWwM50xpuJ'
+      },
+      body: JSON.stringify(dnsData)
+    });
+    
+    if (response.ok) {
+      showStatus(`DNS CNAME record deleted successfully! ${nameValue}.fwebtraincse.com → ${cnameValue}`, 'success');
+      // Clear the delete form
+      document.getElementById('delete-name').value = '';
+      document.getElementById('delete-cname').value = '';
+    } else {
+      const errorText = await response.text();
+      showStatus(`Failed to delete DNS record. Error: ${response.status} - ${errorText}`, 'error');
+    }
+    
+  } catch (error) {
+    console.error('DNS API Error:', error);
+    showStatus('An error occurred while deleting the DNS record. Please try again.', 'error');
+  }
+}
+
+function showStatus(message, type) {
+  const statusDiv = document.getElementById('dns-status');
+  statusDiv.style.display = 'block';
+  statusDiv.textContent = message;
+  
+  // Set colors based on status type
+  switch(type) {
+    case 'success':
+      statusDiv.style.backgroundColor = '#d4edda';
+      statusDiv.style.color = '#155724';
+      statusDiv.style.border = '1px solid #c3e6cb';
+      break;
+    case 'error':
+      statusDiv.style.backgroundColor = '#f8d7da';
+      statusDiv.style.color = '#721c24';
+      statusDiv.style.border = '1px solid #f5c6cb';
+      break;
+    case 'loading':
+      statusDiv.style.backgroundColor = '#d1ecf1';
+      statusDiv.style.color = '#0c5460';
+      statusDiv.style.border = '1px solid #bee5eb';
+      break;
+    default:
+      statusDiv.style.backgroundColor = '#f8f9fa';
+      statusDiv.style.color = '#6c757d';
+      statusDiv.style.border = '1px solid #dee2e6';
+  }
+}
+</script>
+
+<style>
+#dns-form-container {
+  max-width: 500px;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#dns-record-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#dns-delete-form input[type="submit"]:hover {
+  background-color: #b71c1c;
+}
+
+#dns-record-form input:focus,
+#dns-delete-form input:focus {
+  outline: none;
+  border-color: #007cba;
+  box-shadow: 0 0 5px rgba(0, 124, 186, 0.3);
+}
+
+#dns-delete-form input[type="text"]:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+}
+
+#dns-delete-form h3 {
+  margin-top: 0;
+}
+
+.warning-text {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: 10px;
+  font-style: italic;
+}
+</style>
