@@ -28,8 +28,8 @@ weight: 10
     - To exit Nano: type <kbd>ctrl</kbd>+<kbd>x</kbd>
 
        ```
-       20.88.164.117    <FortiAppSecStudentID>.fwebtraincse.com
-       20.88.164.125    <FortiAppSecStudentID>.fwebtraincse.com
+       <replace this value with IP address you have from FortiAppSec>    <FortiAppSecStudentID>.fwebtraincse.com
+       <replace this value with IP address you have from FortiAppSec>   <FortiAppSecStudentID>.fwebtraincse.com
       ```    
       ![Hosts](hosts.png)
  

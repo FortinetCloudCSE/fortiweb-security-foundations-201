@@ -5,7 +5,7 @@ linkTitle: "Ch 2: Protect Application"
 weight: 20
 ---
 
-### Log Into FortiWeb Cloud
+### Log Into FortiAppSec Cloud
 
 1.  Using an **Incognito** browser, navigate to the below URL:
 
@@ -27,9 +27,15 @@ For the next step, choose **Yes**.  You do want to stay logged in.
 
 {{% notice info %}} Sometimes if you wait too long to input your password, you will get SAML login portal error "Error: SAML response with InResponseTo is too late for previous request"  If this happens just click the small blue "Login" link. {{% /notice %}}
 
-4. This will take you to the FortiCloud Premium Dashboard. At the top of the screen select **Services** > **FortiAppsec Cloud**
+4. On the FortiCloud Dashboard, you will be prompted to select a role, select CSE Workshop role as shown below 
 
-![Choose -FortiAppsec](choose-FortiAppsec.png)
+![select-role](app-6.png)
 
-5. If you have problems, you can always browse to ```https://appsec.fortinet.com/```, and click login.  Select your account to proceed to the FortiWeb Cloud console.
-![](FortiCloudLogin.png)
+5. This will take you to the FortiCloud Premium Dashboard. At the top of the screen select **Services** > **FortiAppsec Cloud**
+
+![select-FortiAppSec](app-7.png)
+
+---
+
+
+![fortiAppSec_Cloud](app-8.png)

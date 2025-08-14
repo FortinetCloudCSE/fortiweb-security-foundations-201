@@ -11,7 +11,7 @@ weight: 10
 2. Please use the below link to log out of FortiCloud
 
     ```sh
-    https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/saml\ 
+    https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/saml/
     ```
     Be sure to click the small blue **Logout** button at the bottom of the text.
 
