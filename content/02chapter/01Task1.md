@@ -83,8 +83,8 @@ weight: 10
 7. Update Google DNS
 Use the Form Provided below to update DNS records 
 Example
-   - **Name :** <studentId>.fwebtraincse.com
-   - **CNAME:** <studentId>.fwebtraincse.P2928603258.fortiwebcloud.net
+   - **Name :** \<studentId>\.fwebtraincse.com
+   - **CNAME:** \<studentId>\.fwebtraincse.P2928603258.fortiwebcloud.net
    - **click** on Create DNS Record 
 
    After a few minutes you should get DNS CNAME record created successfully message. 
