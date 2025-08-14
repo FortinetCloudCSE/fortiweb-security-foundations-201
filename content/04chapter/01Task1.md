@@ -71,5 +71,5 @@ Burp Suite gives us a quick and easy way to query targeted sites.
     It's worth mentioning that the standard signature based Web Protection Profile did not catch this attempt. 
     - If Machine Learning were enabled, this would not have succeeded.  
       - Instead, it would have been identified as an anomaly and then passed to the threat engine where it would have been identified as an SQL Injection attempt.  
-      - We are not using ML in this lab, as the number of samples required to train the Model would be time prohibitive
+      - We are not using ML in this lab, ML will be discussed in section 6
       {{% /notice %}}

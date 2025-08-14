@@ -67,8 +67,10 @@ Use the following values for the remaining options:
   - Per- request timeoue : 10s
   - Verbose sample logging: y
 
+{{< notice >}}
 
 ⚠️ Note: The process may take up to 30 minutes. Keep the terminal open. You will see periodic progress updates.
+{{< /notice >}}
 
 3. While the tool is running, log into the FortiAppSec Cloud Console to monitor the model-building process.
 

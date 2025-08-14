@@ -53,11 +53,11 @@ weight: 10
 
 * On the Select storage account screen (values in drop down)
   * choose **Internal-Training** as description
-  * resource group will be **"student number"-http101-workshop** 
+  * resource group will be **"student number"-appsec-102-workshop** 
   * storage account name will be "student number" followed by some random numbers and letters
   * File share will be **cloudshellshare**
   * Click **Select**
 
-    ![cloudshell9](../images/cloudshell-09.png)
+    ![cloudShell10](cloudshell-10.png)
 
 * Your Cloud shell is now configured.

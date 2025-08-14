@@ -38,7 +38,7 @@ weight: 10
    - For **IP Address or FQDN** enter the **JuiceShop Public IP** (which is the Ubuntu VM Public IP from your Terraform Output)
    - For **Port** enter "3000"
    - Select **HTTP** for Server Protocol.  This is Juice Shop and it is NOT secure
-   - Click on **Test Origin Server**  You should see a green box pop up that says "Test successfully"
+   - Click on **Test Origin Server**  You should see a green box pop up that says "Test successfull"
    - Choose **Next**
     
     ![Conf-app2](conf-app2.png)
@@ -81,5 +81,13 @@ weight: 10
    {{% /notice %}}
 
 7. Update Google DNS
+Use the Form Provided below to update DNS records 
+Example
+   - **Name :** <studentId>.fwebtraincse.com
+   - **CNAME:** <studentId>.fwebtraincse.P2928603258.fortiwebcloud.net
+   - **click** on Create DNS Record 
+
+   After a few minutes you should get DNS CNAME record created successfully message. 
+   ![dns-updated](app-9.png)
 
     {{< dns_record >}}

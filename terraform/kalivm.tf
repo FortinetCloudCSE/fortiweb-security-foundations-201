@@ -1,6 +1,6 @@
 
 data "azurerm_resource_group" "resourcegroup" {
-  name = "${var.username}-http101-workshop"
+  name = "${var.username}-appsec102-workshop"
 }
 
 resource "azurerm_virtual_network" "linuxvmnetwork" {

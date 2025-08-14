@@ -1,5 +1,5 @@
 // simple tool to prime the anomaly detection module on Fortiweb
-// the tool will go after "q" parameter found at /rest/products/search?q on the juiceshop app
+// the tool will go after "q" parameter found at /#/search?q on the juiceshop app
 // it will keep sending the same value " apple"to build a model that will expect the string as input
 // //Wondyrad T version 1.0 07/25
 package main
@@ -48,7 +48,7 @@ func randomIP() string {
 func makeRequest(baseURL string, client *http.Client) error {
 	term := searchTerms[rand.Intn(len(searchTerms))]
 	q := url.QueryEscape(term)
-	fullURL := fmt.Sprintf("%s/products/search?q=%s", baseURL, q)
+	fullURL := fmt.Sprintf("%s/#/search?q=%s", baseURL, q)
 
 	req, err := http.NewRequest("GET", fullURL, nil)
 	if err != nil {
