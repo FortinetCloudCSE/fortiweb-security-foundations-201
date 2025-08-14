@@ -87,9 +87,10 @@ async function createDnsRecord(nameValue, cnameValue) {
     
     const response = await fetch('https://dns.fwebtraincse.com/zones/fwebtraincse-com/records', {
       method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
-        'key': 'PazhXz4rKsBu7lcDqW0UCDqz4DwMnKwQ3TEAUq1m'
+        'X-API-Key': 'PazhXz4rKsBu7lcDqW0UCDqz4DwMnKwQ3TEAUq1m'
       },
       body: JSON.stringify(dnsData)
     });
@@ -129,9 +130,10 @@ async function deleteDnsRecord(nameValue, cnameValue) {
     
     const response = await fetch('https://dns.fwebtraincse.com/zones/fwebtraincse-com/records', {
       method: 'DELETE',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
-        'key': 'VaFdZKlkE0pYPXvWiIxW5r93LjnTKsbWwM50xpuJ'
+        'X-API-Key': 'VaFdZKlkE0pYPXvWiIxW5r93LjnTKsbWwM50xpuJ'
       },
       body: JSON.stringify(dnsData)
     });
