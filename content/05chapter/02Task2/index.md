@@ -19,13 +19,13 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 1.  From the FortiAppSec Cloud Console select your application and in the left pane, select **Waf >** **ADD MODULES**.  Scroll down and turn on **API Gateway** under API Protection.
 
-    ![api on](api-on.png)
+    {{< figure src="api-on.png" alt="api on" >}}
 
 2.  Now API PROTECTION should show up on the left side of the screen. Under API PROTECTION, select **API Gateway**
 
 3. Click to **Create an API User**. Add a **Name** and **Email address** Then Click **OK**
 
-    ![api user](api-user.png)
+    {{< figure src="api-user.png" alt="api user" >}}
 
 4.  Next click **Create API Gateway Rule**.  
 
@@ -37,15 +37,15 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
     - for Allow Users, select the user you created in step 3
     - leave the Rate limits at default
     - select **OK**
-    ![api rule](api-rule.png)
+    {{< figure src="api-rule.png" alt="api rule" >}}
 
 5. You will need to click **Save** at the bottom right.  Now you should have an API key. Click on the eye icon to display the key.  Copy it and put it into a note pad.
 
-    ![see key](see-key.png)
+    {{< figure src="see-key.png" alt="see key" >}}
 
 6. Ensure that the action is set to **Alert & Deny** and then click **Save**
 
-    ![api save](api-save.png)
+    {{< figure src="api-save.png" alt="api save" >}}
     
 
 
@@ -53,7 +53,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 1.  Back on Kali Desktop, In Postman, click **Send** again to re-test your api call.  It should return status 403 and return a long error page ending with "Please contact the administrator..."
 
-    ![no key](no-key.png)
+    {{< figure src="no-key.png" alt="no key" >}}
 
 2. Now, let's add a key
 
@@ -65,4 +65,4 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
     You should see code 200 and returned data.
 
-    ![yes key](yes-key.png)
+    {{< figure src="yes-key.png" alt="yes key" >}}

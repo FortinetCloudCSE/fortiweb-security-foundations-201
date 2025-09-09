@@ -18,38 +18,37 @@ weight: 10
 
 * Login to Azure Cloud Portal [https://portal.azure.com/](https://portal.azure.com/) with the provided login/password
 
-    ![cloudshell1](../images/cloudshell-01.png)
-    ![cloudshell2](../images/cloudshell-02.png)
+    {{< figure src="cloudshell-01.png" alt="cloudshell1" >}}
+    {{< figure src="cloudshell-02.png" alt="cloudshell2" >}}
 
 * Select **Yes** when asked if you would like to stay signed in
 
-    ![cloudshell3](../images/cloudshell-03.png)
+    {{< figure src="cloudshell-03.png" alt="cloudshell3" >}}
 
 * If you are presented with a "Welcome to Microsoft Azure" screen, click **Cancel**
-    
-    ![cloudshell4](../images/cloudshell-04.jpg
-    )
+
+    {{< figure src="cloudshell-04.jpg" alt="cloudshell4" >}}
 
 * Click on Cloud Shell icon on the Top Right side of the portal
 
-    ![cloudshell5](../images/cloudshell-05.png)
+    {{< figure src="cloudshell-05.png" alt="cloudshell5" >}}
 
 * Select **Bash**
 
-    ![cloudshell6](../images/cloudshell-06.png)
+    {{< figure src="cloudshell-06.png" alt="cloudshell6" >}}
 
 * Next, you will see a "Getting started" page.
     * Select **Mount Storage Account**
     * Choose **Internal-Training** as the Storage account subscription
     * Click Apply
 
-    ![cloudshell7](../images/cloudshell-07.png)
+    {{< figure src="cloudshell-07.png" alt="cloudshell7" >}}
 
 * On the Mount storage account  screen 
   * click **Select existing storage account**
   * click **Next**
 
-    ![cloudshell8](../images/cloudshell-08.png)
+    {{< figure src="cloudshell-08.png" alt="cloudshell8" >}}
 
 * On the Select storage account screen (values in drop down)
   * choose **Internal-Training** as description
@@ -58,6 +57,6 @@ weight: 10
   * File share will be **cloudshellshare**
   * Click **Select**
 
-    ![cloudShell10](cloudshell-10.png)
+    {{< figure src="cloudshell-10.png" alt="cloudShell10" >}}
 
 * Your Cloud shell is now configured.

@@ -31,11 +31,11 @@ weight: 10
        <replace this value with IP address you have from FortiAppSec>    <FortiAppSecStudentID>.fwebtraincse.com
        <replace this value with IP address you have from FortiAppSec>   <FortiAppSecStudentID>.fwebtraincse.com
       ```    
-      ![Hosts](hosts.png)
+      {{< figure src="hosts.png" alt="Hosts" >}}
  
 4. Navigate to the Firefox browser (located at the top of Kali desktop) and enter our FortiAppSec Cloud Protected Juice Shop URL into the navigation bar ```https://<FortiAppSecStudentID>.fwebtraincse.com```.  Accept warnings and proceed to the application
 
-    ![stud-home](studhome.png)
+    {{< figure src="studhome.png" alt="stud-home" >}}
 
 5. Let’s perform a very simple SQLi attack. To perform a SQLi attack append ```?name=' OR 'x'='x``` to your URL.  Be sure that you use **YOUR NUMBER**.
 

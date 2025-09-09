@@ -22,7 +22,7 @@ To train the model, we will use a tool that generates a sufficient number of leg
 3. Scroll down to the **Security Rules** section.
 4. Toggle **Anomaly Detection** to **On**.
 
-![Anomaly-on](anomaly-on.png)
+{{< figure src="anomaly-on.png" alt="Anomaly-on" >}}
 
 
 In a production environment, both **known attack detection** (signature-based) and **anomaly detection** are used together.  
@@ -38,7 +38,7 @@ For this demonstration, we will disable signature-based detection.
    - Trojans  
 4. Click **Save**.
 
-![disable-sig](disable-sig.png)
+{{< figure src="disable-sig.png" alt="disable-sig" >}}
 
 ---
 
@@ -91,7 +91,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 2. In the left navigation pane, select **Waf > Security Rules > Anomaly Detection** 
    Click on the TreeView tab and drill down to the search parameter field. You will see the stages: **Collecting, Building, and Running.**
 
-   ![ML_build_1](ML_build_1.png)
+   {{< figure src="ML_build_1.png" alt="ML_build_1" >}}
 
    {{< notice warning >}}
 
@@ -104,7 +104,7 @@ Building the model can take up to 30 minutes. In some cases we have found we nee
 
 3. When the model reaches the Running stage, you are ready to proceed with launching attacks.
 
-![running](running.png)
+{{< figure src="running.png" alt="running" >}}
 
 
 ### Step 4: Launch Attacks 
@@ -131,12 +131,12 @@ Accept the default values for the remaining options:
   - Per- request timeoue : 10s
   - Verbose sample logging: n 
 
-  ![Launch-Attack](launch-attack.png)
+  {{< figure src="launch-attack.png" alt="Launch-Attack" >}}
 
 While the tool is running, log into the FortiAppSec Cloud Console and check the logs to confirm attacks are being detected and mitigated.
 
-![Attack-detected](ML-5.png)
+{{< figure src="ML-5.png" alt="Attack-detected" >}}
 
 Drill down on the log entries and review the details. 
 
-![detail-log](ML-6.png)
+{{< figure src="ML-6.png" alt="detail-log" >}}

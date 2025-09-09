@@ -21,7 +21,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
  1.  From the FortiAppSec Cloud Console select your application and in the left pane, select **Waf >** **ADD MODULES**.  Scroll down and turn on **Known Bots, Threshold Based Detection, Biometric Based Detection and Bot Deception** under Bot Mitigation.
 
-   ![Enable-Bot](Bot-1.png)
+   {{< figure src="Bot-1.png" alt="Enable-Bot" >}}
 
 2.  Now the Bot Mitigation tools we need to configure should show up on the left side of the screen. 
 
@@ -32,7 +32,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 2. Change the value in the Action box to **Alert and Deny** , **enable** the **known Bad Bots** toggle switch Then Click **Save**
 
-   ![Known-Bots](Bot-2.png)
+   {{< figure src="Bot-2.png" alt="Known-Bots" >}}
 
 #### Configure Threshold Based Detection Module 
 
@@ -40,7 +40,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 2. Change the value in the Action box to **Alert and Deny** , **enable** the **Crawler, Vulnerability Scanning, Slow Attack,Content Scraping,Credential Based Brute Force** toggle switch. Then Click **Save**
 
-![Threshold Based](Bot-3.png)
+{{< figure src="Bot-3.png" alt="Threshold Based" >}}
 
 #### Configure Biometrics Based Detection 
 
@@ -48,7 +48,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 2. click on **Create Rule**, type in **photo** in the URL box, Click **OK** to continue. Then Click **Save**
 
-![Biometric](Bot-4.png)
+{{< figure src="Bot-4.png" alt="Biometric" >}}
 
 #### Configure Bot Deception
 
@@ -56,4 +56,4 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 2. click on **Create Rule**, type in **about** in the URL box, Click **OK** to continue. Then Click **Save**
 
-![Bot Deception](Bot-5.png)
+{{< figure src="Bot-5.png" alt="Bot Deception" >}}

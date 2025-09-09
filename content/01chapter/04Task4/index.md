@@ -21,6 +21,6 @@ From your Terraform Outputs in Task 2 you should have seen gotten the Public IP 
 
 {{% notice warning %}} Depending on your browser, you will likely need to accept the self-signed certificate warnings.  {{% /notice %}}
 
-![Juice Shop](js-initial.png)
+{{< figure src="js-initial.png" alt="Juice Shop" >}}
 
 - You can now proceed to the next module

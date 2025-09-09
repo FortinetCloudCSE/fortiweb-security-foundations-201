@@ -20,7 +20,7 @@ We’ve provided a tool called **bots** that will simulate a mix of bot and legi
 
 2. Open the terminal emulator by clicking the black box icon at the top of the Kali home screen.  
 At the prompt, type:  
-    ![accessTerminal](accessTerminal.png)
+    {{< figure src="accessTerminal.png" alt="accessTerminal" >}}
 
 
 3. You will be prompted with the following menu: ( notice most of the values are default values)
@@ -39,11 +39,11 @@ At the prompt, type:
 - Requests per second: `20`  
 - Start now: `Y`
 
-![Bot-Attack-1](Bot-Attack-1.png)
+{{< figure src="Bot-Attack-1.png" alt="Bot-Attack-1" >}}
 
 Once the tool starts running, you’ll see progress updates approximately every 10 seconds.
 
-![Bot-Attack-2](Bot-Attack-2.png)
+{{< figure src="Bot-Attack-2.png" alt="Bot-Attack-2" >}}
 
 The bots tool will send traffic to your application protected by FortiAppSec.
 Wait about 4 minutes, then start checking the dashboard and log files in FortiAppSec.
@@ -61,20 +61,20 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 There are multiple ways to review the logs. We’ll start with the “big picture” view using incidents on the dashboard.
 
  1.  From the FortiAppSec Cloud Console, select *** Threat Analytics*** from the left-hand menu.
- ![Threat-Analytics](Bot-Attack-3-1.png)
+ {{< figure src="Bot-Attack-3-1.png" alt="Threat-Analytics" >}}
 
  2. In the Top Attack Types pane click on Bot Attacks (scanner) to view incident details.
   Several drill-down options will show source IP, source country, URL attacked, and more.
   You’re encouraged to explore these options. 
- ![Incident](Bot-Attack-4.png)
- ![Incident-1](Bot-Attack-5.png)
- ![Incident-2](Bot-Attack-6.png)
+ {{< figure src="Bot-Attack-4.png" alt="Incident" >}}
+ {{< figure src="Bot-Attack-5.png" alt="Incident-1" >}}
+ {{< figure src="Bot-Attack-6.png" alt="Incident-2" >}}
 
  3. Under Threat Analytics, click on Attack Logs to view individual log entries with detailed information.
 
- ![Access-logs](Bot-Attack-7.png)
+ {{< figure src="Bot-Attack-7.png" alt="Access-logs" >}}
 
 we can now look at individual log entries. Logs can be Filtered by Application, URL, Source Country etc. Logs can also be filters by time period. 
 please click on any log entry and investigate the detailed information provided. 
 
-![Access-Log-Detail](Bot-Attack-8.png)
+{{< figure src="Bot-Attack-8.png" alt="Access-Log-Detail" >}}

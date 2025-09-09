@@ -28,7 +28,7 @@ cd fortiweb-security-foundations-201/terraform
 terraform init
 ```
 
-![lab11](../images/terraform1.png)
+{{< figure src="terraform1.png" alt="lab11" >}}
 
     
 4. Run the following command to apply it
@@ -49,12 +49,12 @@ terraform apply  -var='username=web31' --auto-approve
     {{% /notice %}} 
 
 
-![lab12](../images/terraform2.png)
+{{< figure src="terraform2.png" alt="lab12" >}}
     
 5. Terraform deployment takes at least 10-15 min to complete.
   * Once Terraform is complete you should see the output. Please copy the output to notepad.
 
-![lab13](../images/tfoutput.png)
+{{< figure src="tfoutput.png" alt="lab13" >}}
 
 
 
@@ -64,4 +64,4 @@ terraform apply  -var='username=web31' --auto-approve
    terraform output -raw password
    ```
 
-![lab14](../images/lin_pass.png)
+{{< figure src="lin_pass.png" alt="lab14" >}}

@@ -6,7 +6,7 @@ weight: 10
 
 1. You are almost done!  Please take a moment to delete only **Your Application** using the trashcan Icon on the right side of the application listing.
 
-    ![del-app](del-app.png)
+    {{< figure src="del-app.png" alt="del-app" >}}
 
 2. Please use the below link to log out of FortiCloud
 

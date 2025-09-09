@@ -35,15 +35,15 @@ Now that we know what the Database type is, we can use sqlmap to see if we can g
  
    As a best practice, FortiAppSec ML protections in production environments prevent reconnaissance with tools like sqlmap{{% /notice %}}
 
-   ![Map-Blocked](map-blocked.png)
+   {{< figure src="map-blocked.png" alt="Map-Blocked" >}}
 
 3. Disable Block Mode on your application in FortiAppSec Cloud
 
-  ![blockmode-disable](blockmode-disable.png)
+  {{< figure src="blockmode-disable.png" alt="blockmode-disable" >}}
 
 4. Re-run the sqlmap attempt.  You will see that some vulnerabilities were found.
 
-   ![Map-Allow](mapallow.png)
+   {{< figure src="mapallow.png" alt="Map-Allow" >}}
    
    {{% notice warning %}}
    Please re-enable block mode for your application before moving forward.

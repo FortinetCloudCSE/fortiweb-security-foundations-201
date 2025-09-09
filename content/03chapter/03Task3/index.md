@@ -22,7 +22,7 @@ In the previous task, we simply turned on Block Mode in FortiAppSec Cloud.  This
 
 1. Navigate to **Security Rules** on the left menu and click on **Known Attacks** to see what features are turned on.  The first category is Signature Based Detection.  Click the **Search Signature** button on the right and search for the injection Keyword.  
 
-    ![Search-Sig](search-sig.png)
+    {{< figure src="search-sig.png" alt="Search-Sig" >}}
 
 2. On the left menu, click through the available menus for **Access Rules, Bot Mitigation and DDOS Prevention**
 

@@ -26,22 +26,22 @@ FortiAppSec can validate incoming requests against your OpenAPI schema to ensure
 
 2. From the FortiAppSec Cloud Console left pane, select ADD MODULES. Scroll down and turn on  under API Protection to add OPEN API VALIDATION
 
-    ![apischema1](api-schema1.png)
+    {{< figure src="api-schema1.png" alt="apischema1" >}}
 
 3. In the API protection module, click on Open API validation > Create OpenAPI Validation Rule. 
 
-    ![apischema2](api-schema2.png)
+    {{< figure src="api-schema2.png" alt="apischema2" >}}
 
 4. Click on "choose file" to upload the file downloaded in Step 1, Click OK. 
 
     {{% notice warning %}} On some systems (macOS), the file may download with a **.yml** extension, giving you an error upon attempting to upload.  In this case, simply rename the file with ```.yaml``` extension before uploading to FortiAppSec OpenAPI Validation rule
     {{% /notice %}}
 
-    ![apischema3](api-schema3.png)
+    {{< figure src="api-schema3.png" alt="apischema3" >}}
 
 5. Don't forget to Save at the bottom. 
 
-    ![apischema4](api-schema4.png)
+    {{< figure src="api-schema4.png" alt="apischema4" >}}
     
     {{% notice warning %}}
  If for some reason you are logged out when you click save here, you will need to log back in using this link ```https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login\``` and the credentials received in the original email.  You will need to repeat steps 1 through 5.
@@ -68,18 +68,18 @@ FortiAppSec can validate incoming requests against your OpenAPI schema to ensure
          "orderLinesData": "[{\"productId\": 12,\"quantity\": 10000,\"customerReference\": [\"PO0000001.2\", \"SM20180105|042\"],\"couponCode\": \"pes[Bh.u*t\"},{\"productId\": 13,\"quantity\": 2000,\"customerReference\": \"PO0000003.4\"}]"
        }
        ```
-       ![apischema6](api-schema6.png)
+       {{< figure src="api-schema6.png" alt="apischema6" >}}
     
     - Note: The schema for Product ID is changed from Integer to String. the FortiAppSec cloud Juiceshop schema we uploaded have this value defined as Integer. 
     
-    ![apischema10](api-schema10.png)
+    {{< figure src="api-schema10.png" alt="apischema10" >}}
     
     - Click on "**SEND**"
 
 7. We will see "403 internal server error" with a FortiAppSec cloud block message in HTML.
 
-    ![apischema7](api-schema7.png)
+    {{< figure src="api-schema7.png" alt="apischema7" >}}
 
 8. In FortiAppSec Cloud on the left hand side of the screen go to Threat Analytics > Attack log > we can see a log generated for this block request to show the reason for block is Open API schema Violation. 
 
-    ![apischema8](api-schema8.png)
+    {{< figure src="api-schema8.png" alt="apischema8" >}}

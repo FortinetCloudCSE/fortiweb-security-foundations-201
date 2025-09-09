@@ -14,12 +14,12 @@ weight: 10
 
 1. Click on the **WAF** icon in the left menu bar, open the **Applications** view, and then click **+ ADD APPLICATION**.
 
-    ![Add-Application1](Add-application.png). \
+    {{< figure src="Add-application.png" alt="Add-Application1" >}}. \
         \
         \
         and then click, **+ ADD APPLICATION** 
 
-    ![Add-Application2](Add-application-2.png). 
+    {{< figure src="Add-application-2.png" alt="Add-Application2" >}}. 
            
           
 2. **_Tab 1: "WEBSITE"_** 
@@ -30,7 +30,7 @@ weight: 10
 
    - For **Domain Name** use ```<studentId>.fwebtraincse.com``` and then select next
     
-    ![conf-app1](conf-app1.png)
+    {{< figure src="conf-app1.png" alt="conf-app1" >}}
 
 2. **Tab 2: Network**,
 
@@ -41,7 +41,7 @@ weight: 10
    - Click on **Test Origin Server**  You should see a green box pop up that says "Test successfull"
    - Choose **Next**
     
-    ![Conf-app2](conf-app2.png)
+    {{< figure src="conf-app2.png" alt="Conf-app2" >}}
 
 3. **Tab 3: CDN** 
 
@@ -51,7 +51,7 @@ weight: 10
     
     - Select **Next**
     
-    ![conf-app3](conf-app3.png)
+    {{< figure src="conf-app3.png" alt="conf-app3" >}}
 
 4. **Tab 4: "SETTING"**
 
@@ -59,7 +59,7 @@ weight: 10
 
    - Select **Save**
    
-    ![conf-app4](conf-app4.png)
+    {{< figure src="conf-app4.png" alt="conf-app4" >}}
 
 5. **Tab 5: "CHANGE DNS"**
 
@@ -70,14 +70,14 @@ weight: 10
    {{% /notice %}}
 
    - Select **Close**
-   ![conf-app5](conf-app5.png)
+   {{< figure src="conf-app5.png" alt="conf-app5" >}}
 
 6. You should now see your Application listed in FortiAppSec Cloud.  Note that the DNS Status is set to **Update Pending** This is expected, and we will ignore it.
-    ![conf-app6](conf-app6.png)
+    {{< figure src="conf-app6.png" alt="conf-app6" >}}
 
    {{% notice note %}} If you need to recover the application IPs or CNAME later, you can click on the app's DNS status **Update Pending** to show DNS status & retrieve the IPs
 
-   ![](app-ips.png)
+   {{< figure src="app-ips.png" >}}
    {{% /notice %}}
 
 7. Update Google DNS
@@ -88,6 +88,6 @@ Example
    - **click** on Create DNS Record 
 
    After a few minutes you should get DNS CNAME record created successfully message. 
-   ![dns-updated](app-9.png)
+   {{< figure src="app-9.png" alt="dns-updated" >}}
 
     {{< dns_record >}}

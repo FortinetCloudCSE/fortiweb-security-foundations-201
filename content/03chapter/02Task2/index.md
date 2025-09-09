@@ -14,7 +14,7 @@ weight: 20
 
     On the Applications page enable block mode by clicking on the Block Mode button
     
-    ![block-mode-en](block-mode-enable.png)  
+    {{< figure src="block-mode-enable.png" alt="block-mode-en" >}}  
            
     
     {{%notice warning%}}
@@ -30,18 +30,18 @@ weight: 20
     You will see that FortiAppSec now blocks the SQLi attack.
     {{% /notice %}}
 
-    ![Blocked](blocked.png)
+    {{< figure src="blocked.png" alt="Blocked" >}}
 
 
 3. Now clicking on the Application Name in FortiAppSec Cloud to navigate to our application page.  
     - This should take you to the Application **Dashboard**.  
     - You should see a Threat listed in the **OWASP Top 10 Threats box called A03:2021-Injection**.  Click on it.
 
-    ![threat-Dashboard](threat-dash.png)
+    {{< figure src="threat-dash.png" alt="threat-Dashboard" >}}
 
 4. Navigate through some of the tabs.
 
-    ![Inj-detected](Injection-detected.png)
+    {{< figure src="Injection-detected.png" alt="Inj-detected" >}}
 
 5. On the **Threats** tab, click on the Threat.  
    - In this case **Known Attacks**.  
@@ -50,6 +50,6 @@ weight: 20
    - Spend some time clicking around on the Clickable links in this output.  
      - There is a lot of information available from here, including a link to the OWASP Top 10 site describing this attack as well as HTTP header information and matched patterns.Injection-detected
 
-         ![attack-details](attack-details.png) <br>
+         {{< figure src="attack-details.png" alt="attack-details" >}} <br>
 
-         ![more-details](more-attack-details.png)
+         {{< figure src="more-attack-details.png" alt="more-details" >}}

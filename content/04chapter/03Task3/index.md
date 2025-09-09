@@ -18,19 +18,19 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
 3. On the proxy tab, Click on **Open Browser**
 
-    ![csrf1](csrf1.png)
+    {{< figure src="csrf1.png" alt="csrf1" >}}
 
 4. Type the FQDN allocated: ```https://<studentId>.fwebtraincse.com``` into the browser.
 
-    ![csrf2](csrf2.png)
+    {{< figure src="csrf2.png" alt="csrf2" >}}
 
 5. Once the Juiceshop app loads, click on Account > Login.
     {{% notice note %}} If you don't see **Account** in top right bar, you may have to expand the browser window {{% /notice %}}
-    ![csrf3](csrf3.png)
+    {{< figure src="csrf3.png" alt="csrf3" >}}
 
 6. Create a user login by clicking on **Not Yet a customer?** at the bottom. 
 
-    ![csrf4](csrf4.png)
+    {{< figure src="csrf4.png" alt="csrf4" >}}
 
 7. Make sure to use the same email and credentials as below just so we won't forget. 
 
@@ -42,13 +42,13 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
    - Click on **register**
 
-    ![csrf5](csrf5.png)
+    {{< figure src="csrf5.png" alt="csrf5" >}}
 
 8. Login using the credentials above. 
 
-    ![csrf6](csrf6.png)
+    {{< figure src="csrf6.png" alt="csrf6" >}}
 
-    ![csrf7](csrf7.png)
+    {{< figure src="csrf7.png" alt="csrf7" >}}
 
 9. Once logged in clik on Account > Privacy and Security > Change Password. 
 
@@ -58,36 +58,36 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
    - Click **Change**
 
-    ![csrf8](csrf8.png)
+    {{< figure src="csrf8.png" alt="csrf8" >}}
 
 10. Once changed we can see **your password was successfully changed** dialog. 
 
-    ![csrf9](csrf9.png)
+    {{< figure src="csrf9.png" alt="csrf9" >}}
 
 11. Go back to **Burpsuite > Proxy > HTTP History** and Scroll down to the end to see the last HTTP call made which is the **/rest/user/change-password**. Right-click on the change-password GET call and select **send to repeater**. 
 
-    ![csrf10](csrf10.png)
+    {{< figure src="csrf10.png" alt="csrf10" >}}
     
-    ![csrf11](csrf11.png)
+    {{< figure src="csrf11.png" alt="csrf11" >}}
 
 12. Click on the **Repeater** tab to see the change password request. The Raw request shows the current password and new password we updated. 
 
-    ![csrf12](csrf12.png)
+    {{< figure src="csrf12.png" alt="csrf12" >}}
 
 13. Execute a Cross Site Request Forgery password change attack!
     - Remove the current password field from the request
     - Update the request to reflect only new and repeat password using: ```hello1234$```
     - Your request should look like below:
     - Click **Send** after the request is updated. 
-        ![csrf13](csrf13.png)
+        {{< figure src="csrf13.png" alt="csrf13" >}}
 
 16. Response is a 200 OK meaning that call is successful. 
 
-    ![csrf14](csrf14.png)
+    {{< figure src="csrf14.png" alt="csrf14" >}}
 
 17. Verify by going back to juiceshop, account login. Logout if already logged in. 
 
-    ![csrf15](csrf15.png)
+    {{< figure src="csrf15.png" alt="csrf15" >}}
 
 18. Account > login 
 
@@ -95,7 +95,7 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
     - password: ```hello1234$```
     - Click **Log In**
 
-    ![csrf16](csrf16.png)
+    {{< figure src="csrf16.png" alt="csrf16" >}}
 
     As we can see with successfully login using the new credentials, our CSRF attack was successful!
 
@@ -104,23 +104,23 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
 20. Scroll down to **Waf** **->** **Add modules** at the bottom. Add **CSRF protection** under Client Security Module and click **OK**
 
-    ![Add-Module](Add-Module.png)
-    
-    ![add CSRF](<Add CSRF.png>)
+    {{< figure src="Add-Module.png" alt="Add-Module" >}}
+
+    {{< figure src="Add CSRF.png" alt="Add CSRF" >}}
 
 21. In the Application View > WAF > Client Security > Click on CSRF Protection.
     - On both **Page List Table** AND **URL List Table**, Add the URL ```/rest/user/change-password```
     - Update the Action to **Alert and Deny** and click Save. the Module takes ~3 minutes to be in effect. 
 
-    ![CSRF-config](CSRF-config.png)
+    {{< figure src="CSRF-config.png" alt="CSRF-config" >}}
     
-    ![CSRF-config-1](CSRF-config-1.png)
+    {{< figure src="CSRF-config-1.png" alt="CSRF-config-1" >}}
 
 
 22. Once done, repeat the attack again with Password of your choice, and you should see a block message. 
 
-    ![csrf21](csrf21.png)
+    {{< figure src="csrf21.png" alt="csrf21" >}}
 
 23. On Fortiappsec cloud, **Threat Analytics > Attack Logs >** There is a CSRF attack log.
 
-    ![csrf22](csrf22.png)
+    {{< figure src="csrf22.png" alt="csrf22" >}}

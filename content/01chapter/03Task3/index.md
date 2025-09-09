@@ -38,15 +38,15 @@ For this lab, we will only need to interact with the Kali linux device.  We will
   - Enter ```guacadmin``` for Username and enter ```S3cur3P4ssw0rd123!```
   - Click **Login**
 
-![Guac Login](guac_log.png)
+{{< figure src="guac_log.png" alt="Guac Login" >}}
 
 - The Guacamole home page will have a list of connections.  Click on the connection labeled **Lab Desktop**
 
-![Kali con](kali_con.png)
+{{< figure src="kali_con.png" alt="Kali con" >}}
 
 - Note the icons at the top left of the home screen.  We will be using these during the lab.
 
-![Kali Home](kali_home.png)
+{{< figure src="kali_home.png" alt="Kali Home" >}}
 
 ### Paste text into Kali Desktop
 
@@ -54,6 +54,6 @@ There are portions of this lab that will require large amounts of text to be ent
 - You will need to open (and close) the Guacamole menu by typing **ctrl+alt+shift** for Windows or **ctrl+command+shift** for MAC. 
 - Paste your text into the window, and select **Text input** as the Input method.
 
-![CP Paste](cp_paste.png)
+{{< figure src="cp_paste.png" alt="CP Paste" >}}
 
 - Right-click on the desktop where you want to past and click "paste" or "paste from clipboard" depending on which option is available.

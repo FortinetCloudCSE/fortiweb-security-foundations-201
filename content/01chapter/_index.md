@@ -38,4 +38,4 @@ Tasks
 
 Each Student will have their own environment for the lab. The following diagram provides an overview of the Student environment.
 
-   ![setup](env_diagram.png)
+   {{< figure src="env_diagram.png" alt="setup" >}}

@@ -17,7 +17,7 @@ This lab was originally bootstrapped with an ingress firewall rule which allows 
 1. In the FortiAppSec Cloud UI, Copy the IPs which FortiAppSec Cloud will use to communicate with your application. From the FortiAppSec Cloud Applications page, select **Allow IP List** from the top of the page.  This will open a dialog showing Management and Scrubbing Center Addresses.  Click on **Copy to Clipboard**.  Paste these IPs into a text document and then click **Return**
 
   
-   ![allow-IP](allowIP-list.png)
+   {{< figure src="allowIP-list.png" alt="allow-IP" >}}
 
 2. In Azure cloud shell, verify you're in the terraform folder or navigate to it by typing ``` cd fortiweb-security-foundations-201/terraform/```
 
@@ -26,18 +26,18 @@ This lab was originally bootstrapped with an ingress firewall rule which allows 
 
 4. Use nano to open and edit the ubuntu terraform file
 
-   ![ubutf1](ubutf1.png)
+   {{< figure src="ubutf1.png" alt="ubutf1" >}}
    
    
    {{% notice info %}}
    In order to Navigate within nano, use the **up, down, left and right** arrow keys.  Use **backspace** to delete and type in the text you want to replace it with.  When you are ready to save type <kbd>ctrl</kbd>+<kbd>o</kbd> then  <kbd>enter</kbd> (to save to the same filename). Then type <kbd>ctrl</kbd>+<kbd>x</kbd> to exit.
    {{% /notice %}}
 
-   ![ubutf3](ubutf3.png)
+   {{< figure src="ubutf3.png" alt="ubutf3" >}}
 
 5. Navigate to the **security rule** named **allow-juice-inbound**.  Note currently, the rule allows all source addresses.
 
-   ![ubutf2](ubutf2.png)
+   {{< figure src="ubutf2.png" alt="ubutf2" >}}
 
 6. We are going to modify the **source_address_prefix** entry and replace it with the list of FortiWeb Cloud IPs captured in the step one above
    - For example: ```source_address_prefixes    = ["3.226.2.163", "3.123.68.65", "52.179.7.200", "20.127.74.103", "20.127.74.161", "20.127.74.143", "20.228.249.214", "52.179.3.225"]```
@@ -46,7 +46,7 @@ This lab was originally bootstrapped with an ingress firewall rule which allows 
    - When you are done you can verify your changes with ```more ubuntu.tf```
 
 
-      ![ubutf4](ubutf4.png)
+      {{< figure src="ubutf4.png" alt="ubutf4" >}}
 
 7. Now we will apply these changes by typing ```terraform apply -var="username=$(whoami)" --auto-approve```
 
@@ -155,11 +155,11 @@ This lab was originally bootstrapped with an ingress firewall rule which allows 
    - From the home screen in Azure, search in the top middle bar for  ```ubu_nsg```
    - You will find a **Network Security Group** with a name corresponding to your Azure Account ID like **web10-ubu_nsg**.  Click to view it
    
-     ![nsg1](nsg1.png)
+     {{< figure src="nsg1.png" alt="nsg1" >}}
 
 10. You should be able to see the updated security rule.
 
-   ![nsg2](nsg2.png)
+   {{< figure src="nsg2.png" alt="nsg2" >}}
 
 11. Now try to navigate to the Juice Shop Application from your laptop by typing ```http://<ubuntu ip>:3000``` in your favorite browser.
     - You should **NOT** be able to access Juice Shop Directly.
