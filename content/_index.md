@@ -24,4 +24,4 @@ FortiAppSec Cloud WAF as a Service (WAFaaS) reduces administrative overhead by o
 
 Below is a diagram of the Lab environment.
 
-![lab1](diagram.png)
+{{< figure src="diagram.png" alt="lab1" >}}
