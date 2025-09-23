@@ -19,7 +19,7 @@ We’ve provided a tool called **bots** that will simulate a mix of bot and legi
 1. Log into Kali Linux:  ```https://{{Kali IP}}:8443```
 
 2. Open the terminal emulator by clicking the black box icon at the top of the Kali home screen.  
-At the prompt, type:  
+At the prompt, type:  ./bots
     {{< figure src="accessTerminal.png" alt="accessTerminal" >}}
 
 

@@ -185,13 +185,17 @@ resource "null_resource" "copy_go_files" {
     ]
   }
 
-  # Trigger the build process (build script is now in bootstrap.txt)
+  # Trigger the build process after files are copied
   provisioner "remote-exec" {
     inline = [
       "echo '=== DEBUG: Triggering build process ==='",
       "echo 'Files copied successfully, triggering build...'",
-      "echo 'Build script will run after Go installation completes'",
-      "echo '=== DEBUG: Build trigger complete ==='"
+      "echo 'Checking if Go is available...'",
+      "which go || echo 'Go not in PATH'",
+      "/usr/local/go/bin/go version || echo 'Go not found at /usr/local/go/bin/go'",
+      "echo 'Executing build script...'",
+      "/usr/local/bin/build-ml2.sh",
+      "echo '=== DEBUG: Build process complete ==='"
     ]
   }
 
