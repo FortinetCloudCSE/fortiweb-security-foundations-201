@@ -76,9 +76,8 @@ weight: 10
     {{< figure src="conf-app6.png" alt="conf-app6" >}}
 
    {{% notice note %}} If you need to recover the application IPs or CNAME later, you can click on the app's DNS status **Update Pending** to show DNS status & retrieve the IPs
-
-   {{< figure src="app-ips.png" >}}
-   {{% /notice %}}
+   ![app-ips](app-ips.png)
+    {{% /notice %}}
 
 7. Update Google DNS
 Use the Form Provided below to update DNS records 

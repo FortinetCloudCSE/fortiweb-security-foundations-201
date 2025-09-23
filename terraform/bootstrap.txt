@@ -28,6 +28,15 @@ write_files:
         wireshark wireshark-common burpsuite \
         kali-desktop-xfce xrdp xorgxrdp xfce4 xfce4-goodies || true
 
+      # Install Postman via tarball
+      log "Installing Postman via tarball..."
+      POSTMAN_URL="https://dl.pstmn.io/download/latest/linux64"
+      POSTMAN_DEST="/opt/Postman"
+      curl -fsSL "$POSTMAN_URL" -o /tmp/postman.tar.gz || { log "Failed to download Postman"; exit 1; }
+      tar -xzf /tmp/postman.tar.gz -C /opt/
+      ln -sf "$POSTMAN_DEST/Postman" /usr/local/bin/postman
+      log "Postman installed successfully"
+
       adduser xrdp ssl-cert || true
       echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
       sed -i.bak '/^test -r \/etc\/X11\/Xsession/d;/^exec \/bin\/sh \/etc\/X11\/Xsession/d' /etc/xrdp/startwm.sh
