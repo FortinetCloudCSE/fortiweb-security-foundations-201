@@ -20,7 +20,7 @@ To train the model, we will use a tool that generates a sufficient number of leg
 1. From the **FortiAppSec Cloud Console**, select your application.
 2. In the left navigation pane, go to **WAF > Add Modules**.
 3. Scroll down to the **Security Rules** section.
-4. Toggle **Anomaly Detection** to **On**.
+4. Toggle **Anomaly Detection** to **On**. Click **OK**.
 
 {{< figure src="anomaly-on.png" alt="Anomaly-on" >}}
 
@@ -49,7 +49,7 @@ To build the anomaly detection model, you need to generate enough legitimate req
 1. Open a terminal window from your Kali desktop.  
    Run:
 
-   ```./ml-mix```
+   ```ml-mix```
 
 2. When prompted, enter the URL:
 
@@ -59,12 +59,12 @@ To build the anomaly detection model, you need to generate enough legitimate req
 Use the following values for the remaining options:
  
   - Duration: 30M
-  - Target 30
+  - Target RPS: 30
   - Workers: 20
   - Attack mix percentage: **0**  (We are building the model only with legitimate traffic.)
   - Use /rest/products/search? q= ... : n 
   - Skip TLS verification: n
-  - Per- request timeoue : 10s
+  - Per- request timeout : 10s
   - Verbose sample logging: y
 
 {{< notice >}}
@@ -113,7 +113,7 @@ To test the model, we will run the same tool again but this time include attack 
 	1.	Open a terminal window from your Kali desktop.
 Run:
 
-   ```./ml-mix``` 
+   ```ml-mix```
 
 2. When prompted, enter the URL:
 
@@ -128,7 +128,7 @@ Accept the default values for the remaining options:
   - Attack mix percentage: ***30*** ( this time we will add about 30% attack traffic to our mix)
   - Use /rest/products/search? q= ... : n 
   - Skip TLS verification: n
-  - Per- request timeoue : 10s
+  - Per- request timeout : 10s
   - Verbose sample logging: n 
 
   {{< figure src="launch-attack.png" alt="Launch-Attack" >}}

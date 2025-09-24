@@ -6,7 +6,7 @@ weight: 50
 
 ### Review 
 
-In this module, we used Burpsuite and SQLMap to both discover and exploit vulnerabilities in Juice Shop.
+In this module, we used Burp Suite and SQLMap to both discover and exploit vulnerabilities in Juice Shop.
 
 ### Application Protection Quiz
 
@@ -25,5 +25,5 @@ With this information, an attacker can greatly narrow their reconnaissance effor
 3. What type of security is FortiAppSec Cloud's Cross Site Request Forgery protection?
 
     {{% expand title="Click here for answer" %}}
-**Clien Security** - This type of security is designed to prevent compromised clients from accessing sensitive data.
+**Client Security** - This type of security is designed to prevent compromised clients from accessing sensitive data.
     {{% /expand %}}

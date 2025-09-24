@@ -11,7 +11,7 @@ weight: 30
 | **Verify task completion** | You should be able to access both Kali and Juice Shop.  All commands in step 4 should complete successfully.
 
 
-### ***Logging into your student environment***
+### ***Log in to your student environment***
 
 ## Prereqs
   - Internet Access
@@ -34,7 +34,7 @@ For this lab, we will only need to interact with the Kali linux device.  We will
   https://<kali-IP>:8443
   ```
 - Accept all warnings and proceed to the site.
-- You will be prompted to login to Apache Guacamole.  
+- You will be prompted to log in to Apache Guacamole.
   - Enter ```guacadmin``` for Username and enter ```S3cur3P4ssw0rd123!```
   - Click **Login**
 

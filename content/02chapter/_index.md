@@ -39,3 +39,5 @@ For the next step, choose **Yes**.  You do want to stay logged in.
 
 
 {{< figure src="app-8.png" alt="fortiAppSec_Cloud" >}}
+
+{{% notice info %}} Any warnings mentioning "Failed to get data." can be safely ignored. {{% /notice %}}

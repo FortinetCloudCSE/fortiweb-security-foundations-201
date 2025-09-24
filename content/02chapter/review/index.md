@@ -6,14 +6,14 @@ weight: 50
 
 ### Review 
 
-In this module, we onboarded our application into FortiAppSec Cloud using the GUI.  We also used the built-in firewall rules in our GCP Virtual Private Cloud Network to lock down access to the origin server such that only traffic from FortiAppSec Cloud will be accepted.
+In this module, we onboarded our application into FortiAppSec Cloud using the GUI.  We also used the built-in Azure Network Security Group (NSG) in our Azure Environment to lock down access to the origin server such that only traffic from FortiAppSec Cloud will be accepted.
 
 
 ### Application Protection Quiz
 
 1. What is the final step for onboarding a Web Application in FortiAppSec Cloud?
     {{% expand title="Click here for answer" %}}
-Change the DNS Record.  While we did not perform this step for the purposes of this lab.  In a production environment, the final step to onboarding your application is to change either the CNAME or A record for your application such that all traffic is directed towards FortiAppSec Cloud.
+Change the DNS Record.  We performed this in Chapter 2 Task 1 Step 8.  Likewise, in a production environment, the final step to onboarding your application is to change either the CNAME or A record for your application such that all traffic is directed towards FortiAppSec Cloud.
     {{% /expand %}}
 
 2. You must use TLS on port 443 to communicate from FortiAppSec Cloud to your origin server. (True or False)

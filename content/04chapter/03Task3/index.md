@@ -6,17 +6,17 @@ weight: 20
 
 |                            |    |  
 |----------------------------| ----
-| **Goal**                   | Use Burpsuite to Perform CSRF attack
-| **Task**                   | Burpsuite will modify a user password, using Cross Site Request Forgery, then block it with FortiAppSec Cloud
+| **Goal**                   | Use Burp Suite to Perform CSRF attack
+| **Task**                   | Burp Suite will modify a user password, using Cross Site Request Forgery, then block it with FortiAppSec Cloud
 | **Verify task completion** | The CSRF password change should go through initially, but be blocked after enabling CSRF protection on FortiAppSec Cloud
 
 A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where an attacker tricks a user into performing actions on a web application without their consent. This can happen when a malicious website, email, or other online resource causes the user's web browser to perform an unwanted action on a different site where the user is authenticated.
 
-1. Let's generate a CSRF attack with Burpsuite. 
+1. Let's generate a CSRF attack with Burp Suite.
 
-2. Repeat Step 1-5 from Task 1 to open Burpsuite. if Burpsuite is already running in the background just click to go back to at by clicking on the top left corner of Kali linux.
+2. Repeat Step 1-5 from Task 1 to open Burp Suite. if Burp Suite is already running in the background just click to go back to at by clicking on the top left corner of Kali linux.
 
-3. On the proxy tab, Click on **Open Browser**
+3. On the proxy tab, Click on **Open Browser** (this is Chrome in this lab and not Firefox)
 
     {{< figure src="csrf1.png" alt="csrf1" >}}
 
@@ -121,6 +121,6 @@ A Cross-Site Request Forgery (CSRF) attack is a type of security exploit where a
 
     {{< figure src="csrf21.png" alt="csrf21" >}}
 
-23. On Fortiappsec cloud, **Threat Analytics > Attack Logs >** There is a CSRF attack log.
+23. On FortiAppSec cloud, **Threat Analytics > Attack Logs >** There is a CSRF attack log.
 
     {{< figure src="csrf22.png" alt="csrf22" >}}

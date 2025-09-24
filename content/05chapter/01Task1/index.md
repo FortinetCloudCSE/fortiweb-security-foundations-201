@@ -10,10 +10,10 @@ weight: 10
 | **Task**                   | Configure Postman and GET information about Apple Juice from the product page
 | **Verify task completion** | The Postman Request should successfully return data for the Apple Juice product
 
-1.  Open postman by opening a new terminal (not bash) and type ```Postman``` at the prompt.  This should start the postman application.
+1.  Open postman by opening a new terminal (not bash) and type ```postman``` at the prompt.  This should start the postman application.
 {{% notice warning %}}
 
-If Postman doesn't open, it's likely due to the terminal still using Bash.  To exit bash, simply type ```sh```
+If Postman doesn't open, it's likely due to the terminal still using Bash.  To exit bash, simply type ```exit```
 
 {{% /notice %}}
 

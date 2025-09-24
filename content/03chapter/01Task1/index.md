@@ -15,10 +15,9 @@ weight: 10
 1. Log into Kali linux: ```https://{{Kali IP}}:8443```
 
 2. To avoid any DNS problems during this workshop, we'll create a static hosts file entry on the Kali Box to resolve our FortiAppSec Cloud protected application
-   - Open the terminal emulator by clicking on the black box at the bottom of the Kali Home screen. At the prompt, type:
+   - Open the terminal emulator by clicking on the terminal icon located at the top left Kali Home screen. At the prompt, type:
 
     ```sh
-    bash
     sudo nano /etc/hosts
     ```
 
@@ -28,7 +27,6 @@ weight: 10
     - To exit Nano: type <kbd>ctrl</kbd>+<kbd>x</kbd>
 
        ```
-       <replace this value with IP address you have from FortiAppSec>    <FortiAppSecStudentID>.fwebtraincse.com
        <replace this value with IP address you have from FortiAppSec>   <FortiAppSecStudentID>.fwebtraincse.com
       ```    
       {{< figure src="hosts.png" alt="Hosts" >}}

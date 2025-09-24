@@ -17,13 +17,13 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 <pre><code>https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login/</code></pre>
 {{< /notice >}}
 
-1.  From the FortiAppSec Cloud Console select your application and in the left pane, select **Waf >** **ADD MODULES**.  Scroll down and turn on **API Gateway** under API Protection.
+1.  From the FortiAppSec Cloud Console select your application and in the left pane, select **Waf >** **ADD MODULES**.  Scroll down and turn on **API Gateway** under API Protection then Click **OK**.
 
     {{< figure src="api-on.png" alt="api on" >}}
 
 2.  Now API PROTECTION should show up on the left side of the screen. Under API PROTECTION, select **API Gateway**
 
-3. Click to **Create an API User**. Add a **Name** and **Email address** Then Click **OK**
+3. Click to **Create an API User**. Add ```testuser``` as **Name** and ```testuser@fortinet.com``` as **Email address** Then Click **OK**
 
     {{< figure src="api-user.png" alt="api user" >}}
 

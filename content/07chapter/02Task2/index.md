@@ -28,7 +28,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 #### Configure Known Bots Module 
 
-1. Under **Bot Mitigaton** , select **Known Bots**
+1. Under **Bot Mitigation** , select **Known Bots**
 
 2. Change the value in the Action box to **Alert and Deny** , **enable** the **known Bad Bots** toggle switch Then Click **Save**
 
@@ -36,7 +36,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 #### Configure Threshold Based Detection Module 
 
-1.  Under **Bot Mitigaton** , select **Threshold Based Detection** 
+1.  Under **Bot Mitigation** , select **Threshold Based Detection**
 
 2. Change the value in the Action box to **Alert and Deny** , **enable** the **Crawler, Vulnerability Scanning, Slow Attack,Content Scraping,Credential Based Brute Force** toggle switch. Then Click **Save**
 
@@ -44,7 +44,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 #### Configure Biometrics Based Detection 
 
-1.  Under **Bot Mitigaton** , select **Biometrics Based Detection** 
+1.  Under **Bot Mitigation** , select **Biometrics Based Detection**
 
 2. click on **Create Rule**, type in **photo** in the URL box, Click **OK** to continue. Then Click **Save**
 
@@ -52,7 +52,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 
 #### Configure Bot Deception
 
-1.  Under **Bot Mitigaton** , select **Bot Deception** 
+1.  Under **Bot Mitigation** , select **Bot Deception**
 
 2. click on **Create Rule**, type in **about** in the URL box, Click **OK** to continue. Then Click **Save**
 
