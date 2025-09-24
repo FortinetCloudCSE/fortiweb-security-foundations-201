@@ -27,7 +27,6 @@ write_files:
         python3 python3-dev python3-pip python3-venv \
         wireshark wireshark-common burpsuite \
         kali-desktop-xfce xrdp xorgxrdp xfce4 xfce4-goodies || true
-
       # Install Postman via tarball
       log "Installing Postman via tarball..."
       POSTMAN_URL="https://dl.pstmn.io/download/latest/linux64"
@@ -36,7 +35,7 @@ write_files:
       tar -xzf /tmp/postman.tar.gz -C /opt/
       ln -sf "$POSTMAN_DEST/Postman" /usr/local/bin/postman
       log "Postman installed successfully"
-
+      
       adduser xrdp ssl-cert || true
       echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
       sed -i.bak '/^test -r \/etc\/X11\/Xsession/d;/^exec \/bin\/sh \/etc\/X11\/Xsession/d' /etc/xrdp/startwm.sh
@@ -275,6 +274,27 @@ write_files:
       log "=== Building ML-2 tool ==="
       # Build script will be executed by Terraform provisioners after files are copied
       log "Build script installed, will be executed after file provisioning"
+      
+      # Wait for Go source files to be copied by Terraform provisioners
+      log "Waiting for Go source files to be available..."
+      for i in {1..30}; do
+        if [ -f /opt/mltool/ml-mix.go ] && [ -f /opt/mltool/ml2.go ] && [ -f /opt/mltool/bots.go ]; then
+          log "Go source files found, proceeding with build..."
+          break
+        fi
+        log "Waiting for source files... (attempt $i/30)"
+        sleep 10
+      done
+      
+      # Check if files are available before building
+      if [ ! -f /opt/mltool/ml-mix.go ] || [ ! -f /opt/mltool/ml2.go ] || [ ! -f /opt/mltool/bots.go ]; then
+        log "ERROR: Go source files not found after waiting. Build will be triggered later by Terraform provisioners."
+        exit 0
+      fi
+      
+      # Execute the build script
+      log "Executing build script..."
+      /usr/local/bin/build-ml2.sh
 
       log "=== Post-provision script completed ==="
 
@@ -342,6 +362,12 @@ write_files:
       # Build ML-2 tool (source files will be copied by Terraform provisioner)
       echo "[build-ml2] $(date -Is) Building ML-2 tool"
       
+      # Check if source file exists
+      if [ ! -f /opt/mltool/ml2.go ]; then
+        echo "[build-ml2] ERROR: ml2.go not found at /opt/mltool/ml2.go"
+        exit 1
+      fi
+      
       # Create separate directory for ML-2 tool
       mkdir -p /opt/mltool/ml2
       cp /opt/mltool/ml2.go /opt/mltool/ml2/
@@ -352,12 +378,24 @@ write_files:
       go mod tidy
       
       # Build the ML-2 tool
+      echo "[build-ml2] $(date -Is) Compiling ML-2 tool..."
       go build -trimpath -ldflags "-s -w" -o /usr/local/bin/ml-2 .
-      chmod +x /usr/local/bin/ml-2
-      echo "[build-ml2] $(date -Is) ML-2 tool build complete"
+      if [ $? -eq 0 ]; then
+        chmod +x /usr/local/bin/ml-2
+        echo "[build-ml2] $(date -Is) ML-2 tool build complete"
+      else
+        echo "[build-ml2] ERROR: Failed to build ML-2 tool"
+        exit 1
+      fi
       
       # Build Bots tool (source files will be copied by Terraform provisioner)
       echo "[build-ml2] $(date -Is) Building Bots tool"
+      
+      # Check if source file exists
+      if [ ! -f /opt/mltool/bots.go ]; then
+        echo "[build-ml2] ERROR: bots.go not found at /opt/mltool/bots.go"
+        exit 1
+      fi
       
       # Create separate directory for bots tool
       cd /opt/mltool
@@ -370,12 +408,24 @@ write_files:
       go mod tidy
       
       # Build the bots tool
+      echo "[build-ml2] $(date -Is) Compiling bots tool..."
       go build -trimpath -ldflags "-s -w" -o /usr/local/bin/bots .
-      chmod +x /usr/local/bin/bots
-      echo "[build-ml2] $(date -Is) Bots tool build complete"
+      if [ $? -eq 0 ]; then
+        chmod +x /usr/local/bin/bots
+        echo "[build-ml2] $(date -Is) Bots tool build complete"
+      else
+        echo "[build-ml2] ERROR: Failed to build bots tool"
+        exit 1
+      fi
       
       # Build ML-Mix tool (source files will be copied by Terraform provisioner)
       echo "[build-ml2] $(date -Is) Building ML-Mix tool"
+      
+      # Check if source file exists
+      if [ ! -f /opt/mltool/ml-mix.go ]; then
+        echo "[build-ml2] ERROR: ml-mix.go not found at /opt/mltool/ml-mix.go"
+        exit 1
+      fi
       
       # Create separate directory for ml-mix tool
       cd /opt/mltool
@@ -388,9 +438,17 @@ write_files:
       go mod tidy
       
       # Build the ml-mix tool
+      echo "[build-ml2] $(date -Is) Compiling ml-mix tool..."
       go build -trimpath -ldflags "-s -w" -o /usr/local/bin/ml-mix .
-      chmod +x /usr/local/bin/ml-mix
-      echo "[build-ml2] $(date -Is) ML-Mix tool build complete"
+      if [ $? -eq 0 ]; then
+        chmod +x /usr/local/bin/ml-mix
+        echo "[build-ml2] $(date -Is) ML-Mix tool build complete"
+        # Verify the binary works
+        /usr/local/bin/ml-mix --help 2>/dev/null || echo "[build-ml2] Warning: ml-mix binary may not be working correctly"
+      else
+        echo "[build-ml2] ERROR: Failed to build ml-mix tool"
+        exit 1
+      fi
       
       # Create logs dir (used by the tool profiles)
       install -d -m 0755 /opt/mltool/logs
