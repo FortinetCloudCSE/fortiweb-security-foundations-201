@@ -26,11 +26,12 @@ weight: 10
 
    - In **Web Application Name** enter your FortiAppSec Cloud StudentID number which you used to login to FortiAppSec Cloud (found at the top right corner of the FortiAppSec Cloud Screen).   
 
-    {{% notice info %}}For example, if your FortiAppSec Cloud User is **CSEAccount669@fortinetcloud.onmicrosoft.com**, your Student ID would be: **669**{{% /notice %}}
+    {{% notice info %}}For example, if your FortiAppSec Cloud User is **appsec10@fortinetcloud.onmicrosoft.com**, your Student ID would be: **10**{{% /notice %}}
 
    - For **Domain Name** use ```<studentId>.fwebtraincse.com``` and then select next
     
     {{< figure src="conf-app1.png" alt="conf-app1" >}}
+    {{% notice info %}}The warning "Failed to look up for <studentId>.fwebtraincse.com" can be safely ignored{{% /notice %}}
 
 2. **Tab 2: Network**,
 
@@ -38,7 +39,7 @@ weight: 10
    - For **IP Address or FQDN** enter the **JuiceShop Public IP** (which is the Ubuntu VM Public IP from your Terraform Output)
    - For **Port** enter "3000"
    - Select **HTTP** for Server Protocol.  This is Juice Shop and it is NOT secure
-   - Click on **Test Origin Server**  You should see a green box pop up that says "Test successfull"
+   - Click on **Test Origin Server**  You should see a green box pop up that says "Test successful"
    - Choose **Next**
     
     {{< figure src="conf-app2.png" alt="Conf-app2" >}}
@@ -79,7 +80,7 @@ weight: 10
    ![app-ips](app-ips.png)
     {{% /notice %}}
 
-7. Update Google DNS
+7. Update Application DNS
 Use the Form Provided below to update DNS records 
 Example
    - **Name :** \<studentId>\.fwebtraincse.com

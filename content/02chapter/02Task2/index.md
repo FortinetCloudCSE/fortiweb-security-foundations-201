@@ -19,12 +19,12 @@ This lab was originally bootstrapped with an ingress firewall rule which allows 
   
    {{< figure src="allowIP-list.png" alt="allow-IP" >}}
 
-2. In Azure cloud shell, verify you're in the terraform folder or navigate to it by typing ``` cd fortiweb-security-foundations-201/terraform/```
+2. In Azure cloud shell, verify you're in the terraform folder or navigate to it by typing ``` cd ~/fortiweb-security-foundations-201/terraform/```
 
 3. Make a copy of our ubuntu.tf file so that we can come back to it later if needed.
     - at the prompt, type ```cp ubuntu.tf ubuntu.tf.bak```
 
-4. Use nano to open and edit the ubuntu terraform file
+4. Use nano to open and edit the ubuntu terraform file ``` nano ubuntu.tf```
 
    {{< figure src="ubutf1.png" alt="ubutf1" >}}
    
@@ -39,7 +39,7 @@ This lab was originally bootstrapped with an ingress firewall rule which allows 
 
    {{< figure src="ubutf2.png" alt="ubutf2" >}}
 
-6. We are going to modify the **source_address_prefix** entry and replace it with the list of FortiWeb Cloud IPs captured in the step one above
+6. We are going to modify the **source_address_prefix** entry and replace it with **source_address_prefixes** as well as the list of FortiWeb Cloud IPs captured in the step one above making sure to add the extra quotes around each IPs.  The VScode search and replace RegEx ``` ((?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)) ``` replaced by ``` "$1" ``` is very useful for this task.
    - For example: ```source_address_prefixes    = ["3.226.2.163", "3.123.68.65", "52.179.7.200", "20.127.74.103", "20.127.74.161", "20.127.74.143", "20.228.249.214", "52.179.3.225"]```
    - Save the file with <kbd>ctrl</kbd>+<kbd>o</kbd> then  <kbd>enter</kbd> (to save to the same filename)
    - Exit Nano with <kbd>ctrl</kbd>+<kbd>x</kbd> 

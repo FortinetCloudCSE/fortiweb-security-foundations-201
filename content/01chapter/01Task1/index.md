@@ -11,7 +11,7 @@ weight: 10
 | **Verify task completion** | You will receive an email
 
 
-{{% notice info %}} The below document references "student number" for a couple of the steps.  This is the first portion of the Username you received in the initial email with your Azure credentials.  For example if your username is **web10@fortinetcloud.onmicrosoft.com** then your student number would be **web10**  {{% /notice %}}
+{{% notice info %}} The below document references "student number" for a couple of the steps.  This is the first portion of the Username you received in the initial email with your Azure credentials.  For example if your username is **web10@fortinetcloud.onmicrosoft.com** then your student number would be **web10**.  The same applies for a username of **appsec10@fortinetcloud.onmicrosoft.com** the student number would be **appsec10**  {{% /notice %}}
 
 
 #### **Setup your AzureCloud Shell**

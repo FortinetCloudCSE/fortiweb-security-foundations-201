@@ -23,7 +23,7 @@ In this module, we performed a very simple SQL injection attack an highlighted h
 When Block mode is enabled, the minimum security configuration, including Known Attacks is already in place.
     {{% /expand %}}
 
-3. Vulnerability scan is available by default. (True or False)
+3. Vulnerability scan is included by default. (True or False)
 
     {{% expand title="Click here for answer" %}}
 **FALSE** - Vulnerability scan is an add-on paid service, which must be purchased separately.

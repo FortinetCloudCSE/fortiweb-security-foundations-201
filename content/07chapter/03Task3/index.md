@@ -56,7 +56,7 @@ If you lose access to the FortiAppSec Console, open an <strong>Incognito</strong
 {{< /notice >}}
 
 
-### check the FortiAppsec Dashboards and Log Files 
+### check the FortiAppSec Dashboards and Log Files
 
 There are multiple ways to review the logs. We’ll start with the “big picture” view using incidents on the dashboard.
 

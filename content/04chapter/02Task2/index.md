@@ -37,7 +37,7 @@ Now that we know what the Database type is, we can use sqlmap to see if we can g
 
    {{< figure src="map-blocked.png" alt="Map-Blocked" >}}
 
-3. Disable Block Mode on your application in FortiAppSec Cloud
+3. Disable Block Mode on your application in FortiAppSec Cloud.  Wait 2 to 3 minutes before continuing for the change to make effect.
 
   {{< figure src="blockmode-disable.png" alt="blockmode-disable" >}}
 

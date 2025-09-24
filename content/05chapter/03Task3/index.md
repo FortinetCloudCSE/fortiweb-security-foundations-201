@@ -24,7 +24,7 @@ FortiAppSec can validate incoming requests against your OpenAPI schema to ensure
     https://juiceshopswagger.blob.core.windows.net/juiceshopswagger/swagger.yaml
  
 
-2. From the FortiAppSec Cloud Console left pane, select ADD MODULES. Scroll down and turn on  under API Protection to add OPEN API VALIDATION
+2. From the FortiAppSec Cloud Console left pane, select ADD MODULES. Scroll down and turn on  under API Protection to add OPEN API VALIDATION.  Click **OK**
 
     {{< figure src="api-schema1.png" alt="apischema1" >}}
 
@@ -39,7 +39,7 @@ FortiAppSec can validate incoming requests against your OpenAPI schema to ensure
 
     {{< figure src="api-schema3.png" alt="apischema3" >}}
 
-5. Don't forget to Save at the bottom. 
+5. Don't forget to Click **SAVE** at the bottom.
 
     {{< figure src="api-schema4.png" alt="apischema4" >}}
     
@@ -47,7 +47,7 @@ FortiAppSec can validate incoming requests against your OpenAPI schema to ensure
  If for some reason you are logged out when you click save here, you will need to log back in using this link ```https://customersso1.fortinet.com/saml-idp/proxy/demo_sallam_okta/login\``` and the credentials received in the original email.  You will need to repeat steps 1 through 5.
     {{%/notice%}}
 
-6. Back on Kali Desktop in Postman
+6. Back to Postman in Kali Desktop
     - We will send a POST request to the URL we have documented in Schema. 
     - Create a new request with the <kbd>+</kbd> button in the top bar.
     - Change "**GET**" to "**POST**", for URL use: ```https://<FortiAppSecStudentID>.fwebtraincse.com/b2b/v2/orders```
@@ -70,7 +70,7 @@ FortiAppSec can validate incoming requests against your OpenAPI schema to ensure
        ```
        {{< figure src="api-schema6.png" alt="apischema6" >}}
     
-    - Note: The schema for Product ID is changed from Integer to String. the FortiAppSec cloud Juiceshop schema we uploaded have this value defined as Integer. 
+    - Note: The schema for Product ID is changed from Integer to String in this task. However the FortiAppSec cloud Juiceshop schema we previously uploaded has this value defined as Integer.
     
     {{< figure src="api-schema10.png" alt="apischema10" >}}
     

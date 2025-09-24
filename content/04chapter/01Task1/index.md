@@ -1,13 +1,13 @@
 ---
-title: "Task 1: Find Vulnerability with Burpsuite"
-linkTitle: "Task 1: Find Vulnerability with Burpsuite"
+title: "Task 1: Find Vulnerability with Burp Suite"
+linkTitle: "Task 1: Find Vulnerability with Burp Suite"
 weight: 10
 ---
 
 |                            |    |  
 |----------------------------| ----
-| **Goal**                   | Find vulnerability with Burpsuite
-| **Task**                   | Activate Burpsuite and use it to scan Juice Shop
+| **Goal**                   | Find vulnerability with Burp Suite
+| **Task**                   | Activate Burp Suite and use it to scan Juice Shop
 | **Verify task completion** | You will see a Server Response, indicating an SQLITE error.
 
 
