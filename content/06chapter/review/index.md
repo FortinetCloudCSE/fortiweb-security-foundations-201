@@ -23,4 +23,6 @@ By the end of this exercise, you should observe the following:
 	- Depending on policy, malicious traffic is either blocked or alerted.
 	- Blocked events show the relevant action in log details.
 
+### Section Quiz
+{{< quizframe page="/gamebytag?tag=ch6" height="800" width="100%" >}}
 
