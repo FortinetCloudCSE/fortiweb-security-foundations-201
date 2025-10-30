@@ -13,3 +13,5 @@ The provided **bots** tool includes many options for delivering different types 
 You can run additional simulations to see how FortiAppSec Cloud can detect and mitigate these attacks.
 
 
+### Section Quiz
+{{< quizframe page="/gamebytag?tag=ch7" height="800" width="100%" >}}

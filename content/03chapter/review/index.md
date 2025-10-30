@@ -11,20 +11,4 @@ In this module, we performed a very simple SQL injection attack an highlighted h
 
 ### SQLi Review Quiz
 
-1. FortiAppSec Cloud is in Block Mode by default. (True or False)
-
-    {{% expand title="Click here for answer" %}}
-**False** - You can enable block mode during application onboarding, but it is not active by default.
-    {{% /expand %}}
-
-2. What do you have to configure on FortiAppSec Cloud in order to enable protection from basic Known Attacks?
-
-    {{% expand title="Click here for answer" %}}
-When Block mode is enabled, the minimum security configuration, including Known Attacks is already in place.
-    {{% /expand %}}
-
-3. Vulnerability scan is included by default. (True or False)
-
-    {{% expand title="Click here for answer" %}}
-**FALSE** - Vulnerability scan is an add-on paid service, which must be purchased separately.
-    {{% /expand %}}
+{{< quizframe page="/gamebytag?tag=ch3" height="800" width="100%" >}}
