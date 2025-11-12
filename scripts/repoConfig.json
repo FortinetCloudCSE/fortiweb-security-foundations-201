@@ -14,6 +14,11 @@
   "quizUrl":"https://fortiweb-security-foundations-201-o32xpkqaca-uc.a.run.app",
   "shortcuts": [
     {
+      "text": "FortiAppSec Cloud XPerts 2025 Presentation",
+      "URL": "XPERTS2025-appsec.pdf?download=true",
+      "icon": "fa-download",
+      "weight":5
+    },    {
       "text": "FortiAppSec Cloud Login",
       "URL": "https://appsec.fortinet.com/",
       "icon": "fa-right-to-bracket",
