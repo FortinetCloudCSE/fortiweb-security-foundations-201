@@ -6,9 +6,8 @@ packages:
 
 runcmd:
   - touch /home/labuser/.hushlogin
-  - git clone https://github.com/fortidg/juiceshop.git
-  - cd juiceshop
-  - chmod +x run-container.sh
-  - sudo ./run-container.sh
+  - [ bash, -lc, "systemctl enable --now docker" ]
+  - [ bash, -lc, "docker rm -f juice-shop >/dev/null 2>&1 || true" ]
+  - [ bash, -lc, "docker run -d --name juice-shop --restart unless-stopped -p 3000:3000 bkimminich/juice-shop:latest" ]
 
 
