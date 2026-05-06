@@ -61,5 +61,5 @@ variable "ubusku" {
 
 variable "ubuvmversion" {
   type    = string
-  default = "20.04.202406140"
+  default = "latest"
 }
