@@ -20,5 +20,11 @@ output "password" {
 }
 
 output "login-url" {
-  value = "https://${azurerm_public_ip.kalipip.ip_address}:8443"
+  value       = "https://${azurerm_public_ip.kalipip.ip_address}:8443"
+  description = "Guacamole web UI. Sign in as guacadmin with the same password as the Terraform admin_password output; then open Lab Desktop (RDP to this VM)."
+}
+
+output "kali_native_rdp" {
+  value       = "${azurerm_public_ip.kalipip.ip_address}:3389"
+  description = "Native Microsoft Remote Desktop: connect here as labuser with admin_password (xrdp). Requires apply after NSG allows 3389."
 }

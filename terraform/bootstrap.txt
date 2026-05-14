@@ -12,7 +12,11 @@ write_files:
       log(){ echo "[$(date -Is)] $*"; }
       export DEBIAN_FRONTEND=noninteractive
 
-      log "=== Starting post-provision script ==="
+      # Credentials injected by Terraform (kalivm.tf); must match the Linux account xrdp uses
+      ADMIN_PW_B64='__ADMIN_PW_B64__'
+      ADMIN_USER='__ADMIN_USERNAME__'
+      NEW_PASS=$(printf '%s' "$ADMIN_PW_B64" | base64 -d)
+      log "=== Starting post-provision script (lab user: ${ADMIN_USER}) ==="
 
       apt-get update -y || true
       dpkg --configure -a || true
@@ -132,6 +136,17 @@ write_files:
       else
         log "Guacamole directory already exists"
       fi
+
+      # guacd cannot reliably reach the host via the Azure NIC IP (e.g. 10.0.0.4); use Docker host-gateway.
+      if [ -f /opt/guacamole/docker-compose.yml ]; then
+        cat > /opt/guacamole/docker-compose.override.yml <<'GUAC_OVERRIDE'
+services:
+  guacd:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+GUAC_OVERRIDE
+        log "Wrote /opt/guacamole/docker-compose.override.yml (guacd -> host.docker.internal for xrdp)"
+      fi
       
       log "Starting Guacamole services..."
       cd /opt/guacamole
@@ -156,7 +171,11 @@ write_files:
         return 1
       }
 
-      HOST=$(ip r | awk '/dev eth0 proto/ {print $9; exit}')
+      # Primary IPv4 (eth0/ens*/enP* on Azure); used for Guacamole nginx checks and RDP target
+      PRIMARY_IP=$(ip -4 route get 1.1.1.1 2>/dev/null | awk '{for(i=1;i<=NF;i++) if($i=="src"){print $(i+1); exit}}' || true)
+      [ -n "${PRIMARY_IP}" ] || PRIMARY_IP=$(hostname -I 2>/dev/null | awk '{print $1}' || true)
+      HOST="${PRIMARY_IP}"
+      log "Detected primary IP: ${HOST:-unset}"
       NGINX_HTTPS_PORT="$(docker port nginx_guacamole_compose 443/tcp | awk -F: '{print $2}' | head -n1 || true)"
       GUAC_HTTP_PORT="$(docker port guacamole_compose 8080/tcp | awk -F: '{print $2}' | head -n1 || true)"
       API_BASE=""
@@ -184,7 +203,6 @@ write_files:
       fi
       log "Using Guacamole API base: ${API_BASE}"
 
-      NEW_PASS='S3cur3P4ssw0rd123!'
       TOKEN_JSON=$(curl -ksS -X POST "${API_BASE}/api/tokens" \
         -H "Content-Type: application/x-www-form-urlencoded" \
         --data 'username=guacadmin&password=guacadmin' || true)
@@ -219,20 +237,43 @@ write_files:
       done
 
       DS=${DS:-postgresql}
-      NET=$(docker inspect -f '{{range $k,$v := .NetworkSettings.Networks}}{{println $k}}{{end}}' guacd_compose | head -n1)
-      GW=$(docker network inspect "${NET}" --format '{{(index .IPAM.Config 0).Gateway}}')
-      [ -n "${GW}" ] && [ "${GW}" != "null" ] || GW=$(ip route | awk '/docker0/ && /src/ {print $9; exit}')
-      log "Using RDP host: ${GW} (guacd network: ${NET})"
+      NET=$(docker inspect -f '{{range $k,$v := .NetworkSettings.Networks}}{{println $k}}{{end}}' guacd_compose 2>/dev/null | head -n1 || true)
+      BRIDGE_GW=""
+      if [ -n "${NET}" ]; then
+        BRIDGE_GW=$(docker network inspect "${NET}" --format '{{(index .IPAM.Config 0).Gateway}}' 2>/dev/null || true)
+      fi
+      if [ -z "${BRIDGE_GW}" ] || [ "${BRIDGE_GW}" = "<no value>" ]; then
+        BRIDGE_GW=$(ip -4 addr show docker0 2>/dev/null | awk '/inet / {print $2}' | cut -d/ -f1 | head -n1 || true)
+      fi
+      # Do NOT use the VM VNet IP here (e.g. 10.0.0.4): guacd is on a Docker bridge and often cannot route there.
+      # docker-compose.override.yml adds host.docker.internal -> host-gateway for guacd.
+      RDP_HOST="host.docker.internal"
+      log "Guacamole RDP hostname: ${RDP_HOST} (PRIMARY_IP=${PRIMARY_IP:-unset} is not used for guacd->xrdp; bridge gw=${BRIDGE_GW:-unset}; net=${NET:-unset})"
 
-      PAYLOAD=$(jq -n --arg gw "${GW}" \
+      if docker ps --format '{{.Names}}' 2>/dev/null | grep -qx guacd_compose; then
+        if H=$(docker exec guacd_compose getent hosts host.docker.internal 2>/dev/null); then
+          log "guacd host.docker.internal: ${H}"
+        else
+          log "WARN: host.docker.internal missing inside guacd (Docker too old or extra_hosts not applied)"
+        fi
+        if docker exec guacd_compose sh -c "command -v nc >/dev/null 2>&1 && nc -z -w 3 host.docker.internal 3389"; then
+          log "guacd reachability: tcp host.docker.internal:3389 OK"
+        else
+          log "WARN: guacd could not confirm tcp host.docker.internal:3389 (nc missing, xrdp down, or extra_hosts not applied — try: cd /opt/guacamole && docker compose up -d --force-recreate guacd)"
+        fi
+      fi
+
+      # xrdp: avoid NLA / auto-negotiation issues with guacd (see Apache Guacamole + xrdp discussions)
+      PAYLOAD=$(jq -n --arg host "${RDP_HOST}" --arg pass "${NEW_PASS}" --arg user "${ADMIN_USER}" \
         '{
           name:"Lab Desktop",
           parentIdentifier:"ROOT",
           protocol:"rdp",
           parameters:{
-            hostname:$gw, port:"3389",
-            username:"labuser", password:"S3cur3P4ssw0rd123!",
-            "ignore-cert":"true", security:"any",
+            hostname:$host, port:"3389",
+            username:$user, password:$pass,
+            "ignore-cert":"true", security:"rdp",
+            "disable-nla":"true",
             "enable-wallpaper":"false", "resize-method":"display-update",
             "color-depth":"24", "enable-font-smoothing":"true"
           },

@@ -65,6 +65,19 @@ resource "azurerm_network_security_group" "kali-nsg" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
+
+  # xrdp on the Kali VM (Guacamole also reaches this on the host; native RDP clients need this open)
+  security_rule {
+    name                       = "allow-rdp-inbound"
+    priority                   = 103
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "3389"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
 }
 
 resource "azurerm_network_interface_security_group_association" "nsg-association" {
@@ -81,8 +94,13 @@ resource "azurerm_linux_virtual_machine" "kalivm" {
   admin_password                  = var.admin_password
   disable_password_authentication = false
 
-  # Use bootstrap.txt as cloud-init configuration
-  custom_data = filebase64("bootstrap.txt")
+  # cloud-init: inject VM admin creds so Guacamole RDP matches xrdp (labuser + admin_password)
+  custom_data = base64encode(
+    replace(
+      replace(file("bootstrap.txt"), "__ADMIN_PW_B64__", base64encode(var.admin_password)),
+      "__ADMIN_USERNAME__", var.admin_username
+    )
+  )
 
   network_interface_ids = [azurerm_network_interface.nic.id]
 
