@@ -9,11 +9,9 @@ weight: 10
 
 {{% notice warning %}}
 
-Provisioning can take several minutes.  Delivery to corporate email addresses can be delayed, so we recommend using a personal email address (gmail works great) to speed up delivery. If you do not receive an email after 10 minutes, please check your spam folder and/or notify the instructors
+Enter your email and click **Provision Accounts** once. You'll see a live progress bar while your account is created — this typically takes a few minutes. When it's done, your credentials (username and sign-in info) will appear directly on this page, and a copy is also sent to your email as a backup. If you reload this page or come back later, your credentials will still be here — no need to re-submit.
 
-\*\*\* __PLEASE DO NOT SUBMIT MULTIPLE TIMES__ \*\*\*
-
-There is no notice here of submission, your email address just disappears.
+Delivery to corporate email addresses can be delayed, so we recommend using a personal email address (gmail works great) to speed up delivery of the backup copy.
 
 {{% /notice %}}
 
