@@ -6,6 +6,7 @@
   "logoBannerText":"AppSec 102",
   "logoBannerSubText":"FortiAppSec Cloud Security Foundational",
   "errorLevel":"warning",
+  "provisionApiBaseUrl": "https://func-cse-lab-provisioning.azurewebsites.net",
   "googleServicesID":"G-5RZBH288ST",
   "marketingCode":"CloudCSE-Xperts2025",
   "bannerLine1":"AppSec: 102: AI-driven Anomoly Detection ",
